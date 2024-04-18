@@ -41,7 +41,9 @@
     "reset_password": "Reset Password",
     "lets_chat": "Let's chat",
     "edit": "Edit",
-    "update": "Update"
+    "update": "Update",
+    "apply": "Apply",
+    "check_out": "Check out"
   },
   "auth": {
     "login_into_your_account": "Login into your account",
@@ -157,5 +159,17 @@
     "joy_is_the_best_makeup": "Joy is the best makeup.",
     "love_is_never_lost": "Love is never lost.",
     "if_not_reciprocated_it_will_flow_back_and_soften_and_purify_the_heart": "If not reciprocated, it will flow back and soften and purify the heart."
+  },
+  "cart": {
+    "shopping_cart": "Shopping cart",
+    "your_cart_is_empty": "Your cart is empty!",
+    "subtotal": "Subtotal",
+    "shipping_and_taxes_calculated_at_checkout": "Shipping and taxes calculated at checkout.",
+    "continue_shopping": "Continue Shopping",
+    "start_shopping": "Start Shopping",
+    "cart_items": "Cart Items",
+    "shipping": "Shipping",
+    "total": "Total",
+    "including_vat": "including VAT"
   }
 }
