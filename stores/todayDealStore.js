@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 import { db } from "@/firebase/config";
 
-export const useMyTodayDealStoreStore = defineStore('today-deal', {
+export const useTodayDealStore = defineStore('today-deal', {
   state: () => ({
     deals: [],
   }),

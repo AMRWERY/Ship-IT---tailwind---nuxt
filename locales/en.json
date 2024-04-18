@@ -141,7 +141,8 @@
     "hire_me": "Hire Me",
     "contact_us": "Contact Us",
     "blogs": "Blogs",
-    "about_us": "About Us"
+    "about_us": "About Us",
+    "profile": "Profile"
   },
   "deal": {
     "today_deal": "Today Deal",
@@ -150,8 +151,11 @@
     "minutes": "minutes",
     "seconds": "seconds",
     "deal_has_been_expired": "Deal has been Expired",
-    "add_new_deal": "Add New Deal",
-    "start_date": "Start Date",
-    "end_date": "End Date"
+    "i_cannot_make_my_days_longer_so_i_strive_to_make_them_better": "I cannot make my days longer so I strive to make them better.",
+    "nothing_in_life_is_to_be_feared": "Nothing in life is to be feared.",
+    "it_is_only_to_be_understood": "It is only to be understood.",
+    "joy_is_the_best_makeup": "Joy is the best makeup.",
+    "love_is_never_lost": "Love is never lost.",
+    "if_not_reciprocated_it_will_flow_back_and_soften_and_purify_the_heart": "If not reciprocated, it will flow back and soften and purify the heart."
   }
 }
