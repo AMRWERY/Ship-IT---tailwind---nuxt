@@ -150,9 +150,6 @@
     "hours": "hours",
     "minutes": "minutes",
     "seconds": "seconds",
-    "deal_has_been_expired": "Deal has been Expired",
-    "add_new_deal": "Add New Deal",
-    "start_date": "Start Date",
-    "end_date": "End Date"
+    "deal_has_been_expired": "Deal has been Expired"
   }
 }

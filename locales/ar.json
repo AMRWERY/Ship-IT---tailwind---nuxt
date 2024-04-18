@@ -150,9 +150,6 @@
     "hours": "ساعات",
     "minutes": "دقائق",
     "seconds": "ثواني",
-    "deal_has_been_expired": "الصفقة انتهت",
-    "add_new_deal": "إضافة صفقة جديدة",
-    "start_date": "تاريخ البدء",
-    "end_date": "تاريخ الأنتهاء"
+    "deal_has_been_expired": "الصفقة انتهت"
   }
 }
