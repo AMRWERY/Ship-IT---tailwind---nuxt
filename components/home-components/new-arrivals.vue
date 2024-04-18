@@ -1,0 +1,141 @@
+<template>
+  <div>
+    <div class="max-w-full py-6 mx-auto space-y-6 sm:px-6 lg:px-8">
+      <section class="max-w-full mx-auto mt-10 sm:px-6 lg:px-8">
+        <h2 class="mb-6 text">New Arrivals</h2>
+        <Carousel :wrapAround="true" v-bind="settings" :breakpoints="breakpoints">
+          <Slide v-for="card in arrivalOne" :key="card">
+            <div class="carousel__item">
+              <div class="relative mt-5 w-[300px] max-w-[16rem] overflow-hidden rounded-lg bg-white shadow-md">
+                <div class="relative flex mx-3 mt-3 overflow-hidden h-60 rounded-xl" href="#">
+                  <img class="object-cover w-full transit" :src="card.img" />
+                  <span
+                    class="absolute top-0 left-0 px-2 m-2 text-sm font-medium text-center text-white bg-black rounded-full"
+                    v-if="card.discount">{{ card.discount }}%
+                    {{ $t('home.off') }}</span>
+                </div>
+                <div class="px-5 pb-5 mt-4">
+                  <nuxt-link to="">
+                    <h5 class="font-semibold tracking-tight truncate text-md text-slate-900">
+                      {{ card.title }}
+                    </h5>
+                  </nuxt-link>
+
+                  <div class="flex items-center mt-2 mb-5">
+                    <p>
+                      <span class="text-lg font-bold text-red-600 me-1">EGP{{ card.price }}</span>
+                      <span class="text-sm line-through text-slate-900" v-if="card.originalPrice">EGP{{
+                        card.originalPrice }}</span>
+                    </p>
+                  </div>
+                  <p class="mt-2 text-start">Get it by {{ card.getBy }}</p>
+                </div>
+              </div>
+            </div>
+          </Slide>
+          <template #addons>
+            <Navigation />
+          </template>
+        </Carousel>
+      </section>
+    </div>
+
+    <div class="max-w-full py-2 mx-auto mt-4 sm:px-6 lg:px-8">
+      <img src="https://justfields.com/storage/projects/7M5rV059/tommy.webp"
+        class="w-full h-60 xs:h-56 sm:h-72 md:h-96">
+    </div>
+
+    <div class="max-w-2xl px-4 mx-auto sm:px-6 lg:max-w-full lg:px-8">
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:gap-x-8">
+        <div v-for="card in cardsOne" :key="card" class="relative group">
+          <div
+            class="block max-w-96 xs:min-w-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="p-6 text-center">
+              <p class="mb-2 truncate">{{ $t(card.title) }}</p>
+              <p class="text-base text-neutral-600 dark:text-neutral-200">
+                {{ $t(card.subtitle) }}
+              </p>
+            </div>
+            <div class="relative overflow-hidden bg-no-repeat bg-cover">
+              <img class="w-full transit" :src="card.img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-full py-2 mx-auto mt-4  sm:px-6 lg:px-8">
+      <img src="https://justfields.com/storage/projects/7M5rV059/six-shop.jpg"
+        class="w-full h-60 xs:h-56 sm:h-72 md:h-96">
+    </div>
+
+    <div class="max-w-2xl px-4 mx-auto sm:px-6 lg:max-w-full lg:px-8 mb-7">
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:gap-x-8">
+        <div v-for="card in cardsTwo" :key="card" class="relative group">
+          <div
+            class="block max-w-96 xs:min-w-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="p-6 text-center">
+              <p class="mb-2 truncate">{{ $t(card.title) }}</p>
+              <p class="text-base text-neutral-600 dark:text-neutral-200">
+                {{ $t(card.subtitle) }}
+              </p>
+            </div>
+            <div class="relative overflow-hidden bg-no-repeat bg-cover">
+              <img class="w-full transit" :src="card.img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
+
+const arrivalOne = ref([
+  { img: 'https://justfields.com/storage/projects/7M5rV059/025.webp', title: 'Feel Good Loved Up Feel Good Eau de Toilette', price: '599.00', originalPrice: '270.00', discount: '55', getBy: 'Nov 08 - Nov 10' },
+  { img: 'https://justfields.com/storage/projects/7M5rV059/026.webp', title: "Shein Men Flap Pocket Buckle Cargo Pants", price: '1.809.00', originalPrice: '2.419.00', discount: '25', getBy: 'Nov 28 - Dec 05' },
+  { img: 'https://justfields.com/storage/projects/7M5rV059/027.webp', title: "Adidas Performance Trunks 3-Pack", price: '1.929.00', originalPrice: '2.419.00', discount: '20', getBy: 'Nov 28 - Dec 05' },
+  { img: 'https://justfields.com/storage/projects/7M5rV059/028.webp', title: "Plain Rib No Show Thong", price: '299.00', originalPrice: '409.00', discount: '27', getBy: 'Nov 28 - Dec 05' },
+  { img: 'https://justfields.com/storage/projects/7M5rV059/029.webp', title: "Men's Analog Wrist Watch", price: '750.00', originalPrice: '950.00', discount: '21', getBy: 'Nov 08 - Nov 10' },
+  { img: 'https://justfields.com/storage/projects/7M5rV059/030.webp', title: "Emery Rose Floral Print Open Front Jacket", price: '1.389.00', originalPrice: '1.920.00', discount: '28', getBy: 'Nov 28 - Dec 05' },
+  { img: 'https://justfields.com/storage/projects/7M5rV059/031.webp', title: "Men Slogan Graphic Buckle Detail Flap Pocket Drawstring Waist Cargo Pants", price: '1.979.00', originalPrice: '2.609.00', discount: '24', getBy: 'Nov 28 - Dec 05' },
+  { img: 'https://justfields.com/storage/projects/7M5rV059/032.webp', title: "Shein Men Letter and Tropical Print Polo Shirt", price: '969.00', originalPrice: '1.309.00', discount: '26', getBy: 'Nov 28 - Dec 05' },
+  { img: 'https://justfields.com/storage/projects/7M5rV059/033.webp', title: "Shein Men Camo Print Flap Pocket Cargo Jeans", price: '950.00', originalPrice: '1.500.00', discount: '37', getBy: 'Nov 08 - Nov 10' },
+  { img: 'https://justfields.com/storage/projects/7M5rV059/034.webp', title: "Women White Lace-Up Front Running Shoes", price: '1.979.00', originalPrice: '2.679.00', discount: '26', getBy: 'Nov 28 - Dec 05' },
+])
+
+const { t } = useI18n();
+
+const cardsOne = ref([
+  { title: 'home.browse_this_extraordinary_womens_dresses_assortment', subtitle: 'home.from_this_exceptional_assortment_choose_your_ideal_dress_and_be_whatever_you_desire', img: 'https://justfields.com/storage/projects/7M5rV059/035.jpg' },
+  { title: 'home.shop_stylish_winter_wear_with_no_wallet_worries', subtitle: 'home.find_great_winter_season_looks_without_worrying_about_your_wallet_all_within_your_budget', img: 'https://justfields.com/storage/projects/7M5rV059/036.jpg' },
+])
+
+const cardsTwo = ref([
+  { title: 'home.unleash_the_fashionista_side_of_you_with_shein_products', subtitle: 'home.explore_an_incredible_collection_of_trendy_clothing_at_amazing_prices', img: 'https://justfields.com/storage/projects/7M5rV059/01201.jpg' },
+  { title: "home.find_the_best_womens_Winter_boots_around", subtitle: "home.make_a_statement_with_our_stunning_selection_of_womens_boots_they_are_the_best", img: 'https://justfields.com/storage/projects/7M5rV059/045454.jpg' },
+])
+
+const settings = ref({
+  itemsToShow: 1,
+  snapAlign: 'center',
+});
+
+const breakpoints = ref({
+  600: {
+    itemsToShow: 1,
+    snapAlign: 'center',
+  },
+  960: {
+    itemsToShow: 2.5,
+    snapAlign: 'start',
+  },
+  1024: {
+    itemsToShow: 4.5,
+    snapAlign: 'start',
+  },
+});
+</script>

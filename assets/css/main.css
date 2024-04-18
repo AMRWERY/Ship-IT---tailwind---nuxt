@@ -1,0 +1,22 @@
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.desc::-webkit-scrollbar {
+  width: 6px;
+}
+
+.desc::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 6px;
+}
+
+.desc::-webkit-scrollbar-track {
+  background-color: #eee;
+}
