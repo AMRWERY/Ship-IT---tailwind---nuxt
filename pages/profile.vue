@@ -216,7 +216,9 @@ const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')
 
+const { t } = useI18n()
+
 useHead({
-    title: 'Your Profile'
+  title: t('head.profile')
 })
 </script>

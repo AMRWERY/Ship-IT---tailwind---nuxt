@@ -138,7 +138,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <AddDeal />
                                                 </div>
                                             </div>
                                             <div v-if="todayDealExpired" class="m-5">
