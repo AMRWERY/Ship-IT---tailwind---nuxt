@@ -102,11 +102,8 @@
                                                         </a>
                                                     </span>
                                                 </div>
-                                                <p class="leading-relaxed">"I cannot make my days longer so I strive
-                                                    to make them better. Nothing in life is to be feared. It is only
-                                                    to be understood. "Joy is the best makeup. Love is never lost.
-                                                    If not reciprocated, it will flow back and soften and purify the
-                                                    heart."
+                                                <p class="leading-relaxed">"{{ $t('deal.i_cannot_make_my_days_longer_so_i_strive_to_make_them_better') }} {{ $t('deal.nothing_in_life_is_to_be_feared') }} {{ $t('deal.it_is_only_to_be_understood') }} {{ $t('deal.joy_is_the_best_makeup') }} {{ $t('deal.love_is_never_lost') }}
+                                                    {{ $t('deal.if_not_reciprocated_it_will_flow_back_and_soften_and_purify_the_heart') }}"
                                                 </p>
                                                 <div class="flex items-center pb-5 mt-6 mb-5 border-gray-100">
                                                     <div class="flex items-center ms-6">
@@ -147,7 +144,7 @@
 </template>
 
 <script setup>
-const store = useMyTodayDealStoreStore()
+const store = useTodayDealStore()
 const isOpen = ref(false)
 const hours = ref('')
 const minutes = ref('')
