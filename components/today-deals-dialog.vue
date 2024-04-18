@@ -59,7 +59,7 @@
                                                             </p>
                                                             <p class="font-medium text-gray-900 text-md">${{
                                                                 todayDeal.price
-                                                                }}
+                                                            }}
                                                             </p>
                                                         </div>
                                                     </div>
