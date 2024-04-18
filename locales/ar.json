@@ -41,7 +41,9 @@
     "reset_password": "إعادة تعيين كلمة المرور",
     "lets_chat": "لنتحدث",
     "edit": "تعديل",
-    "update": "تحديث"
+    "update": "تحديث",
+    "apply": "تطبيق",
+    "check_out": "الدفع"
   },
   "auth": {
     "login_into_your_account": "تسجيل الدخول إلى حسابك",
@@ -157,5 +159,17 @@
     "joy_is_the_best_makeup": "الفرح هو أفضل ماكياج.",
     "love_is_never_lost": "الحب لا يضيع أبدًا.",
     "if_not_reciprocated_it_will_flow_back_and_soften_and_purify_the_heart": "إذا لم يتم مقابلته، سيعود ويُلين ويطهر القلب."
+  },
+  "cart": {
+    "shopping_cart": "عربة التسوق",
+    "your_cart_is_empty": "عربة التسوق فارغة!",
+    "subtotal": "المجموع الفرعي",
+    "shipping_and_taxes_calculated_at_checkout": "الشحن والضرائب يتم حسابها عند الخروج.",
+    "continue_shopping": "متابعة التسوق",
+    "start_shopping": "ابدأ التسوق",
+    "cart_items": "عناصر العربة",
+    "shipping": "الشحن",
+    "total": "الإجمالي",
+    "including_vat": "تشمل الضريبة المضافة"
   }
 }

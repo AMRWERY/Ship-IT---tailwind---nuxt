@@ -52,15 +52,7 @@
         </nuxt-link>
 
         <!-- cart -->
-        <div class="relative">
-          <span
-            class="absolute top-0 end-2 mt-2 -me-2.5 inline-flex items-center justify-center rounded-full bg-red-500 h-4 w-4 text-white text-xs">
-            2
-          </span>
-          <button type="button" class="rounded-full me-4 text-neutral-600 dark:text-white">
-            <icon name="material-symbols:shopping-basket-outline" size="30px" class="text-gray-500" />
-          </button>
-        </div>
+        <cart-dialog />
 
         <profile-menu />
 
