@@ -43,7 +43,8 @@
     "edit": "Edit",
     "update": "Update",
     "apply": "Apply",
-    "check_out": "Check out"
+    "check_out": "Check out",
+    "place_order": "Place Order"
   },
   "auth": {
     "login_into_your_account": "Login into your account",
@@ -171,5 +172,25 @@
     "shipping": "Shipping",
     "total": "Total",
     "including_vat": "including VAT"
+  },
+  "checkout": {
+    "shop": "Shop",
+    "shipping": "Shipping",
+    "payment": "Payment",
+    "order_summary": "Order Summary",
+    "check_your_items_and_select_a_suitable_shipping_method": "Check your items. And select a suitable shipping method.",
+    "shipping_methods": "Shipping Methods",
+    "fedex_delivery": "Fedex Delivery",
+    "delivery": "Delivery",
+    "days": "Days",
+    "payment_details": "Payment Details",
+    "complete_your_order_by_providing_your_payment_details": "Complete your order by providing your payment details.",
+    "email_address": "Email Address",
+    "card_holder": "Card Holder",
+    "card_details": "Card Details",
+    "billing_address": "Billing Address",
+    "state": "State",
+    "subtotal": "Subtotal",
+    "total": "Total"
   }
 }
