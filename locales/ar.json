@@ -43,7 +43,8 @@
     "edit": "تعديل",
     "update": "تحديث",
     "apply": "تطبيق",
-    "check_out": "الدفع"
+    "check_out": "الدفع",
+    "place_order": "تقديم الطلب"
   },
   "auth": {
     "login_into_your_account": "تسجيل الدخول إلى حسابك",
@@ -171,5 +172,25 @@
     "shipping": "الشحن",
     "total": "الإجمالي",
     "including_vat": "تشمل الضريبة المضافة"
+  },
+  "checkout": {
+    "shop": "التسوق",
+    "shipping": "الشحن",
+    "payment": "الدفع",
+    "order_summary": "ملخص الطلب",
+    "check_your_items_and_select_a_suitable_shipping_method": "تحقق من عناصرك واختر طريقة شحن مناسبة.",
+    "shipping_methods": "طرق الشحن",
+    "fedex_delivery": "توصيل فيديكس",
+    "delivery": "التسليم",
+    "days": "أيام",
+    "payment_details": "تفاصيل الدفع",
+    "complete_your_order_by_providing_your_payment_details": "أكمل طلبك عن طريق تقديم تفاصيل الدفع الخاصة بك.",
+    "email_address": "عنوان البريد الإلكتروني",
+    "card_holder": "حامل البطاقة",
+    "card_details": "تفاصيل البطاقة",
+    "billing_address": "عنوان الفواتير",
+    "state": "الدولة",
+    "subtotal": "المجموع الفرعي",
+    "total": "الإجمالي"
   }
 }
