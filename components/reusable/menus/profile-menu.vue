@@ -31,6 +31,14 @@
           </nuxt-link>
         </li>
         <li>
+          <nuxt-link 
+            class="block w-full px-4 py-2 text-sm font-normal bg-white whitespace-nowrap text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25 text-start"
+            to="#" data-twe-dropdown-item-ref>
+            <icon name="icon-park-solid:transaction-order" size="20px" class="text-gray-500 me-2" />
+            {{ $t('menu.your_orders') }}
+          </nuxt-link>
+        </li>
+        <li>
           <nuxt-link role="button" @click="logout"
             class="block w-full px-4 py-2 text-sm font-normal bg-white whitespace-nowrap text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25 text-start"
             to="" data-twe-dropdown-item-ref>
