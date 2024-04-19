@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col items-center py-4 bg-white border-b sm:flex-row sm:px-10 lg:px-20 xl:px-16">
+      <p class="text-2xl font-bold text-gray-800">{{ $t('checkout.checkout') }}</p>
       <div class="py-2 mt-4 text-xs sm:mt-0 sm:ms-auto sm:text-base">
         <div class="relative">
           <ul class="relative flex items-center justify-between w-full space-s-2 sm:space-s-4">
@@ -64,10 +65,11 @@
             <label
               class="flex p-4 border border-gray-300 rounded-lg cursor-pointer select-none peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50"
               for="radio_1">
-              <img class="object-contain w-14" src="https://justfields.com/storage/projects/7M5rV059/download.png" />
+              <img class="object-contain w-14" src="https://justfields.com/storage/projects/7M5rV059/fedex.jpg" />
               <div class="ms-5">
                 <span class="mt-2 font-semibold">{{ $t('checkout.fedex_delivery') }}</span>
-                <p class="text-sm leading-6 text-slate-500">{{ $t('checkout.delivery') }}: 2-4 {{ $t('checkout.days') }}
+                <p class="text-sm leading-6 text-slate-500">{{ $t('checkout.delivery') }}: 2 - 4 {{ $t('checkout.days')
+                  }}
                 </p>
               </div>
             </label>
@@ -79,10 +81,11 @@
             <label
               class="flex p-4 border border-gray-300 rounded-lg cursor-pointer select-none peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50"
               for="radio_2">
-              <img class="object-contain w-14" src="https://justfields.com/storage/projects/7M5rV059/download.png" />
+              <img class="object-contain w-14" src="https://justfields.com/storage/projects/7M5rV059/dhl.jpg" />
               <div class="ms-5">
-                <span class="mt-2 font-semibold">{{ $t('checkout.fedex_delivery') }}</span>
-                <p class="text-sm leading-6 text-slate-500">{{ $t('checkout.delivery') }}: 3-6 {{ $t('checkout.days') }}
+                <span class="mt-2 font-semibold">{{ $t('checkout.dhl_delivery') }}</span>
+                <p class="text-sm leading-6 text-slate-500">{{ $t('checkout.delivery') }}: 3 - 6 {{ $t('checkout.days')
+                  }}
                 </p>
               </div>
             </label>
@@ -95,64 +98,124 @@
         <p class="text-gray-400">
           {{ $t('checkout.complete_your_order_by_providing_your_payment_details') }}
         </p>
-        <div>
-          <label for="email" class="block mt-4 mb-2 text-sm font-medium">{{ $t('checkout.email_address') }}</label>
-          <div class="relative">
-            <input type="text" id="email" name="email"
-              class="w-full px-4 py-3 text-sm border border-gray-200 rounded-md shadow-sm outline-none pl-11 focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-              placeholder="test@test.com" />
-            <div class="absolute inset-y-0 left-0 inline-flex items-center px-3 pointer-events-none">
-              <icon name="ic:baseline-alternate-email" class="w-4 h-4 text-gray-400" />
-            </div>
-          </div>
-          <label for="card-holder" class="block mt-4 mb-2 text-sm font-medium">{{ $t('checkout.card_holder') }}</label>
-          <div class="relative">
-            <input type="text" id="card-holder" name="card-holder"
-              class="w-full px-4 py-3 text-sm border border-gray-200 rounded-md shadow-sm outline-none pl-11 focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-              placeholder="Your full name here" />
-            <div class="absolute inset-y-0 left-0 inline-flex items-center px-3 pointer-events-none">
-              <icon name="fa-regular:address-card" class="w-4 h-4 text-gray-400" />
-            </div>
-          </div>
-          <label for="card-no" class="block mt-4 mb-2 text-sm font-medium">{{ $t('checkout.card_details') }}</label>
-          <div class="flex">
-            <div class="relative flex-shrink-0 w-7/12">
-              <input type="text" id="card-no" name="card-no"
-                class="w-full px-2 py-3 text-sm border border-gray-200 rounded-md shadow-sm outline-none pl-11 focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                placeholder="xxxx-xxxx-xxxx-xxxx" />
-              <div class="absolute inset-y-0 left-0 inline-flex items-center px-3 pointer-events-none">
-                <icon name="fa-regular:credit-card" class="w-4 h-4 text-gray-400" />
-              </div>
-            </div>
-            <input type="text" name="credit-expiry"
-              class="w-full px-2 py-3 text-sm border border-gray-200 rounded-md shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-              placeholder="MM/YY" />
-            <input type="text" name="credit-cvc"
-              class="flex-shrink-0 w-1/6 px-2 py-3 text-sm border border-gray-200 rounded-md shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-              placeholder="CVC" />
-          </div>
-          <label for="billing-address" class="block mt-4 mb-2 text-sm font-medium">{{ $t('checkout.billing_address')
-            }}</label>
-          <div class="flex flex-col sm:flex-row">
-            <div class="relative flex-shrink-0 sm:w-7/12">
-              <input type="text" id="billing-address" name="billing-address"
-                class="w-full px-4 py-3 text-sm border border-gray-200 rounded-md shadow-sm outline-none pl-11 focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                placeholder="Street Address" />
-              <div class="absolute inset-y-0 left-0 inline-flex items-center px-3 pointer-events-none">
-                <img class="object-contain w-4 h-4"
-                  src="https://flagpack.xyz/_nuxt/4c829b6c0131de7162790d2f897a90fd.svg" />
-              </div>
-            </div>
-            <select type="text" name="billing-state"
-              class="w-full px-4 py-3 text-sm border border-gray-200 rounded-md shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500">
-              <option value="State">{{ $t('checkout.state') }}</option>
-            </select>
-            <input type="text" name="billing-zip"
-              class="flex-shrink-0 px-4 py-3 text-sm border border-gray-200 rounded-md shadow-sm outline-none sm:w-1/6 focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-              placeholder="ZIP" />
-          </div>
+        <FormKit type="form" id="login-form" :actions="false" :incomplete-message="false">
+          <div>
+            <form-inputs>
+              <template #email="{ icon, label }">
+                <label for="email" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                  label }}</label>
+                <div class="relative">
+                  <FormKit name="email" type="email" v-model="email" validation="required|email|ends_with:.com"
+                    validation-visibility="dirty" placeholder="test@test.com" message-class="text-red-600 mt-1.5"
+                    input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                  <span class="absolute inset-y-0 flex items-center end-0 pe-3">
+                    <icon :name="icon" class="w-5 h-5 text-gray-400" />
+                  </span>
+                </div>
+              </template>
+            </form-inputs>
 
-          <!-- Total -->
+            <form-inputs>
+              <template #card-holder="{ icon, label }">
+                <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                  label }}</label>
+                <div class="relative">
+                  <FormKit name="first name" type="text" v-model="cardHolder" validation="required|contains_alpha"
+                    validation-visibility="dirty" :placeholder="$t('placeholder.your_full_name_here')"
+                    message-class="text-red-600 mt-1.5"
+                    input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                  <span class="absolute inset-y-0 flex items-center end-0 pe-3">
+                    <icon :name="icon" class="w-5 h-5 text-gray-400" />
+                  </span>
+                </div>
+              </template>
+            </form-inputs>
+
+            <div class="flex gap-2">
+              <div class="relative flex-shrink-0 w-7/12">
+                <form-inputs>
+                  <template #card-details="{ icon, label }">
+                    <label for="card-no" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                      label }}</label>
+                    <div class="relative">
+                      <FormKit name="card-no" type="text" v-model="cardNumber" validation="required|number"
+                        validation-visibility="dirty" placeholder="xxxx-xxxx-xxxx-xxxx"
+                        message-class="text-red-600 mt-1.5"
+                        input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                      <span class="absolute inset-y-0 flex items-center end-0 pe-3">
+                        <icon :name="icon" class="w-5 h-5 text-gray-400" />
+                      </span>
+                    </div>
+                  </template>
+                </form-inputs>
+              </div>
+              <form-inputs>
+                <template #expiry_date>
+                  <label for="credit-expiry" class="inline-block mb-1 text-sm text-gray-800 sm:text-base"></label>
+                  <div class="relative">
+                    <FormKit name="credit-expiry" type="text" v-model="expiryDate"
+                      validation="required|date_format:MM/YY" validation-visibility="dirty" placeholder="MM/YY"
+                      message-class="text-red-600 mt-1.5"
+                      input-class="w-full px-3 py-2 mt-1 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                  </div>
+                </template>
+              </form-inputs>
+              <form-inputs>
+                <template #cvc>
+                  <label for="credit-cvc" class="inline-block mb-1 text-sm text-gray-800 sm:text-base"></label>
+                  <div class="relative">
+                    <FormKit name="credit-cvc" type="text" v-model="cvc" validation="required|number|length:3"
+                      validation-visibility="dirty" placeholder="CVC" message-class="text-red-600 mt-1.5"
+                      input-class="w-full px-3 py-2 mt-1 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                  </div>
+                </template>
+              </form-inputs>
+            </div>
+
+            <div class="flex gap-2">
+              <div class="relative flex-shrink-0 w-7/12">
+                <form-inputs>
+                  <template #street-address="{ label }">
+                    <label for="street-address" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                      label }}</label>
+                    <div class="relative">
+                      <FormKit name="street-address" type="text" v-model="streetAddress"
+                        validation="required|contains_alpha_spaces|length:10,100" validation-visibility="dirty"
+                        :placeholder="$t('placeholder.street_address')" message-class="text-red-600 mt-1.5"
+                        input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                      <span class="absolute inset-y-0 flex items-center end-0 pe-3">
+                        <img class="object-contain w-4 h-4"
+                          src="https://justfields.com/storage/projects/7M5rV059/egy=flag.png" />
+                      </span>
+                    </div>
+                  </template>
+                </form-inputs>
+              </div>
+              <div class="relative mt-6 rounded-md shadow-sm">
+                <select id="billing-state" name="billing-state" v-model="state"
+                  class="w-full px-3 py-2 mt-1 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50"
+                  required autocomplete="state">
+                  <!-- <option selected>-- {{ $t('placeholder.select_a_state') }} --</option> -->
+                  <option v-for="country in countriesData" :key="country" :value="country">
+                    {{ country.governorate_name_en }} - {{ country.governorate_name_ar }}
+                  </option>
+                </select>
+              </div>
+              <form-inputs>
+                <template #billing-zip>
+                  <label for="billing-zip" class="inline-block mb-1 text-sm text-gray-800 sm:text-base"></label>
+                  <div class="relative">
+                    <FormKit name="billing-zip" type="text" v-model="zip" :placeholder="$t('placeholder.zip')"
+                      input-class="w-full px-3 py-2 mt-1 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                  </div>
+                </template>
+              </form-inputs>
+            </div>
+          </div>
+        </FormKit>
+
+        <!-- Total -->
+        <div>
           <div class="py-2 mt-6 border-t border-b">
             <div class="flex items-center justify-between">
               <p class="text-sm font-medium text-gray-900">{{ $t('checkout.subtotal') }}</p>
@@ -177,5 +240,15 @@
 </template>
 
 <script setup>
+import dataBase from '/public/countries.json';
 
+const email = ref('')
+const cardHolder = ref('')
+const cardNumber = ref('')
+const expiryDate = ref('')
+const cvc = ref('')
+const streetAddress = ref('')
+const state = ref(null)
+const zip = ref(null)
+const countriesData = ref(dataBase.governorates);
 </script>

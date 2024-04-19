@@ -1,16 +1,14 @@
 <template>
-  <nav class="bg-[#4F46E5] py-1.5 flex justify-center">
+  <nav class="fixed top-0 left-0 right-0 bg-[#4F46E5] py-1.5 flex justify-center z-50">
     <p class="mt-0.5 text-sm text-white">{{ $t('layout.get_free_delivery_on_orders_over_egp_1000') }}</p>
     <span class="mx-2 text-white">|</span>
-    <!-- <div class="flex text-white">
-      <icon name="svg-spinners:clock" class="text-red-100 mt-0.5" size="20px" />
-      <p class="ms-2">{{ $t('layout.today_deals') }}</p>
-    </div> -->
+
     <today-deals-dialog />
+
   </nav>
 
   <nav
-    class="relative flex flex-no-wrap items-center justify-between w-full py-2 bg-zinc-50 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4">
+    class="relative flex flex-no-wrap items-center justify-between w-full py-2 mt-7 bg-zinc-50 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4">
     <div class="flex flex-wrap items-center justify-between w-full px-3">
       <!-- Hamburger button for mobile view -->
       <button

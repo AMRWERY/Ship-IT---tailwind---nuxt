@@ -75,7 +75,11 @@
   "placeholder": {
     "enter_your_password": "أدخل كلمة المرور الخاصة بك",
     "retype_your_password": "اعد كتابه كلمة المرور",
-    "enter_your_message": "أدخل رسالتك"
+    "enter_your_message": "أدخل رسالتك",
+    "your_full_name_here": "الاسم الكامل الخاص بك هنا",
+    "street_address": "عنوان الشارع",
+    "select_a_state": "اختر المحافظه",
+    "zip": "الرمز البريدي"
   },
   "home": {
     "shop_by_brand": "التسوق حسب العلامة التجارية",
@@ -137,7 +141,9 @@
     "first_name": "الاسم الأول",
     "last_name": "الاسم الأخير",
     "password": "كلمة المرور",
-    "confirm_password": "تأكيد كلمة المرور"
+    "confirm_password": "تأكيد كلمة المرور",
+    "card_holder": "حامل البطاقة",
+    "card_number": "رقم البطاقة"
   },
   "head": {
     "create_new_account": "إنشاء حساب جديد",
@@ -175,6 +181,7 @@
     "including_vat": "تشمل الضريبة المضافة"
   },
   "checkout": {
+    "checkout": "الدفع",
     "shop": "التسوق",
     "shipping": "الشحن",
     "payment": "الدفع",
@@ -182,6 +189,7 @@
     "check_your_items_and_select_a_suitable_shipping_method": "تحقق من عناصرك واختر طريقة شحن مناسبة.",
     "shipping_methods": "طرق الشحن",
     "fedex_delivery": "توصيل فيديكس",
+    "dhl_delivery": "توصيل DHL",
     "delivery": "التسليم",
     "days": "أيام",
     "payment_details": "تفاصيل الدفع",

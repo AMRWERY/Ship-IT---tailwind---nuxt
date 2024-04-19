@@ -75,7 +75,11 @@
   "placeholder": {
     "enter_your_password": "enter your password",
     "retype_your_password": "re-type your password",
-    "enter_your_message": "enter your message"
+    "enter_your_message": "enter your message",
+    "your_full_name_here": "your full name here",
+    "street_address": "street address",
+    "select_a_state": "select a state",
+    "zip": "Zip"
   },
   "home": {
     "shop_by_brand": "Shop by Brand",
@@ -137,7 +141,9 @@
     "first_name": "First name",
     "last_name": "Last name",
     "password": "Password",
-    "confirm_password": "Confirm Password"
+    "confirm_password": "Confirm Password",
+    "card_holder": "Card Holder",
+    "card_number": "Card Number"
   },
   "head": {
     "create_new_account": "Create new Account",
@@ -175,6 +181,7 @@
     "including_vat": "including VAT"
   },
   "checkout": {
+    "checkout": "Checkout",
     "shop": "Shop",
     "shipping": "Shipping",
     "payment": "Payment",
@@ -182,6 +189,7 @@
     "check_your_items_and_select_a_suitable_shipping_method": "Check your items. And select a suitable shipping method.",
     "shipping_methods": "Shipping Methods",
     "fedex_delivery": "Fedex Delivery",
+    "dhl_delivery": "DHL Delivery",
     "delivery": "Delivery",
     "days": "Days",
     "payment_details": "Payment Details",
