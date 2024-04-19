@@ -92,7 +92,7 @@ export const useAuthStore = defineStore("auth", {
             sessionStorage.setItem("email", email);
             sessionStorage.setItem("isAuthenticated", true);
             // sessionStorage.setItem("username", payload.username);
-            router.replace("/");
+            // router.replace("/");
             try {
               const usersCollection = collection(db, "users");
               const q = query(

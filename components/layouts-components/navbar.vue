@@ -52,11 +52,11 @@
         </nuxt-link>
 
         <!-- cart -->
-        <cart-dialog />
+        <cart-dialog v-if="isAuthenticated" />
 
-        <profile-menu />
+        <profile-menu v-if="isAuthenticated" />
 
-        <login-dialog />
+        <login-dialog v-if="!isAuthenticated" />
       </div>
       <!-- Right elements -->
     </div>
@@ -83,6 +83,8 @@ onMounted(() => {
     setLocale(storedLocale);
   }
 });
+
+const isAuthenticated = useIsAuthenticated()
 
 onMounted(async () => {
   const { Tooltip, Collapse, Dropdown, initTWE } = await import("tw-elements");

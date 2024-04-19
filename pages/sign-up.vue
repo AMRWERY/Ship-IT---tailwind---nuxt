@@ -109,7 +109,10 @@
 
                             <button type="submit"
                                 class="inline-block px-5 py-3 text-sm font-medium text-white bg-blue-500 rounded-lg ">
-                                {{ $t('btn.sign_up') }}
+                                {{ loading ? $t('Loading...') : $t('btn.sign_up') }}
+                                <template v-if="loading">
+                                    <icon name="svg-spinners:6-dots-scale-middle" class="animate-spin" />
+                                </template>
                             </button>
                         </div>
                     </div>
@@ -165,14 +168,20 @@ const lastName = ref('')
 const email = ref('')
 const password = ref('')
 const { t } = useI18n();
+const loading = ref(false);
 
 const signUp = async () => {
-    await store.userSignUp({
-        email: email.value,
-        password: password.value,
-        firstName: firstName.value,
-        lastName: lastName.value
-    });
+    loading.value = true;
+    if (email.value && password.value) {
+        await store.userSignUp({
+            email: email.value,
+            password: password.value,
+            firstName: firstName.value,
+            lastName: lastName.value
+        });
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        loading.value = false;
+    }
 };
 
 const signUpWithGoogleAccount = () => {
