@@ -6,17 +6,13 @@
         <Carousel v-bind="settings" :breakpoints="breakpoints" :wrapAround="true" :transition="500" :autoplay="3000">
           <Slide v-for="(card, index) in store.shopByBrand" :key="index">
             <div class="carousel__item">
-              <div class="carousel__item">
-                <div
-                  class="relative flex justify-center flex-shrink-0 h-56 mx-2 overflow-hidden border border-white w-44 rounded-xl">
-                  <div class="relative overflow-hidden bg-no-repeat bg-cover transit">
-                    <img class="rounded-t-lg" :src="getImageUrl(card.img)" />
-                  </div>
+              <div class="relative flex justify-center flex-shrink-0 h-48 mx-2 overflow-hidden w-44 rounded-xl">
+                <div class="relative overflow-hidden bg-no-repeat bg-cover transit">
+                  <img class="h-48 rounded-t-lg" :src="getImageUrl(card.img)" />
                 </div>
               </div>
             </div>
           </Slide>
-
           <template #addons>
             <Navigation />
           </template>
@@ -43,13 +39,12 @@
       </div>
     </div>
 
-    <div class="max-w-full py-6 mx-auto mt-8  sm:px-6 lg:px-8">
+    <div class="max-w-full py-6 mx-auto mt-8 sm:px-6 lg:px-8">
       <img src="https://justfields.com/storage/projects/7M5rV059/expressss.webp"
         class="w-full h-60 xs:h-56 sm:h-72 md:h-96">
     </div>
   </div>
 </template>
-
 
 <script setup>
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
@@ -102,3 +97,24 @@ const cards = ref([
   { title: 'home.accessories_and_bags', subtitle: 'home.large_collections_of_sharpening_up_your_fashion_look_with_these_statement', img: 'https://justfields.com/storage/projects/7M5rV059/bagssss.jpg', route: '' },
 ])
 </script>
+
+<style>
+.carousel__item {
+  min-height: 200px;
+  font-size: 20px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__prev,
+.carousel__next {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

@@ -68,9 +68,13 @@
                   </form-inputs>
                 </div>
 
-                <button type="submit"
+                <button type="submit" data-twe-modal-dismiss
                   class="block px-8 py-3 mt-1 text-sm font-semibold text-center text-white transition duration-100 bg-gray-800 rounded-lg outline-none ring-gray-300 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">{{
-                    $t('btn.login') }}</button>
+                    loading ? $t('Loading...') : $t('btn.login') }}
+                  <template v-if="loading">
+                    <icon name="svg-spinners:6-dots-scale-middle" class="animate-spin" />
+                  </template>
+                </button>
               </div>
             </FormKit>
 
@@ -125,13 +129,26 @@
 const store = useAuthStore()
 const email = ref('')
 const password = ref('')
+const loading = ref(false);
 
-const signIn = () => {
-  store.userSignIn({
-    email: email.value,
-    password: password.value,
-  });
+const signIn = async () => {
+  loading.value = true;
+  if (email.value && password.value) {
+    await store.userSignIn({
+      email: email.value,
+      password: password.value,
+    });
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    loading.value = false;
+  }
 };
+
+// const signIn = () => {
+//   store.userSignIn({
+//     email: email.value,
+//     password: password.value,
+//   });
+// };
 
 const signInWithGoogleAccount = () => {
   store.signInWithGoogle({

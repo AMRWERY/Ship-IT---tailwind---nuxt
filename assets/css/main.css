@@ -1,3 +1,4 @@
+/*directions*/
 .rtl {
   direction: rtl;
   text-align: right;
@@ -8,6 +9,7 @@
   text-align: left;
 }
 
+/*scroll*/
 .desc::-webkit-scrollbar {
   width: 6px;
 }
