@@ -31,12 +31,12 @@
               <div class="flex flex-col gap-4 p-4">
                 <div>
                   <form-inputs>
-                    <template #email="{ icon, label }">
+                    <template #email="{ icon, label, placeholder }">
                       <label for="email" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
                         label }}</label>
                       <div class="relative">
                         <FormKit name="email" type="email" v-model="email" validation="required|email|ends_with:.com"
-                          validation-visibility="dirty" placeholder="test@test.com" message-class="text-red-600 mt-1.5"
+                          validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
                           input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                         <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                           <icon :name="icon" class="w-5 h-5 text-gray-400" />
@@ -48,7 +48,7 @@
 
                 <div>
                   <form-inputs>
-                    <template #password="{ icon, label }">
+                    <template #password="{ icon, label, placeholder }">
                       <div class="flex items-center">
                         <label for="password" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
                           label }}</label>
@@ -58,7 +58,7 @@
                       <div class="relative">
                         <FormKit name="password" type="password" v-model="password"
                           validation="required|password|length:6,7" validation-visibility="dirty"
-                          :placeholder="$t('placeholder.enter_your_password')" message-class="mt-1.5 text-red-600"
+                          :placeholder="placeholder" message-class="mt-1.5 text-red-600"
                           input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                         <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                           <icon :name="icon" class="w-5 h-5 text-gray-400 mt-2.5" />

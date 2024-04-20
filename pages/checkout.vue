@@ -42,7 +42,7 @@
             <div class="flex flex-col w-full px-4 py-4">
               <span class="font-semibold">Nike Air Max Pro 8888 - Super Light</span>
               <span class="float-right text-gray-400">42EU - 8.5US</span>
-              <p class="text-lg font-bold">EGP138.99</p>
+              <p class="text-lg font-bold">{{ $t('products.egp') }} 138.99</p>
             </div>
           </div>
           <div class="flex flex-col bg-white rounded-lg sm:flex-row">
@@ -51,7 +51,7 @@
             <div class="flex flex-col w-full px-4 py-4">
               <span class="font-semibold">Nike Air Max Pro 8888 - Super Light</span>
               <span class="float-right text-gray-400">42EU - 8.5US</span>
-              <p class="mt-auto text-lg font-bold">EGP238.99</p>
+              <p class="mt-auto text-lg font-bold">{{ $t('products.egp') }} 238.99</p>
             </div>
           </div>
         </div>
@@ -98,15 +98,15 @@
         <p class="text-gray-400">
           {{ $t('checkout.complete_your_order_by_providing_your_payment_details') }}
         </p>
-        <FormKit type="form" id="login-form" :actions="false" :incomplete-message="false">
-          <div>
+        <FormKit type="form" id="checkout-form" :actions="false" :incomplete-message="false">
+          <div class="space-y-4">
             <form-inputs>
-              <template #email="{ icon, label }">
-                <label for="email" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+              <template #email="{ icon, label, placeholder }">
+                <label for="email" class="inline-block mt-4 mb-1 text-sm text-gray-800 sm:text-base">{{
                   label }}</label>
                 <div class="relative">
                   <FormKit name="email" type="email" v-model="email" validation="required|email|ends_with:.com"
-                    validation-visibility="dirty" placeholder="test@test.com" message-class="text-red-600 mt-1.5"
+                    validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
                     input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                   <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                     <icon :name="icon" class="w-5 h-5 text-gray-400" />
@@ -116,13 +116,12 @@
             </form-inputs>
 
             <form-inputs>
-              <template #card-holder="{ icon, label }">
+              <template #card-holder="{ icon, label, placeholder }">
                 <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
                   label }}</label>
                 <div class="relative">
                   <FormKit name="first name" type="text" v-model="cardHolder" validation="required|contains_alpha"
-                    validation-visibility="dirty" :placeholder="$t('placeholder.your_full_name_here')"
-                    message-class="text-red-600 mt-1.5"
+                    validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
                     input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                   <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                     <icon :name="icon" class="w-5 h-5 text-gray-400" />
@@ -134,13 +133,12 @@
             <div class="flex gap-2">
               <div class="relative flex-shrink-0 w-7/12">
                 <form-inputs>
-                  <template #card-details="{ icon, label }">
+                  <template #card-details="{ icon, label, placeholder }">
                     <label for="card-no" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
                       label }}</label>
                     <div class="relative">
                       <FormKit name="card-no" type="text" v-model="cardNumber" validation="required|number"
-                        validation-visibility="dirty" placeholder="xxxx-xxxx-xxxx-xxxx"
-                        message-class="text-red-600 mt-1.5"
+                        validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
                         input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                       <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                         <icon :name="icon" class="w-5 h-5 text-gray-400" />
@@ -150,22 +148,22 @@
                 </form-inputs>
               </div>
               <form-inputs>
-                <template #expiry_date>
+                <template #expiry_date="{ placeholder }">
                   <label for="credit-expiry" class="inline-block mb-1 text-sm text-gray-800 sm:text-base"></label>
                   <div class="relative">
                     <FormKit name="credit-expiry" type="text" v-model="expiryDate"
-                      validation="required|date_format:MM/YY" validation-visibility="dirty" placeholder="MM/YY"
+                      validation="required|date_format:MM/YY" validation-visibility="dirty" :placeholder="placeholder"
                       message-class="text-red-600 mt-1.5"
                       input-class="w-full px-3 py-2 mt-1 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                   </div>
                 </template>
               </form-inputs>
               <form-inputs>
-                <template #cvc>
+                <template #cvc="{ placeholder }">
                   <label for="credit-cvc" class="inline-block mb-1 text-sm text-gray-800 sm:text-base"></label>
                   <div class="relative">
                     <FormKit name="credit-cvc" type="text" v-model="cvc" validation="required|number|length:3"
-                      validation-visibility="dirty" placeholder="CVC" message-class="text-red-600 mt-1.5"
+                      validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
                       input-class="w-full px-3 py-2 mt-1 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                   </div>
                 </template>
@@ -175,13 +173,13 @@
             <div class="flex gap-2">
               <div class="relative flex-shrink-0 w-7/12">
                 <form-inputs>
-                  <template #street-address="{ label }">
+                  <template #street-address="{ label, placeholder }">
                     <label for="street-address" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
                       label }}</label>
                     <div class="relative">
                       <FormKit name="street-address" type="text" v-model="streetAddress"
                         validation="required|contains_alpha_spaces|length:10,100" validation-visibility="dirty"
-                        :placeholder="$t('placeholder.street_address')" message-class="text-red-600 mt-1.5"
+                        :placeholder="placeholder" message-class="text-red-600 mt-1.5"
                         input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                       <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                         <img class="object-contain w-4 h-4"
@@ -202,38 +200,38 @@
                 </select>
               </div>
               <form-inputs>
-                <template #billing-zip>
+                <template #billing-zip="{ placeholder }">
                   <label for="billing-zip" class="inline-block mb-1 text-sm text-gray-800 sm:text-base"></label>
                   <div class="relative">
-                    <FormKit name="billing-zip" type="text" v-model="zip" :placeholder="$t('placeholder.zip')"
+                    <FormKit name="billing-zip" type="text" v-model="zip" :placeholder="placeholder"
                       input-class="w-full px-3 py-2 mt-1 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                   </div>
                 </template>
               </form-inputs>
             </div>
           </div>
+          <!-- Total -->
+          <div>
+            <div class="py-2 mt-6 border-t border-b">
+              <div class="flex items-center justify-between">
+                <p class="text-sm font-medium text-gray-900">{{ $t('checkout.subtotal') }}</p>
+                <p class="font-semibold text-gray-900">{{ $t('products.egp') }} 399.00</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-sm font-medium text-gray-900">{{ $t('checkout.shipping') }}</p>
+                <p class="font-semibold text-gray-900">{{ $t('products.egp') }} 8.00</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-6">
+              <p class="text-sm font-medium text-gray-900">{{ $t('checkout.total') }}</p>
+              <p class="text-2xl font-semibold text-gray-900">{{ $t('products.egp') }} 408.00</p>
+            </div>
+          </div>
+          <button type="submit" class="w-full px-6 py-3 mt-4 mb-8 font-medium text-white bg-gray-900 rounded-md">
+            {{ $t('btn.place_order') }}
+          </button>
         </FormKit>
 
-        <!-- Total -->
-        <div>
-          <div class="py-2 mt-6 border-t border-b">
-            <div class="flex items-center justify-between">
-              <p class="text-sm font-medium text-gray-900">{{ $t('checkout.subtotal') }}</p>
-              <p class="font-semibold text-gray-900">EGP399.00</p>
-            </div>
-            <div class="flex items-center justify-between">
-              <p class="text-sm font-medium text-gray-900">{{ $t('checkout.shipping') }}</p>
-              <p class="font-semibold text-gray-900">EGP8.00</p>
-            </div>
-          </div>
-          <div class="flex items-center justify-between mt-6">
-            <p class="text-sm font-medium text-gray-900">{{ $t('checkout.total') }}</p>
-            <p class="text-2xl font-semibold text-gray-900">EGP408.00</p>
-          </div>
-        </div>
-        <button class="w-full px-6 py-3 mt-4 mb-8 font-medium text-white bg-gray-900 rounded-md">
-          {{ $t('btn.place_order') }}
-        </button>
       </div>
     </div>
   </div>

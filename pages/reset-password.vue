@@ -19,12 +19,12 @@
               <div class="grid gap-y-4">
                 <div>
                   <form-inputs>
-                    <template #email="{ icon, label }">
+                    <template #email="{ icon, label, placeholder }">
                       <label for="email" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
                         label }}</label>
                       <div class="relative">
                         <FormKit name="email" type="email" v-model="email" validation="required|email|ends_with:.com"
-                          validation-visibility="dirty" placeholder="test@test.com" message-class="text-red-600 mt-1.5"
+                          validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
                           input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                         <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                           <icon :name="icon" class="w-5 h-5 text-gray-400" />
@@ -56,6 +56,6 @@ const resetPassword = () => {
 };
 
 useHead({
-    title: 'Reset Password'
+  title: 'Reset Password'
 })
 </script>

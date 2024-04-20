@@ -33,7 +33,7 @@
                                                 <HeadlessDialogTitle class="text-lg font-medium text-gray-900">
                                                     <nuxt-link to="/cart" @click="open = false">{{
                                                         $t('cart.shopping_cart')
-                                                    }}</nuxt-link>
+                                                        }}</nuxt-link>
                                                 </HeadlessDialogTitle>
                                                 <div class="flex items-center ml-3 h-7">
                                                     <button type="button"
@@ -69,10 +69,12 @@
                                                                             <nuxt-link to="">{{ product.title
                                                                                 }}</nuxt-link>
                                                                         </h3>
-                                                                        <p class="ml-4">EGP{{ product.price }}</p>
+                                                                        <p class="ml-4">{{ $t('products.egp') }} {{
+                                                                            product.price }}</p>
                                                                     </div>
-                                                                    <p class="mt-1 text-sm text-gray-500">Quantity: {{
-                                                                        product.quantity }}
+                                                                    <p class="mt-1 text-sm text-gray-500">{{
+                                                                        $t('products.quantity') }} {{
+                                                                            product.quantity }}
                                                                     </p>
                                                                 </div>
                                                                 <div
@@ -83,7 +85,7 @@
                                                                         <button type="button"
                                                                             @click="removeProduct(product.id)"
                                                                             class="font-medium text-indigo-600 hover:text-indigo-500">{{
-                                                                            $t('btn.remove') }}</button>
+                                                                                $t('btn.remove') }}</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -115,7 +117,7 @@
                                             </div>
                                             <div class="flex justify-between text-base font-medium text-gray-900">
                                                 <p>{{ $t('cart.subtotal') }}</p>
-                                                <p>EGP{{ calculateSubtotal() }}</p>
+                                                <p>{{ $t('products.egp') }} {{ calculateSubtotal() }}</p>
                                             </div>
                                             <p class="mt-0.5 text-sm text-gray-500">{{
                                                 $t('cart.shipping_and_taxes_calculated_at_checkout') }}
@@ -123,7 +125,7 @@
                                             <div class="mt-6">
                                                 <nuxt-link to="/checkout" type="button" @click="open = false"
                                                     class="flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">{{
-                                                    $t('btn.checkout') }}</nuxt-link>
+                                                        $t('btn.checkout') }}</nuxt-link>
                                             </div>
                                             <div class="flex justify-center mt-6 text-sm text-center text-gray-500">
                                                 <p>
