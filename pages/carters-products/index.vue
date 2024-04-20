@@ -23,7 +23,7 @@
                                     <button type="button"
                                         class="flex items-center justify-center w-10 h-10 p-2 -mr-2 text-gray-400 bg-white rounded-md"
                                         @click="mobileFiltersOpen = false">
-                                        <i class="w-6 h-6 fa-solid fa-xmark" aria-hidden="true"></i>
+                                        <icon name="ci:close-sm" class="w-6 h-6" aria-hidden="true" />
                                     </button>
                                 </div>
 
@@ -37,9 +37,10 @@
                                                 class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
                                                 <span class="font-medium text-gray-900">Price (EGP)</span>
                                                 <span class="flex items-center ml-6">
-                                                    <i class="w-5 h-5 fa-solid fa-plus" aria-hidden="true"
-                                                        v-if="!open"></i>
-                                                    <i class="w-5 h-5 fa-solid fa-minus" aria-hidden="true" v-else></i>
+                                                    <icon name="ant-design:plus-outlined" class="w-5 h-5"
+                                                        aria-hidden="true" v-if="!open" />
+                                                    <icon name="ant-design:minus-outlined" class="w-5 h-5"
+                                                        aria-hidden="true" v-else />
                                                 </span>
                                             </HeadlessDisclosureButton>
                                         </h3>
@@ -78,9 +79,10 @@
                                                 class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
                                                 <span class="font-medium text-gray-900">Fulfillment</span>
                                                 <span class="flex items-center ml-6">
-                                                    <i class="w-5 h-5 fa-solid fa-plus" aria-hidden="true"
-                                                        v-if="!open"></i>
-                                                    <i class="w-5 h-5 fa-solid fa-minus" aria-hidden="true" v-else></i>
+                                                    <icon name="ant-design:plus-outlined" class="w-5 h-5"
+                                                        aria-hidden="true" v-if="!open" />
+                                                    <icon name="ant-design:minus-outlined" class="w-5 h-5"
+                                                        aria-hidden="true" v-else />
                                                 </span>
                                             </HeadlessDisclosureButton>
                                         </h3>
@@ -93,7 +95,7 @@
                                                         class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
                                                     <label for="category" class="ml-3 text-sm text-gray-600">{{
                                                         ful.label
-                                                        }}</label>
+                                                    }}</label>
                                                 </div>
                                             </div>
                                         </HeadlessDisclosurePanel>
@@ -107,9 +109,10 @@
                                                 class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
                                                 <span class="font-medium text-gray-900">Categories</span>
                                                 <span class="flex items-center ml-6">
-                                                    <i class="w-5 h-5 fa-solid fa-plus" aria-hidden="true"
-                                                        v-if="!open"></i>
-                                                    <i class="w-5 h-5 fa-solid fa-minus" aria-hidden="true" v-else></i>
+                                                    <icon name="ant-design:plus-outlined" class="w-5 h-5"
+                                                        aria-hidden="true" v-if="!open" />
+                                                    <icon name="ant-design:minus-outlined" class="w-5 h-5"
+                                                        aria-hidden="true" v-else />
                                                 </span>
                                             </HeadlessDisclosureButton>
                                         </h3>
@@ -123,7 +126,7 @@
                                                         @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
                                                     <label for="category" class="ml-3 text-sm text-gray-600">{{
                                                         category.label
-                                                        }}</label>
+                                                    }}</label>
                                                 </div>
                                             </div>
                                         </HeadlessDisclosurePanel>
@@ -137,9 +140,10 @@
                                                 class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
                                                 <span class="font-medium text-gray-900">Colors</span>
                                                 <span class="flex items-center ml-6">
-                                                    <i class="w-5 h-5 fa-solid fa-plus" aria-hidden="true"
-                                                        v-if="!open"></i>
-                                                    <i class="w-5 h-5 fa-solid fa-minus" aria-hidden="true" v-else></i>
+                                                    <icon name="ant-design:plus-outlined" class="w-5 h-5"
+                                                        aria-hidden="true" v-if="!open" />
+                                                    <icon name="ant-design:minus-outlined" class="w-5 h-5"
+                                                        aria-hidden="true" v-else />
                                                 </span>
                                             </HeadlessDisclosureButton>
                                         </h3>
@@ -172,12 +176,12 @@
                     <div class="flex items-center">
                         <button type="button" class="p-2 ml-5 -m-2 text-gray-400 hover:text-gray-500 sm:ml-7">
                             <span class="sr-only">View grid</span>
-                            <i class="w-5 h-5 fa-solid fa-square" aria-hidden="true"></i>
+                            <icon name="material-symbols:square-rounded" class="w-5 h-5" aria-hidden="true" />
                         </button>
                         <button type="button" class="p-2 ml-4 -m-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
                             @click="mobileFiltersOpen = true">
                             <span class="sr-only">Filters</span>
-                            <i class="w-5 h-5 fa-solid fa-filter" aria-hidden="true"></i>
+                            <icon name="material-symbols:filter-alt" class="w-5 h-5" aria-hidden="true" />
                         </button>
                     </div>
                 </div>
@@ -195,8 +199,10 @@
                                         class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
                                         <span class="font-medium text-gray-900">Price (EGP)</span>
                                         <span class="flex items-center ml-6">
-                                            <i class="w-5 h-5 fa-solid fa-plus" aria-hidden="true" v-if="!open"></i>
-                                            <i class="w-5 h-5 fa-solid fa-minus" aria-hidden="true" v-else></i>
+                                            <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
+                                                v-if="!open" />
+                                            <icon name="ant-design:minus-outlined" class="w-5 h-5" aria-hidden="true"
+                                                v-else />
                                         </span>
                                     </HeadlessDisclosureButton>
                                 </h3>
@@ -234,8 +240,10 @@
                                         class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
                                         <span class="font-medium text-gray-900">Fulfillment</span>
                                         <span class="flex items-center ml-6">
-                                            <i class="w-5 h-5 fa-solid fa-plus" aria-hidden="true" v-if="!open"></i>
-                                            <i class="w-5 h-5 fa-solid fa-minus" aria-hidden="true" v-else></i>
+                                            <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
+                                                v-if="!open" />
+                                            <icon name="ant-design:minus-outlined" class="w-5 h-5" aria-hidden="true"
+                                                v-else />
                                         </span>
                                     </HeadlessDisclosureButton>
                                 </h3>
@@ -259,8 +267,10 @@
                                         class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
                                         <span class="font-medium text-gray-900">Categories</span>
                                         <span class="flex items-center ml-6">
-                                            <i class="w-5 h-5 fa-solid fa-plus" aria-hidden="true" v-if="!open"></i>
-                                            <i class="w-5 h-5 fa-solid fa-minus" aria-hidden="true" v-else></i>
+                                            <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
+                                                v-if="!open" />
+                                            <icon name="ant-design:minus-outlined" class="w-5 h-5" aria-hidden="true"
+                                                v-else />
                                         </span>
                                     </HeadlessDisclosureButton>
                                 </h3>
@@ -286,8 +296,10 @@
                                         class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
                                         <span class="font-medium text-gray-900">Colors</span>
                                         <span class="flex items-center ml-6">
-                                            <i class="w-5 h-5 fa-solid fa-plus" aria-hidden="true" v-if="!open"></i>
-                                            <i class="w-5 h-5 fa-solid fa-minus" aria-hidden="true" v-else></i>
+                                            <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
+                                                v-if="!open" />
+                                            <icon name="ant-design:minus-outlined" class="w-5 h-5" aria-hidden="true"
+                                                v-else />
                                         </span>
                                     </HeadlessDisclosureButton>
                                 </h3>
