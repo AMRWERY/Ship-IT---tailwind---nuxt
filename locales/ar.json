@@ -45,7 +45,11 @@
     "update": "تحديث",
     "apply": "تطبيق",
     "check_out": "الدفع",
-    "place_order": "تقديم الطلب"
+    "place_order": "تقديم الطلب",
+    "remove": "إزالة",
+    "checkout": "الدفع",
+    "adding": "جاري الإضافة...",
+    "buy_now": "اشترِ الآن"
   },
   "auth": {
     "login_into_your_account": "تسجيل الدخول إلى حسابك",
@@ -79,7 +83,11 @@
     "your_full_name_here": "الاسم الكامل الخاص بك هنا",
     "street_address": "عنوان الشارع",
     "select_a_state": "اختر المحافظه",
-    "zip": "الرمز البريدي"
+    "zip": "الرمز البريدي",
+    "coupon_code": "رمز القسيمة",
+    "min": "الحد الأدنى",
+    "max": "الحد الأقصى",
+    "search_products": "ابحث عن المنتجات..."
   },
   "home": {
     "shop_by_brand": "التسوق حسب العلامة التجارية",
@@ -178,7 +186,8 @@
     "cart_items": "عناصر العربة",
     "shipping": "الشحن",
     "total": "الإجمالي",
-    "including_vat": "تشمل الضريبة المضافة"
+    "including_vat": "تشمل الضريبة المضافة",
+    "or": "أو"
   },
   "checkout": {
     "checkout": "الدفع",
@@ -201,5 +210,31 @@
     "state": "الدولة",
     "subtotal": "المجموع الفرعي",
     "total": "الإجمالي"
+  },
+  "products": {
+    "pages_over": "الصفحات فوق",
+    "items_for": "العناصر لـ",
+    "price": "السعر",
+    "egp": "ج.م",
+    "to": "إلى",
+    "go": "انتقل",
+    "fulfillment": "الوفاء",
+    "categories": "الفئات",
+    "colors": "الألوان",
+    "reviews": "تقييمات",
+    "price_and_other_details_may_vary_based_on_product_size_and_color": "قد تختلف الأسعار والتفاصيل الأخرى استنادًا إلى حجم المنتج ولونه.",
+    "results": "النتائج",
+    "get_it_by": "احصل عليه خلال",
+    "sku": "رمز التخزين التعريفي",
+    "availability": "التوفر",
+    "color": "اللون:",
+    "size": "الحجم:",
+    "select": "اختر",
+    "package": "الحزمة:",
+    "style": "النمط:",
+    "type": "النوع:",
+    "category": "الفئة:",
+    "quantity": "الكمية:",
+    "related_products": "المنتجات ذات الصلة"
   }
 }

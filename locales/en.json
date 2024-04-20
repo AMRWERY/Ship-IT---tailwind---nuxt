@@ -45,7 +45,11 @@
     "update": "Update",
     "apply": "Apply",
     "check_out": "Check out",
-    "place_order": "Place Order"
+    "place_order": "Place Order",
+    "remove": "Remove",
+    "checkout": "Checkout",
+    "adding": "Adding...",
+    "buy_now": "Buy Now"
   },
   "auth": {
     "login_into_your_account": "Login into your account",
@@ -79,7 +83,11 @@
     "your_full_name_here": "your full name here",
     "street_address": "street address",
     "select_a_state": "select a state",
-    "zip": "Zip"
+    "zip": "Zip",
+    "coupon_code": "Coupon Code",
+    "min": "min",
+    "max": "max",
+    "search_products": "Search Products..."
   },
   "home": {
     "shop_by_brand": "Shop by Brand",
@@ -178,7 +186,8 @@
     "cart_items": "Cart Items",
     "shipping": "Shipping",
     "total": "Total",
-    "including_vat": "including VAT"
+    "including_vat": "including VAT",
+    "or": "or"
   },
   "checkout": {
     "checkout": "Checkout",
@@ -201,5 +210,31 @@
     "state": "State",
     "subtotal": "Subtotal",
     "total": "Total"
+  },
+  "products": {
+    "pages_over": "pages over",
+    "items_for": "items for",
+    "price": "Price",
+    "egp": "EGP",
+    "to": "To",
+    "go": "Go",
+    "fulfillment": "Fulfillment",
+    "categories": "Categories",
+    "colors": "Colors",
+    "results": "Results",
+    "price_and_other_details_may_vary_based_on_product_size_and_color": "Price and other details may vary based on product size and color.",
+    "reviews": "reviews",
+    "get_it_by": "Get it by",
+    "sku": "SKU",
+    "availability": "Availability",
+    "color": "Color:",
+    "size": "Size:",
+    "select": "Select",
+    "package": "Package:",
+    "style": "Style:",
+    "type": "Type:",
+    "category": "Category:",
+    "quantity": "Quantity:",
+    "related_products": "Related Products"
   }
 }

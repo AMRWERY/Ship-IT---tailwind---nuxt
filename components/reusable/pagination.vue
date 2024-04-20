@@ -4,7 +4,7 @@
             <a href="#"
                 class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">Previous</a>
             <a href="#"
-                class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">Next</a>
+                class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md ms-3 hover:bg-gray-50">Next</a>
         </div>
         <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
             <div>
@@ -25,11 +25,12 @@
                 </p>
             </div>
             <div>
-                <nav class="inline-flex -space-x-px rounded-md shadow-sm isolate" aria-label="Pagination">
+                <nav class="inline-flex rounded-md shadow-sm -space-s-px isolate" aria-label="Pagination">
                     <a href="#"
-                        class="relative inline-flex items-center px-2 py-2 text-gray-400 rounded-l-md ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                        class="relative inline-flex items-center px-2 py-2 text-gray-400 rounded-s-md ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
                         <span class="sr-only">Previous</span>
-                        <i class="fa-solid fa-chevron-left h-5 w-5 mt-0.5 ml-1" aria-hidden="true"></i>
+                        <icon name="ic:baseline-keyboard-double-arrow-left" class="h-5 w-5 mt-0.5 ms-1"
+                            aria-hidden="true" />
                     </a>
                     <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
                     <a href="#" aria-current="page"
@@ -49,7 +50,8 @@
                     <a href="#"
                         class="relative inline-flex items-center px-2 py-2 text-gray-400 rounded-r-md ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
                         <span class="sr-only">Next</span>
-                        <i class="fa-solid fa-chevron-right h-5 w-5 mt-0.5 ml-1" aria-hidden="true"></i>
+                        <icon name="ic:baseline-keyboard-double-arrow-right" class="h-5 w-5 mt-0.5 ms-1"
+                            aria-hidden="true" />
                     </a>
                 </nav>
             </div>
@@ -58,11 +60,5 @@
 </template>
 
 <script setup>
-// import { ref } from "vue";
 
-// const items = ref([
-//     { id: 1, title: 'Back End Developer', department: 'Engineering', type: 'Full-time', location: 'Remote' },
-//     { id: 2, title: 'Front End Developer', department: 'Engineering', type: 'Full-time', location: 'Remote' },
-//     { id: 3, title: 'User Interface Designer', department: 'Design', type: 'Full-time', location: 'Remote' },
-// ])
 </script>

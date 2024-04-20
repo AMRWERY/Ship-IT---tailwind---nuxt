@@ -25,8 +25,8 @@
                             </div>
                             <div class="flex justify-between mt-4 sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                                 <div class="flex items-center">
-                                    <i @click="removeProduct(product.id)"
-                                        class="w-5 h-5 ml-auto duration-150 cursor-pointer fa-solid fa-xmark hover:text-red-500"></i>
+                                    <icon @click="removeProduct(product.id)" name="ci:close-md"
+                                        class="w-5 h-5 ml-auto duration-150 cursor-pointer hover:text-red-500"></icon>
                                 </div>
                             </div>
                         </div>

@@ -4,36 +4,36 @@
       <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <nav class="flex">
           <ol role="list" class="flex items-center">
-            <li class="text-left">
+            <li class="text-start">
               <div class="-m-1">
-                <a href="#"
+                <nuxt-link to="#"
                   class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800">
                   Home
-                </a>
+                </nuxt-link>
               </div>
             </li>
 
-            <li class="text-left">
+            <li class="text-start">
               <div class="flex items-center">
                 <span class="mx-2 text-gray-400">/</span>
                 <div class="-m-1">
-                  <a href="#"
+                  <nuxt-link to href="#"
                     class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800">
                     Products
-                  </a>
+                  </nuxt-link>
                 </div>
               </div>
             </li>
 
-            <li class="text-left">
+            <li class="text-start">
               <div class="flex items-center">
                 <span class="mx-2 text-gray-400">/</span>
                 <div class="-m-1">
-                  <a href="#"
+                  <nuxt-link to href="#"
                     class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800"
                     aria-current="page">
                     Coffee
-                  </a>
+                  </nuxt-link>
                 </div>
               </div>
             </li>
@@ -55,13 +55,13 @@
             </button>
           </div>
         </div>
-        <div class="w-full mt-6 lg:w-1/2 lg:pl-10 lg:py-6 lg:mt-0">
+        <div class="w-full mt-6 lg:w-1/2 lg:ps-10 lg:py-6 lg:mt-0">
           <div class="flex">
             <h2 class="font-medium tracking-widest text-blue-500 text-md title-font">
               {{ productDetails?.brand }}
             </h2>
-            <span class="p-1 ml-auto text-sm font-semibold text-green-600 bg-green-100 rounded-lg"
-              v-if="productDetails?.discount">{{ productDetails?.discount }}% off</span>
+            <span class="p-1 text-sm font-semibold text-green-600 bg-green-100 rounded-lg ms-auto"
+              v-if="productDetails?.discount">{{ productDetails?.discount }}% {{ $t('home.off') }}</span>
           </div>
           <h1 class="mb-1 text-3xl font-medium text-gray-900 title-font">
             {{ productDetails?.title }}
@@ -72,23 +72,23 @@
               <rating :rating="productDetails?.rating" :reviews="productDetails?.reviews" />
 
             </span>
-            <span class="flex py-2 pl-3 ml-3 border-l-2 border-gray-200">
+            <span class="flex py-2 border-gray-200 border-s-2 ms-3 ps-3">
               <a class="text-gray-500">
                 <icon name="ci:facebook" class="w-5 h-5" />
               </a>
-              <a class="ml-2 text-gray-500">
+              <a class="text-gray-500 ms-2">
                 <icon name="ci:twitter" class="w-5 h-5" />
               </a>
-              <a class="ml-2 text-gray-500">
+              <a class="text-gray-500 ms-2">
                 <icon name="fontisto:whatsapp" class="w-5 h-5" />
               </a>
             </span>
           </div>
           <div class="my-3">
-            <p>SKU: <strong>{{ productDetails?.sku }}</strong></p>
+            <p>{{ $t('products.sku') }}: <strong>{{ productDetails?.sku }}</strong></p>
           </div>
           <div class="mb-4">
-            <p>Availability: <strong>{{ productDetails?.availability }}</strong></p>
+            <p>{{ $t('products.availability') }}: <strong>{{ productDetails?.availability }}</strong></p>
           </div>
           <div class="overflow-x-hidden overflow-y-auto max-h-14 desc">
             <p class="leading-relaxed">
@@ -98,54 +98,54 @@
           <div class="flex items-center pb-5 mt-6 mb-5 border-gray-100">
             <div class="flex">
               <div class="items-center" v-if="productDetails?.color != null">
-                <p class="flex items-center mr-3">Color: <strong
-                    class="relative flex items-center justify-center px-4 py-3 ml-3 text-sm font-medium border rounded-md cursor-pointer hover:bg-gray-50 focus:outline-none sm:flex-1">{{
+                <p class="flex items-center me-3">{{ $t('products.color') }} <strong
+                    class="relative flex items-center justify-center px-4 py-3 text-sm font-medium border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1">{{
                       productDetails?.color }}</strong></p>
               </div>
               <div class="items-center" v-if="productDetails?.colors != null">
-                <p class="flex items-center mr-3">Color: <strong v-for="color in store.selectedProduct?.colors"
-                    :key="color"
-                    class="relative flex items-center justify-center px-4 py-3 ml-3 text-sm font-medium border rounded-md cursor-pointer hover:bg-gray-50 focus:outline-none sm:flex-1">{{
+                <p class="flex items-center me-3">{{ $t('products.color') }} <strong
+                    v-for="color in store.selectedProduct?.colors" :key="color"
+                    class="relative flex items-center justify-center px-4 py-3 text-sm font-medium border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1">{{
                       color }}</strong></p>
               </div>
             </div>
-            <div class="flex items-center ml-16" v-if="productDetails?.size != null">
-              <span class="mr-3">Size</span>
-              <div class="ml-auto">
+            <div class="flex items-center ms-16" v-if="productDetails?.size != null">
+              <span class="me-3">{{ $t('products.size') }} </span>
+              <div class="ms-auto">
                 <div class="relative">
                   <select
-                    class="py-2 pl-3 pr-10 text-base border border-gray-400 rounded appearance-none focus:outline-none focus:border-red-500">
-                    <option>--Select--</option>
+                    class="py-2 text-base border border-gray-400 rounded appearance-none pe-10 ps-3 focus:outline-none focus:border-red-500">
+                    <option>--{{ $t('products.select') }}--</option>
                     <option v-for="size in store.selectedProduct?.size" :key="size">{{ size }}</option>
                   </select>
                   <span
-                    class="absolute top-0 right-0 flex items-center justify-center w-10 h-full text-center text-gray-600 pointer-events-none">
+                    class="absolute top-0 flex items-center justify-center w-10 h-full text-center text-gray-600 pointer-events-none end-0">
                     <icon name="material-symbols:keyboard-arrow-down-rounded" class="w-4 h-4" />
                   </span>
                 </div>
               </div>
             </div>
-            <div class="items-center ml-16" v-if="productDetails?.oneSize != null">
-              <p class="flex items-center mr-3">Size: <strong
-                  class="relative flex items-center justify-center px-4 py-3 ml-3 text-sm font-medium border rounded-md cursor-pointer hover:bg-gray-50 focus:outline-none sm:flex-1">{{
+            <div class="items-center ms-16" v-if="productDetails?.oneSize != null">
+              <p class="flex items-center me-3">{{ $t('products.size') }} <strong
+                  class="relative flex items-center justify-center px-4 py-3 text-sm font-medium border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1">{{
                     productDetails?.oneSize }}</strong></p>
             </div>
-            <div class="items-center ml-16" v-if="productDetails?.package != null">
-              <p class="flex items-center mr-3">Package: <strong
-                  class="relative flex items-center justify-center px-4 py-3 ml-3 text-sm font-medium border rounded-md cursor-pointer hover:bg-gray-50 focus:outline-none sm:flex-1">{{
+            <div class="items-center ms-16" v-if="productDetails?.package != null">
+              <p class="flex items-center me-3">{{ $t('products.package') }} <strong
+                  class="relative flex items-center justify-center px-4 py-3 text-sm font-medium border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1">{{
                     productDetails?.package }}</strong></p>
             </div>
-            <div class="flex items-center ml-16" v-if="productDetails?.styles != null">
-              <span class="mr-3">Style</span>
-              <div class="ml-auto">
+            <div class="flex items-center ms-16" v-if="productDetails?.styles != null">
+              <span class="mr-3">{{ $t('products.style') }} </span>
+              <div class="ms-auto">
                 <div class="relative">
                   <select
-                    class="py-2 pl-3 pr-10 text-base border border-gray-400 rounded appearance-none focus:outline-none focus:border-red-500">
-                    <option>--Select--</option>
+                    class="py-2 text-base border border-gray-400 rounded appearance-none pe-10 ps-3 focus:outline-none focus:border-red-500">
+                    <option>--{{ $t('products.select') }}--</option>
                     <option v-for="style in store.selectedProduct?.styles" :key="style">{{ style }}</option>
                   </select>
                   <span
-                    class="absolute top-0 right-0 flex items-center justify-center w-10 h-full text-center text-gray-600 pointer-events-none">
+                    class="absolute top-0 flex items-center justify-center w-10 h-full text-center text-gray-600 pointer-events-none end-0">
                     <icon name="material-symbols:keyboard-arrow-down-rounded" class="w-4 h-4" />
                   </span>
                 </div>
@@ -153,15 +153,15 @@
             </div>
           </div>
           <div class="my-3" v-if="productDetails?.type != null">
-            <p>Type: <strong>{{ productDetails?.type }}</strong></p>
+            <p>{{ $t('products.type') }}: <strong>{{ productDetails?.type }}</strong></p>
           </div>
           <div class="my-3">
-            <p>Category: <strong>{{ productDetails?.category }}</strong></p>
+            <p>{{ $t('products.category') }} <strong>{{ productDetails?.category }}</strong></p>
           </div>
 
           <div class="flex items-center">
-            <label for="quantity"
-              class="mt-5 mr-4 text-xl font-semibold text-gray-700 dark:text-gray-400">Quantity</label>
+            <label for="quantity" class="mt-5 text-xl font-semibold text-gray-700 me-4 dark:text-gray-400">{{
+              $t('products.quantity') }}</label>
             <div class="relative flex flex-row w-full h-10 mt-6 bg-transparent rounded-lg">
               <button type="button" @click="decrementQuantity"
                 class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75 hover:bg-red-400">
@@ -180,19 +180,20 @@
 
           <hr class="mt-4">
           <div class="flex mt-6">
-            <span class="text-2xl font-medium text-gray-900 title-font">EGP{{ productDetails?.price }}</span>
-            <span class="mt-1 ml-1 font-medium text-gray-500 line-through text-md"
-              v-if="productDetails?.originalPrice">EGP{{ productDetails?.originalPrice
+            <span class="text-2xl font-medium text-gray-900 title-font">{{ $t('products.egp') }} {{
+              productDetails?.price }}</span>
+            <span class="mt-1 font-medium text-gray-500 line-through ms-2 text-md"
+              v-if="productDetails?.originalPrice">{{ $t('products.egp') }} {{ productDetails?.originalPrice
               }}</span>
             <button @click="addToCart" :class="{
               'bg-red-500 hover:bg-red-600': isAddingToCart,
               'bg-indigo-500 hover:bg-indigo-600': !isAddingToCart,
             }"
-              class="inline-flex items-center justify-center px-6 py-2 ml-auto text-white transition-all duration-200 ease-in-out border-0 rounded focus:outline-none focus:shadow"
+              class="inline-flex items-center justify-center px-6 py-2 text-white transition-all duration-200 ease-in-out border-0 rounded ms-auto focus:outline-none focus:shadow"
               :disabled="isAddingToCart">
               <icon name="svg-spinners:blocks-shuffle-3" class="w-5 h-5 me-3" v-if="isAddingToCart"></icon>
               <icon name="material-symbols:shopping-basket-sharp" class="w-5 h-5 me-3" v-else />
-              {{ isAddingToCart ? 'Adding...' : 'Buy Now' }}
+              {{ isAddingToCart ? $t('btn.adding') : $t('btn.buy_now') }}
             </button>
           </div>
         </div>

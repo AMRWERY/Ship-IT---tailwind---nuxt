@@ -1,33 +1,17 @@
-<!-- <template>
-    <div class="flex items-center">
-        <i class="fa-solid fa-star w-4 h-4 text-yellow-300 me-1" aria-hidden="true"></i>
-        <p class="ms-2 text-sm font-bold text-gray-900 dark:text-white">{{ rating }}</p>
-        <span class="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
-        <a href="#" class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white">{{ reviews }}
-            reviews</a>
-    </div>
-</template>
-
-<script setup>
-const props = defineProps(["rating", 'reviews']);
-</script> -->
-
 <template>
     <div class="flex items-center">
         <div v-for="star in stars" :key="star" class="flex items-center">
-            <i :class="star.iconClass" aria-hidden="true"></i>
+            <icon :name="star.iconName" :class="star.iconClass" aria-hidden="true"></icon>
         </div>
-        <p class="ms-2 text-sm font-bold text-gray-900 dark:text-white">{{ rating }}</p>
+        <p class="text-sm font-bold text-gray-900 ms-2 dark:text-white">{{ rating }}</p>
         <span class="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
         <a href="#" class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white">
-            {{ reviews }} reviews
+            {{ reviews }} {{ $t('products.reviews') }}
         </a>
     </div>
 </template>
-  
-<script setup>
-import { computed } from 'vue';
 
+<script setup>
 const props = defineProps(['rating', 'reviews']);
 
 const stars = computed(() => {
@@ -38,15 +22,14 @@ const stars = computed(() => {
     const starsArray = [];
 
     for (let i = 0; i < fullStars; i++) {
-        starsArray.push({ iconClass: 'fa-solid fa-star w-4 h-4 text-yellow-300 me-1' });
+        starsArray.push({ iconClass: 'w-5 h-5 text-yellow-300', iconName: 'ic:baseline-star' });
     }
     if (hasHalfStar) {
-        starsArray.push({ iconClass: 'fa-solid fa-star-half w-4 h-4 text-yellow-300 me-1' });
+        starsArray.push({ iconClass: 'w-5 h-5 text-yellow-300', iconName: 'ic:baseline-star-half' });
     }
     for (let i = 0; i < emptyStars; i++) {
-        starsArray.push({ iconClass: 'fa-regular fa-star w-4 h-4 text-gray-300 me-1' });
+        starsArray.push({ iconClass: 'w-5 h-5 text-gray-300', iconName: 'ic:baseline-star-border' });
     }
     return starsArray;
 });
 </script>
-  

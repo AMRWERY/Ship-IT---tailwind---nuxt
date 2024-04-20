@@ -45,10 +45,10 @@
                                                             todayDeal.title }}</h1>
                                                     <div class="flex gap-2 mt-2">
                                                         <p class="font-medium text-gray-500 line-through text-md">
-                                                            ${{
+                                                            {{ $t('products.egp') }} {{
                                                                 todayDeal.originalPrice }}
                                                         </p>
-                                                        <p class="font-medium text-gray-900 text-md">${{
+                                                        <p class="font-medium text-gray-900 text-md">{{ $t('products.egp') }} {{
                                                             todayDeal.price
                                                         }}
                                                         </p>

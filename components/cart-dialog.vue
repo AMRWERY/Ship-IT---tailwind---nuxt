@@ -20,7 +20,7 @@
 
                 <div class="fixed inset-0 overflow-hidden">
                     <div class="absolute inset-0 overflow-hidden">
-                        <div class="fixed inset-y-0 right-0 flex max-w-full pl-10 pointer-events-none">
+                        <div class="fixed inset-y-0 flex max-w-full pl-10 pointer-events-none end-0">
                             <HeadlessTransitionChild as="template"
                                 enter="transform transition ease-in-out duration-500 sm:duration-700"
                                 enter-from="translate-x-full" enter-to="translate-x-0"
@@ -33,7 +33,7 @@
                                                 <HeadlessDialogTitle class="text-lg font-medium text-gray-900">
                                                     <nuxt-link to="/cart" @click="open = false">{{
                                                         $t('cart.shopping_cart')
-                                                        }}</nuxt-link>
+                                                    }}</nuxt-link>
                                                 </HeadlessDialogTitle>
                                                 <div class="flex items-center ml-3 h-7">
                                                     <button type="button"
@@ -82,7 +82,8 @@
                                                                     <div class="flex">
                                                                         <button type="button"
                                                                             @click="removeProduct(product.id)"
-                                                                            class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                                            class="font-medium text-indigo-600 hover:text-indigo-500">{{
+                                                                            $t('btn.remove') }}</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -100,7 +101,7 @@
                                                     <div>
                                                         <div class="relative flex mt-1 rounded-md shadow-sm"><input
                                                                 class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 shadow-sm appearance-none focus:outline-none sm:text-sm rounded-is-md focus:ring-indigo-500 focus:border-indigo-500"
-                                                                placeholder="Coupon Code" value="">
+                                                                :placeholder="$t('placeholder.coupon_code')" value="">
                                                             <span
                                                                 class="inline-flex items-center px-3 rounded-ie-md border border-is-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm !bg-transparent !p-0 !border-none !rounded-none">
                                                                 <button
@@ -120,12 +121,13 @@
                                                 $t('cart.shipping_and_taxes_calculated_at_checkout') }}
                                             </p>
                                             <div class="mt-6">
-                                                <nuxt-link to="/checkout" @click="open = false"
-                                                    class="flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">Checkout</nuxt-link>
+                                                <nuxt-link to="/checkout" type="button" @click="open = false"
+                                                    class="flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">{{
+                                                    $t('btn.checkout') }}</nuxt-link>
                                             </div>
                                             <div class="flex justify-center mt-6 text-sm text-center text-gray-500">
                                                 <p>
-                                                    or
+                                                    {{ $t('cart.or') }}
                                                     <nuxt-link type="button" to=""
                                                         class="font-medium text-indigo-600 hover:text-indigo-500"
                                                         @click="open = false">

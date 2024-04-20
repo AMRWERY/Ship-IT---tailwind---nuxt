@@ -18,11 +18,11 @@
                                 leave="transition ease-in-out duration-300 transform" leave-from="translate-x-0"
                                 leave-to="translate-x-full">
                                 <HeadlessDialogPanel
-                                    class="relative flex flex-col w-full h-full max-w-xs py-4 pb-12 ml-auto overflow-y-auto bg-white shadow-xl">
-                                    <div class="flex items-center justify-between px-4">
+                                    class="relative flex flex-col w-full h-full max-w-xs py-4 pb-12 overflow-y-auto bg-white shadow-xl ms-auto">
+                                    <div class="flex items-center justify-between px-4 mt-7">
                                         <h2 class="text-lg font-medium text-gray-900">Filters</h2>
                                         <button type="button"
-                                            class="flex items-center justify-center w-10 h-10 p-2 -mr-2 text-gray-400 bg-white rounded-md"
+                                            class="flex items-center justify-center w-10 h-10 p-2 text-gray-400 bg-white rounded-md -me-2"
                                             @click="mobileFiltersOpen = false">
                                             <icon name="ci:close-sm" class="w-6 h-6" aria-hidden="true" />
                                         </button>
@@ -36,8 +36,9 @@
                                             <h3 class="flow-root -my-3">
                                                 <HeadlessDisclosureButton
                                                     class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">Price (EGP)</span>
-                                                    <span class="flex items-center ml-6">
+                                                    <span class="font-medium text-gray-900">{{ $t('products.price') }}
+                                                        ({{ $t('products.egp') }})</span>
+                                                    <span class="flex items-center ms-6">
                                                         <icon name="ant-design:plus-outlined" class="w-5 h-5"
                                                             aria-hidden="true" v-if="!open" />
                                                         <icon name="ant-design:minus-outlined" class="w-5 h-5"
@@ -47,26 +48,29 @@
                                             </h3>
                                             <HeadlessDisclosurePanel class="pt-6">
                                                 <div class="space-y-4">
-                                                    <form class="relative flex items-center space-x-1"
+                                                    <form class="relative flex items-center space-s-1"
                                                         @submit.prevent="filterProducts">
                                                         <div>
                                                             <div class="relative mt-1 rounded-md shadow-sm">
                                                                 <input id="minPrice" name="minPrice" v-model="minPrice"
                                                                     class="flex-1 block w-full px-2 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 h-9"
-                                                                    type="number" step="100" placeholder="min">
+                                                                    type="number" step="100"
+                                                                    :placeholder="$t('placeholder.min')">
                                                             </div>
                                                         </div>
-                                                        <span class="text-gray-600">To</span>
+                                                        <span class="mx-auto mt-1 text-gray-600">{{ $t('products.to')
+                                                            }}</span>
                                                         <div>
                                                             <div class="relative mt-1 rounded-md shadow-sm">
                                                                 <input id="maxPrice" name="maxPrice" v-model="maxPrice"
                                                                     class="flex-1 block w-full px-2 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 h-9"
-                                                                    step="100" type="number" placeholder="max">
+                                                                    step="100" type="number"
+                                                                    :placeholder="$t('placeholder.max')">
                                                             </div>
                                                         </div>
                                                         <button
                                                             class="inline-flex items-center justify-center px-2 py-1 mt-1 font-medium text-indigo-700 bg-indigo-100 border border-transparent rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-indigo-200 focus:ring-indigo-500"
-                                                            type="submit">Go</button>
+                                                            type="submit">{{ $t('products.go') }}</button>
                                                     </form>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -78,8 +82,9 @@
                                             <h3 class="flow-root -my-3">
                                                 <HeadlessDisclosureButton
                                                     class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">Fulfillment</span>
-                                                    <span class="flex items-center ml-6">
+                                                    <span class="font-medium text-gray-900">{{
+                                                        $t('products.fulfillment') }}</span>
+                                                    <span class="flex items-center ms-6">
                                                         <icon name="ant-design:plus-outlined" class="w-5 h-5"
                                                             aria-hidden="true" v-if="!open" />
                                                         <icon name="ant-design:minus-outlined" class="w-5 h-5"
@@ -94,9 +99,9 @@
                                                         <input id="category" name="category" :value="ful.label"
                                                             type="checkbox" :checked="ful.checked"
                                                             class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
-                                                        <label for="category" class="ml-3 text-sm text-gray-600">{{
+                                                        <label for="category" class="text-sm text-gray-600 ms-3">{{
                                                             ful.label
-                                                            }}</label>
+                                                        }}</label>
                                                     </div>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -108,8 +113,9 @@
                                             <h3 class="flow-root -my-3">
                                                 <HeadlessDisclosureButton
                                                     class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">Categories</span>
-                                                    <span class="flex items-center ml-6">
+                                                    <span class="font-medium text-gray-900">{{ $t('products.categories')
+                                                        }}</span>
+                                                    <span class="flex items-center ms-6">
                                                         <icon name="ant-design:plus-outlined" class="w-5 h-5"
                                                             aria-hidden="true" v-if="!open" />
                                                         <icon name="ant-design:minus-outlined" class="w-5 h-5"
@@ -125,9 +131,9 @@
                                                             type="checkbox" :checked="category.checked"
                                                             class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                                                             @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
-                                                        <label for="category" class="ml-3 text-sm text-gray-600">{{
-                                                            category.label
-                                                            }}</label>
+                                                        <label for="category" class="text-sm text-gray-600 ms-3">{{
+                                                            $t(category.label)
+                                                        }}</label>
                                                     </div>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -139,8 +145,9 @@
                                             <h3 class="flow-root -my-3">
                                                 <HeadlessDisclosureButton
                                                     class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">Colors</span>
-                                                    <span class="flex items-center ml-6">
+                                                    <span class="font-medium text-gray-900">{{ $t('products.colors')
+                                                        }}</span>
+                                                    <span class="flex items-center ms-6">
                                                         <icon name="ant-design:plus-outlined" class="w-5 h-5"
                                                             aria-hidden="true" v-if="!open" />
                                                         <icon name="ant-design:minus-outlined" class="w-5 h-5"
@@ -156,9 +163,9 @@
                                                             type="checkbox" :checked="color.checked"
                                                             class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                                                             @change="color.checked = !color.checked; updateSelectedColor(color.label, color.checked)" />
-                                                        <label for="color" class="ml-3 text-sm text-gray-600">{{
+                                                        <label for="color" class="text-sm text-gray-600 ms-3">{{
                                                             color.label
-                                                            }}</label>
+                                                        }}</label>
                                                     </div>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -172,16 +179,16 @@
 
                 <main class="max-w-full px-4 mx-auto sm:px-6 lg:px-8">
                     <div class="flex items-baseline justify-between pt-12 pb-6 border-b border-gray-200">
-                        <p>1 - 2 pages over 43 items for <span
+                        <p>1 - 2 {{ $t('products.pages_over') }} 43 {{ $t('products.items_for') }} <span
                                 class="font-semibold tracking-tight text-blue-700 underline">carters</span>
                         </p>
                         <div class="flex items-center">
-                            <button type="button" class="p-2 ml-5 -m-2 text-gray-400 hover:text-gray-500 sm:ml-7">
+                            <button type="button" class="p-2 -m-2 text-gray-400 ms-5 hover:text-gray-500 sm:ms-7">
                                 <span class="sr-only">View grid</span>
                                 <icon name="material-symbols:square-rounded" class="w-5 h-5" aria-hidden="true" />
                             </button>
                             <button type="button"
-                                class="p-2 ml-4 -m-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
+                                class="p-2 -m-2 text-gray-400 ms-4 hover:text-gray-500 sm:ms-6 lg:hidden"
                                 @click="mobileFiltersOpen = true">
                                 <span class="sr-only">Filters</span>
                                 <icon name="material-symbols:filter-alt" class="w-5 h-5" aria-hidden="true" />
@@ -191,7 +198,6 @@
 
                     <section aria-labelledby="products-heading" class="pt-6 pb-24">
                         <h2 id="products-heading" class="sr-only">Products</h2>
-
                         <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
                             <!-- Filters -->
                             <form class="hidden lg:block">
@@ -200,8 +206,9 @@
                                     <h3 class="flow-root -my-3">
                                         <HeadlessDisclosureButton
                                             class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                            <span class="font-medium text-gray-900">Price (EGP)</span>
-                                            <span class="flex items-center ml-6">
+                                            <span class="font-medium text-gray-900">{{ $t('products.price') }} ({{
+                                                $t('products.egp') }})</span>
+                                            <span class="flex items-center ms-6">
                                                 <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
                                                     v-if="!open" />
                                                 <icon name="ant-design:minus-outlined" class="w-5 h-5"
@@ -211,26 +218,28 @@
                                     </h3>
                                     <HeadlessDisclosurePanel class="pt-6">
                                         <div class="space-y-4">
-                                            <form class="relative flex items-center space-x-1"
+                                            <form class="relative flex items-center space-s-1"
                                                 @submit.prevent="filterProducts">
                                                 <div>
                                                     <div class="relative mt-1 rounded-md shadow-sm">
                                                         <input id="minPrice" name="minPrice" v-model="minPrice"
                                                             class="flex-1 block w-full px-2 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 h-9"
-                                                            type="number" step="100" placeholder="min">
+                                                            type="number" step="100"
+                                                            :placeholder="$t('placeholder.min')">
                                                     </div>
                                                 </div>
-                                                <span class="text-gray-600">To</span>
+                                                <span class="mt-1 text-gray-600">{{ $t('products.to') }}</span>
                                                 <div>
                                                     <div class="relative mt-1 rounded-md shadow-sm">
                                                         <input id="maxPrice" name="maxPrice" v-model="maxPrice"
                                                             class="flex-1 block w-full px-2 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 h-9"
-                                                            step="100" type="number" placeholder="max">
+                                                            step="100" type="number"
+                                                            :placeholder="$t('placeholder.max')">
                                                     </div>
                                                 </div>
                                                 <button
                                                     class="inline-flex items-center justify-center px-2 py-1 mt-1 font-medium text-indigo-700 bg-indigo-100 border border-transparent rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-indigo-200 focus:ring-indigo-500"
-                                                    type="submit">Go</button>
+                                                    type="submit">{{ $t('products.go') }}</button>
                                             </form>
                                         </div>
                                     </HeadlessDisclosurePanel>
@@ -241,8 +250,9 @@
                                     <h3 class="flow-root -my-3">
                                         <HeadlessDisclosureButton
                                             class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                            <span class="font-medium text-gray-900">Fulfillment</span>
-                                            <span class="flex items-center ml-6">
+                                            <span class="font-medium text-gray-900">{{ $t('products.fulfillment')
+                                                }}</span>
+                                            <span class="flex items-center ms-6">
                                                 <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
                                                     v-if="!open" />
                                                 <icon name="ant-design:minus-outlined" class="w-5 h-5"
@@ -256,7 +266,7 @@
                                                 <input id="category" name="category" :value="ful.label" type="checkbox"
                                                     :checked="ful.checked"
                                                     class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
-                                                <label for="category" class="ml-3 text-sm text-gray-600">{{ ful.label
+                                                <label for="category" class="text-sm text-gray-600 ms-3">{{ ful.label
                                                     }}</label>
                                             </div>
                                         </div>
@@ -268,8 +278,9 @@
                                     <h3 class="flow-root -my-3">
                                         <HeadlessDisclosureButton
                                             class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                            <span class="font-medium text-gray-900">Categories</span>
-                                            <span class="flex items-center ml-6">
+                                            <span class="font-medium text-gray-900">{{ $t('products.categories')
+                                                }}</span>
+                                            <span class="flex items-center ms-6">
                                                 <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
                                                     v-if="!open" />
                                                 <icon name="ant-design:minus-outlined" class="w-5 h-5"
@@ -285,9 +296,9 @@
                                                     type="checkbox" :checked="category.checked"
                                                     class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                                                     @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
-                                                <label for="category" class="ml-3 text-sm text-gray-600">{{
-                                                    category.label
-                                                    }}</label>
+                                                <label for="category" class="text-sm text-gray-600 ms-3">{{
+                                                    $t(category.label)
+                                                }}</label>
                                             </div>
                                         </div>
                                     </HeadlessDisclosurePanel>
@@ -298,8 +309,8 @@
                                     <h3 class="flow-root -my-3">
                                         <HeadlessDisclosureButton
                                             class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                            <span class="font-medium text-gray-900">Colors</span>
-                                            <span class="flex items-center ml-6">
+                                            <span class="font-medium text-gray-900">{{ $t('products.colors') }}</span>
+                                            <span class="flex items-center ms-6">
                                                 <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
                                                     v-if="!open" />
                                                 <icon name="ant-design:minus-outlined" class="w-5 h-5"
@@ -314,7 +325,7 @@
                                                     :checked="color.checked"
                                                     class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                                                     @change="color.checked = !color.checked; updateSelectedColor(color.label, color.checked)" />
-                                                <label for="color" class="ml-3 text-sm text-gray-600">{{ color.label
+                                                <label for="color" class="text-sm text-gray-600 ms-3">{{ color.label
                                                     }}</label>
                                             </div>
                                         </div>
@@ -340,6 +351,7 @@ const maxPrice = ref('');
 const store = useCartersProductsStore()
 const selectedCategories = ref([]);
 const selectedColor = ref([]);
+const { t } = useI18n();
 
 const filterProducts = () => {
     store.filterProductsByPrice(minPrice.value, maxPrice.value);
@@ -370,11 +382,11 @@ const fulfillment = ref([
 ])
 
 const categories = reactive([
-    { value: 'women', label: 'Women', checked: false },
-    { value: 'men', label: 'Men', checked: false },
-    { value: 'kids', label: 'Juniors & Kids', checked: false },
-    { value: 'electronics', label: 'Electronics', checked: false },
-    { value: 'beauty', label: 'Beauty', checked: false },
+    { value: 'women', label: 'menu.women', checked: false },
+    { value: 'men', label: 'menu.men', checked: false },
+    { value: 'kids', label: 'menu.juniors_kids', checked: false },
+    { value: 'electronics', label: 'menu.electronics', checked: false },
+    { value: 'beauty', label: 'menu.beauty', checked: false },
 ])
 
 const colors = reactive([
