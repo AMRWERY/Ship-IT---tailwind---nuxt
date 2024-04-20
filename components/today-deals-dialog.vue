@@ -48,9 +48,10 @@
                                                             {{ $t('products.egp') }} {{
                                                                 todayDeal.originalPrice }}
                                                         </p>
-                                                        <p class="font-medium text-gray-900 text-md">{{ $t('products.egp') }} {{
-                                                            todayDeal.price
-                                                        }}
+                                                        <p class="font-medium text-gray-900 text-md">{{
+                                                            $t('products.egp') }} {{
+                                                                todayDeal.price
+                                                            }}
                                                         </p>
                                                     </div>
                                                 </div>
@@ -102,8 +103,15 @@
                                                         </a>
                                                     </span>
                                                 </div>
-                                                <p class="leading-relaxed">"{{ $t('deal.i_cannot_make_my_days_longer_so_i_strive_to_make_them_better') }} {{ $t('deal.nothing_in_life_is_to_be_feared') }} {{ $t('deal.it_is_only_to_be_understood') }} {{ $t('deal.joy_is_the_best_makeup') }} {{ $t('deal.love_is_never_lost') }}
-                                                    {{ $t('deal.if_not_reciprocated_it_will_flow_back_and_soften_and_purify_the_heart') }}"
+                                                <p class="leading-relaxed">"{{
+                                                    $t('deal.i_cannot_make_my_days_longer_so_i_strive_to_make_them_better')
+                                                    }} {{ $t('deal.nothing_in_life_is_to_be_feared') }} {{
+                                                    $t('deal.it_is_only_to_be_understood') }} {{
+                                                    $t('deal.joy_is_the_best_makeup') }} {{
+                                                    $t('deal.love_is_never_lost') }}
+                                                    {{
+                                                        $t('deal.if_not_reciprocated_it_will_flow_back_and_soften_and_purify_the_heart')
+                                                    }}"
                                                 </p>
                                                 <div class="flex items-center pb-5 mt-6 mb-5 border-gray-100">
                                                     <div class="flex items-center ms-6">

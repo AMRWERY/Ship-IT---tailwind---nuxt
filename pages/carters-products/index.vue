@@ -80,17 +80,20 @@
                                         <HeadlessDisclosure as="div" class="px-4 py-6 border-t border-gray-200"
                                             v-slot="{ open }">
                                             <h3 class="flow-root -my-3">
-                                                <HeadlessDisclosureButton
-                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">{{
-                                                        $t('products.fulfillment') }}</span>
-                                                    <span class="flex items-center ms-6">
-                                                        <icon name="ant-design:plus-outlined" class="w-5 h-5"
-                                                            aria-hidden="true" v-if="!open" />
-                                                        <icon name="ant-design:minus-outlined" class="w-5 h-5"
-                                                            aria-hidden="true" v-else />
-                                                    </span>
-                                                </HeadlessDisclosureButton>
+                                                <filteration>
+                                                    <template #fulfillment="{ plusIcon, minusIcon, label }">
+                                                        <HeadlessDisclosureButton
+                                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
+                                                            <span class="font-medium text-gray-900">{{ label }}</span>
+                                                            <span class="flex items-center ms-6">
+                                                                <icon :name="plusIcon" class="w-5 h-5"
+                                                                    aria-hidden="true" v-if="!open" />
+                                                                <icon :name="minusIcon" class="w-5 h-5"
+                                                                    aria-hidden="true" v-else />
+                                                            </span>
+                                                        </HeadlessDisclosureButton>
+                                                    </template>
+                                                </filteration>
                                             </h3>
                                             <HeadlessDisclosurePanel class="pt-6">
                                                 <div class="space-y-4">
@@ -101,7 +104,7 @@
                                                             class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
                                                         <label for="category" class="text-sm text-gray-600 ms-3">{{
                                                             ful.label
-                                                        }}</label>
+                                                            }}</label>
                                                     </div>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -111,17 +114,20 @@
                                         <HeadlessDisclosure as="div" class="px-4 py-6 border-b border-gray-200"
                                             v-slot="{ open }">
                                             <h3 class="flow-root -my-3">
-                                                <HeadlessDisclosureButton
-                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">{{ $t('products.categories')
-                                                        }}</span>
-                                                    <span class="flex items-center ms-6">
-                                                        <icon name="ant-design:plus-outlined" class="w-5 h-5"
-                                                            aria-hidden="true" v-if="!open" />
-                                                        <icon name="ant-design:minus-outlined" class="w-5 h-5"
-                                                            aria-hidden="true" v-else />
-                                                    </span>
-                                                </HeadlessDisclosureButton>
+                                                <filteration>
+                                                    <template #categories="{ plusIcon, minusIcon, label }">
+                                                        <HeadlessDisclosureButton
+                                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
+                                                            <span class="font-medium text-gray-900">{{ label }}</span>
+                                                            <span class="flex items-center ms-6">
+                                                                <icon :name="plusIcon" class="w-5 h-5"
+                                                                    aria-hidden="true" v-if="!open" />
+                                                                <icon :name="minusIcon" class="w-5 h-5"
+                                                                    aria-hidden="true" v-else />
+                                                            </span>
+                                                        </HeadlessDisclosureButton>
+                                                    </template>
+                                                </filteration>
                                             </h3>
                                             <HeadlessDisclosurePanel class="pt-6">
                                                 <div class="space-y-4">
@@ -133,7 +139,7 @@
                                                             @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
                                                         <label for="category" class="text-sm text-gray-600 ms-3">{{
                                                             $t(category.label)
-                                                        }}</label>
+                                                            }}</label>
                                                     </div>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -143,17 +149,20 @@
                                         <HeadlessDisclosure as="div" class="px-4 py-6 border-b border-gray-200"
                                             v-slot="{ open }">
                                             <h3 class="flow-root -my-3">
-                                                <HeadlessDisclosureButton
-                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">{{ $t('products.colors')
-                                                        }}</span>
-                                                    <span class="flex items-center ms-6">
-                                                        <icon name="ant-design:plus-outlined" class="w-5 h-5"
-                                                            aria-hidden="true" v-if="!open" />
-                                                        <icon name="ant-design:minus-outlined" class="w-5 h-5"
-                                                            aria-hidden="true" v-else />
-                                                    </span>
-                                                </HeadlessDisclosureButton>
+                                                <filteration>
+                                                    <template #colors="{ plusIcon, minusIcon, label }">
+                                                        <HeadlessDisclosureButton
+                                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
+                                                            <span class="font-medium text-gray-900">{{ label }}</span>
+                                                            <span class="flex items-center ms-6">
+                                                                <icon :name="plusIcon" class="w-5 h-5"
+                                                                    aria-hidden="true" v-if="!open" />
+                                                                <icon :name="minusIcon" class="w-5 h-5"
+                                                                    aria-hidden="true" v-else />
+                                                            </span>
+                                                        </HeadlessDisclosureButton>
+                                                    </template>
+                                                </filteration>
                                             </h3>
                                             <HeadlessDisclosurePanel class="pt-6">
                                                 <div class="space-y-4">
@@ -165,7 +174,7 @@
                                                             @change="color.checked = !color.checked; updateSelectedColor(color.label, color.checked)" />
                                                         <label for="color" class="text-sm text-gray-600 ms-3">{{
                                                             color.label
-                                                        }}</label>
+                                                            }}</label>
                                                     </div>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -248,17 +257,20 @@
                                 <!-- fulfillment -->
                                 <HeadlessDisclosure as="div" class="py-6 border-b border-gray-200" v-slot="{ open }">
                                     <h3 class="flow-root -my-3">
-                                        <HeadlessDisclosureButton
-                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                            <span class="font-medium text-gray-900">{{ $t('products.fulfillment')
-                                                }}</span>
-                                            <span class="flex items-center ms-6">
-                                                <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
-                                                    v-if="!open" />
-                                                <icon name="ant-design:minus-outlined" class="w-5 h-5"
-                                                    aria-hidden="true" v-else />
-                                            </span>
-                                        </HeadlessDisclosureButton>
+                                        <filteration>
+                                            <template #fulfillment="{ plusIcon, minusIcon, label }">
+                                                <HeadlessDisclosureButton
+                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
+                                                    <span class="font-medium text-gray-900">{{ label }}</span>
+                                                    <span class="flex items-center ms-6">
+                                                        <icon :name="plusIcon" class="w-5 h-5" aria-hidden="true"
+                                                            v-if="!open" />
+                                                        <icon :name="minusIcon" class="w-5 h-5" aria-hidden="true"
+                                                            v-else />
+                                                    </span>
+                                                </HeadlessDisclosureButton>
+                                            </template>
+                                        </filteration>
                                     </h3>
                                     <HeadlessDisclosurePanel class="pt-6">
                                         <div class="space-y-4">
@@ -276,17 +288,20 @@
                                 <!-- Categories -->
                                 <HeadlessDisclosure as="div" class="py-6 border-b border-gray-200" v-slot="{ open }">
                                     <h3 class="flow-root -my-3">
-                                        <HeadlessDisclosureButton
-                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                            <span class="font-medium text-gray-900">{{ $t('products.categories')
-                                                }}</span>
-                                            <span class="flex items-center ms-6">
-                                                <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
-                                                    v-if="!open" />
-                                                <icon name="ant-design:minus-outlined" class="w-5 h-5"
-                                                    aria-hidden="true" v-else />
-                                            </span>
-                                        </HeadlessDisclosureButton>
+                                        <filteration>
+                                            <template #categories="{ plusIcon, minusIcon, label }">
+                                                <HeadlessDisclosureButton
+                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
+                                                    <span class="font-medium text-gray-900">{{ label }}</span>
+                                                    <span class="flex items-center ms-6">
+                                                        <icon :name="plusIcon" class="w-5 h-5" aria-hidden="true"
+                                                            v-if="!open" />
+                                                        <icon :name="minusIcon" class="w-5 h-5" aria-hidden="true"
+                                                            v-else />
+                                                    </span>
+                                                </HeadlessDisclosureButton>
+                                            </template>
+                                        </filteration>
                                     </h3>
                                     <HeadlessDisclosurePanel class="pt-6">
                                         <div class="space-y-4">
@@ -298,7 +313,7 @@
                                                     @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
                                                 <label for="category" class="text-sm text-gray-600 ms-3">{{
                                                     $t(category.label)
-                                                }}</label>
+                                                    }}</label>
                                             </div>
                                         </div>
                                     </HeadlessDisclosurePanel>
@@ -307,16 +322,20 @@
                                 <!-- Colors -->
                                 <HeadlessDisclosure as="div" class="py-6 border-b border-gray-200" v-slot="{ open }">
                                     <h3 class="flow-root -my-3">
-                                        <HeadlessDisclosureButton
-                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                            <span class="font-medium text-gray-900">{{ $t('products.colors') }}</span>
-                                            <span class="flex items-center ms-6">
-                                                <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
-                                                    v-if="!open" />
-                                                <icon name="ant-design:minus-outlined" class="w-5 h-5"
-                                                    aria-hidden="true" v-else />
-                                            </span>
-                                        </HeadlessDisclosureButton>
+                                        <filteration>
+                                            <template #colors="{ plusIcon, minusIcon, label }">
+                                                <HeadlessDisclosureButton
+                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
+                                                    <span class="font-medium text-gray-900">{{ label }}</span>
+                                                    <span class="flex items-center ms-6">
+                                                        <icon :name="plusIcon" class="w-5 h-5" aria-hidden="true"
+                                                            v-if="!open" />
+                                                        <icon :name="minusIcon" class="w-5 h-5" aria-hidden="true"
+                                                            v-else />
+                                                    </span>
+                                                </HeadlessDisclosureButton>
+                                            </template>
+                                        </filteration>
                                     </h3>
                                     <HeadlessDisclosurePanel class="pt-6">
                                         <div class="space-y-4">
