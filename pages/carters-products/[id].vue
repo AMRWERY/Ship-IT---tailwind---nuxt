@@ -90,7 +90,7 @@
           <div class="mb-4">
             <p>{{ $t('products.availability') }}: <strong>{{ productDetails?.availability }}</strong></p>
           </div>
-          <div class="overflow-x-hidden overflow-y-auto max-h-14 desc">
+          <div class="overflow-x-hidden overflow-y-auto max-h-20 desc">
             <p class="leading-relaxed">
               {{ productDetails?.description }}
             </p>
