@@ -3,20 +3,17 @@
     <div class="max-w-5xl py-6 mx-auto sm:px-6 lg:px-8">
       <section class="max-w-full mx-auto mt-10 sm:px-6 lg:px-8">
         <h2 class="mb-6 text">{{ $t('home.shop_by_brand') }}</h2>
-        <Carousel v-bind="settings" :breakpoints="breakpoints" :wrapAround="true" :transition="500" :autoplay="3000">
-          <Slide v-for="(card, index) in store.shopByBrand" :key="index">
-            <div class="carousel__item">
-              <div class="relative flex justify-center flex-shrink-0 h-48 mx-2 overflow-hidden w-44 rounded-xl">
-                <div class="relative overflow-hidden bg-no-repeat bg-cover transit">
-                  <img class="h-48 rounded-t-lg" :src="getImageUrl(card.img)" />
-                </div>
+        <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{ delay: 2500, disableOnInteraction: false }"
+          :slidesPerView="4.5" :loop="true" :grabCursor="true" :grid="{ rows: 1 }" :pagination="{ clickable: true }"
+          :modules="[SwiperAutoplay, SwiperPagination]" class="mySwiper">
+          <swiper-slide v-for="(card, index) in store.shopByBrand" :key="index">
+            <div class="relative flex justify-center flex-shrink-0 h-48 mx-2 overflow-hidden w-44 rounded-xl">
+              <div class="relative overflow-hidden bg-no-repeat bg-cover transit">
+                <img class="h-48 rounded-t-lg" :src="getImageUrl(card.img)" />
               </div>
             </div>
-          </Slide>
-          <template #addons>
-            <Navigation />
-          </template>
-        </Carousel>
+          </swiper-slide>
+        </swiper>
       </section>
     </div>
 
@@ -47,9 +44,6 @@
 </template>
 
 <script setup>
-import { Carousel, Slide, Navigation } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
-
 const store = useShopByBrandStore()
 
 const fetchAllImages = () => {
@@ -71,22 +65,6 @@ const getImageUrl = (imgPath) => {
   const image = store.images.find((image) => image.name === imgPath);
   return image ? image.url : '';
 };
-
-const settings = ref({
-  itemsToShow: 2,
-  snapAlign: 'center',
-});
-
-const breakpoints = ref({
-  700: {
-    itemsToShow: 3,
-    snapAlign: 'center',
-  },
-  1024: {
-    itemsToShow: 4,
-    snapAlign: 'start',
-  },
-});
 
 const { t } = useI18n();
 

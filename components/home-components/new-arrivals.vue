@@ -3,10 +3,11 @@
     <div class="max-w-full py-6 mx-auto space-y-6 sm:px-6 lg:px-8">
       <section class="max-w-full mx-auto mt-10 sm:px-6 lg:px-8">
         <h2 class="mb-6 text">New Arrivals</h2>
-        <Carousel :wrapAround="true" v-bind="settings" :breakpoints="breakpoints">
-          <Slide v-for="card in arrivalOne" :key="card">
-            <div class="carousel__item">
-              <div class="relative mt-5 w-[300px] max-w-[16rem] overflow-hidden rounded-lg bg-white shadow-md">
+        <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{ delay: 2500, disableOnInteraction: false }"
+          :slidesPerView="4.5" :loop="true" :grabCursor="true" :grid="{ rows: 1 }"
+          :modules="[SwiperAutoplay]" class="mySwiper">
+          <swiper-slide v-for="card in arrivalOne" :key="card">
+            <div class="relative mt-5 w-[300px] max-w-[18rem] overflow-hidden rounded-lg bg-white shadow-md">
                 <div class="relative flex mx-3 mt-3 overflow-hidden h-60 rounded-xl" href="#">
                   <img class="object-cover w-full transit" :src="card.img" />
                   <span
@@ -31,12 +32,8 @@
                   <p class="mt-2 text-start">Get it by {{ card.getBy }}</p>
                 </div>
               </div>
-            </div>
-          </Slide>
-          <template #addons>
-            <Navigation />
-          </template>
-        </Carousel>
+          </swiper-slide>
+        </swiper>
       </section>
     </div>
 
@@ -64,7 +61,7 @@
       </div>
     </div>
 
-    <div class="max-w-full py-2 mx-auto mt-4  sm:px-6 lg:px-8">
+    <div class="max-w-full py-2 mx-auto mt-4 sm:px-6 lg:px-8">
       <img src="https://justfields.com/storage/projects/7M5rV059/six-shop.jpg"
         class="w-full h-60 xs:h-56 sm:h-72 md:h-96">
     </div>
@@ -91,9 +88,6 @@
 </template>
 
 <script setup>
-import { Carousel, Slide, Navigation } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
-
 const arrivalOne = ref([
   { img: 'https://justfields.com/storage/projects/7M5rV059/025.webp', title: 'Feel Good Loved Up Feel Good Eau de Toilette', price: '599.00', originalPrice: '270.00', discount: '55', getBy: 'Nov 08 - Nov 10' },
   { img: 'https://justfields.com/storage/projects/7M5rV059/026.webp', title: "Shein Men Flap Pocket Buckle Cargo Pants", price: '1.809.00', originalPrice: '2.419.00', discount: '25', getBy: 'Nov 28 - Dec 05' },
@@ -118,24 +112,4 @@ const cardsTwo = ref([
   { title: 'home.unleash_the_fashionista_side_of_you_with_shein_products', subtitle: 'home.explore_an_incredible_collection_of_trendy_clothing_at_amazing_prices', img: 'https://justfields.com/storage/projects/7M5rV059/01201.jpg' },
   { title: "home.find_the_best_womens_Winter_boots_around", subtitle: "home.make_a_statement_with_our_stunning_selection_of_womens_boots_they_are_the_best", img: 'https://justfields.com/storage/projects/7M5rV059/045454.jpg' },
 ])
-
-const settings = ref({
-  itemsToShow: 1,
-  snapAlign: 'center',
-});
-
-const breakpoints = ref({
-  600: {
-    itemsToShow: 1,
-    snapAlign: 'center',
-  },
-  960: {
-    itemsToShow: 2.5,
-    snapAlign: 'start',
-  },
-  1024: {
-    itemsToShow: 4.5,
-    snapAlign: 'start',
-  },
-});
 </script>
