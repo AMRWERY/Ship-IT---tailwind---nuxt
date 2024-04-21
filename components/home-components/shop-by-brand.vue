@@ -76,23 +76,8 @@ const cards = ref([
 ])
 </script>
 
-<style>
-.carousel__item {
-  min-height: 200px;
-  font-size: 20px;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel__prev,
-.carousel__next {
-  border: 2px solid white;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style scoped>
+.mySwiper {
+  height: 230px;
 }
 </style>

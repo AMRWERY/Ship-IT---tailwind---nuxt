@@ -39,10 +39,8 @@ export default defineNuxtConfig({
     configFile: "./formkit.config.ts",
   },
   swiper: {
-    // Swiper options
-    //----------------------
     prefix: "Swiper",
-    // styleLang: 'css',
+    styleLang: "css",
     // modules: ['Autoplay', 'Pagination', 'Navigation'],
   },
   css: ["~/assets/css/main.css"],
