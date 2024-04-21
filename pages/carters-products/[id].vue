@@ -42,7 +42,8 @@
       </div>
 
       <div class="flex flex-wrap mx-auto lg:w-4/5">
-        <img class="max-w-xl overflow-hidden rounded-lg h-[650px] xs:w-[400px] lg:w-[550px]" :src="selectedImg" />
+        <img class="max-w-xl overflow-hidden rounded-lg h-[600px] xs:h-[300px] lg:h-[600px] xs:w-[400px] lg:w-[550px]"
+          :src="selectedImg" />
         <div class="w-full mt-4 lg:order-1 lg:w-96 lg:flex-shrink-0">
           <div class="flex items-start">
             <button type="button" @click="selectCard('imgFront')" v-if="productDetails?.imgFront != null"
