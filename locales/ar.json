@@ -87,7 +87,8 @@
     "coupon_code": "رمز القسيمة",
     "min": "الحد الأدنى",
     "max": "الحد الأقصى",
-    "search_products": "ابحث عن المنتجات..."
+    "search_products": "ابحث عن المنتجات...",
+    "enter_courier_name": "أدخل اسم شركة الشحن"
   },
   "home": {
     "shop_by_brand": "التسوق حسب العلامة التجارية",
@@ -151,7 +152,9 @@
     "password": "كلمة المرور",
     "confirm_password": "تأكيد كلمة المرور",
     "card_holder": "حامل البطاقة",
-    "card_number": "رقم البطاقة"
+    "card_number": "رقم البطاقة",
+    "courier_name": "اسم شركة الشحن",
+    "tracking_number": "رقم التتبع"
   },
   "head": {
     "create_new_account": "إنشاء حساب جديد",
@@ -236,5 +239,16 @@
     "category": "الفئة:",
     "quantity": "الكمية:",
     "related_products": "المنتجات ذات الصلة"
+  },
+  "order_tracking": {
+    "order_details": "تفاصيل الطلب",
+    "date": "التاريخ",
+    "order_confirmed": "تم تأكيد الطلب",
+    "shipping": "الشحن",
+    "to_deliver": "قيد التوصيل",
+    "subtotal": "المجموع الفرعي",
+    "total": "الإجمالي",
+    "vat": "ضريبة القيمة المضافة",
+    "discount": "الخصم"
   }
 }

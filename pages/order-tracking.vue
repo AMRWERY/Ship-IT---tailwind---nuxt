@@ -63,15 +63,15 @@
 
       <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8 sm:grid-cols-6">
         <div class="sm:col-span-3">
-          <label for="courier-name" class="block text-sm font-medium leading-6 text-gray-900">Courier name</label>
+          <label for="courier-name" class="block text-sm font-medium leading-6 text-gray-900">{{ $t('forms.courier_name') }}</label>
           <div class="mt-2">
             <input type="text" name="courier-name" id="courier-name" autocomplete="courier-name"
-              placeholder="courier-name"
+              :placeholder="$t('placeholder.enter_courier_name')"
               class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
         </div>
         <div class="sm:col-span-3">
-          <label for="tracking-number" class="block text-sm font-medium leading-6 text-gray-900">Tracking number</label>
+          <label for="tracking-number" class="block text-sm font-medium leading-6 text-gray-900">{{ $t('forms.tracking_number') }}</label>
           <div class="mt-2">
             <input type="text" name="tracking-number" id="tracking-number" autocomplete="tracking-number"
               placeholder="#A53365ax12"
@@ -88,13 +88,13 @@
               class="object-cover w-24 h-24 rounded-lg" />
             <div>
               <h3 class="text-sm text-gray-900">Basic Tee 6-Pack</h3>
-              <dl class="mt-0.5 space-y-px text-[10px] text-gray-600">
+              <dl class="mt-0.5 space-y-px text-[13px] text-gray-600">
                 <div>
-                  <dt class="inline">Size:</dt>
+                  <dt class="inline">{{$t('products.size')}}</dt>
                   <dd class="inline">XXS</dd>
                 </div>
                 <div>
-                  <dt class="inline">Color:</dt>
+                  <dt class="inline">{{$t('products.color')}}</dt>
                   <dd class="inline">White</dd>
                 </div>
               </dl>
@@ -109,7 +109,7 @@
             </div>
 
             <div class="flex items-center justify-end flex-1 gap-2">
-              <p class="text-lg font-semibold text-gray-700">320 EGP</p>
+              <p class="text-lg font-semibold text-gray-700">320 {{ $t('products.egp') }}</p>
             </div>
           </li>
         </ul>
@@ -119,19 +119,19 @@
             <dl class="space-y-0.5 text-sm text-gray-700">
               <div class="flex justify-between">
                 <dt>Subtotal</dt>
-                <dd>£250</dd>
+                <dd>{{ $t('products.egp') }} 250</dd>
               </div>
               <div class="flex justify-between">
                 <dt>VAT</dt>
-                <dd>£25</dd>
+                <dd>{{ $t('products.egp') }} 25</dd>
               </div>
               <div class="flex justify-between">
                 <dt>Discount</dt>
-                <dd>-£20</dd>
+                <dd>-{{ $t('products.egp') }} 20</dd>
               </div>
               <div class="flex justify-between !text-base font-medium border-t-2 border-gray-500">
                 <dt class="mt-2">Total</dt>
-                <dd class="mt-2">£200</dd>
+                <dd class="mt-2">{{ $t('products.egp') }} 200</dd>
               </div>
             </dl>
           </div>

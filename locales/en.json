@@ -87,7 +87,8 @@
     "coupon_code": "Coupon Code",
     "min": "min",
     "max": "max",
-    "search_products": "Search Products..."
+    "search_products": "Search Products...",
+    "enter_courier_name": "enter courier name"
   },
   "home": {
     "shop_by_brand": "Shop by Brand",
@@ -151,7 +152,9 @@
     "password": "Password",
     "confirm_password": "Confirm Password",
     "card_holder": "Card Holder",
-    "card_number": "Card Number"
+    "card_number": "Card Number",
+    "courier_name": "Courier name",
+    "tracking_number": "Tracking number"
   },
   "head": {
     "create_new_account": "Create new Account",
@@ -236,5 +239,16 @@
     "category": "Category:",
     "quantity": "Quantity:",
     "related_products": "Related Products"
+  },
+  "order_tracking": {
+    "order_details": "Order details",
+    "date": "Date",
+    "order_confirmed": "Order Confirmed",
+    "shipping": "Shipping",
+    "to_deliver": "To Deliver",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "vat": "VAT",
+    "discount": "Discount"
   }
 }
