@@ -49,7 +49,8 @@
     "remove": "Remove",
     "checkout": "Checkout",
     "adding": "Adding...",
-    "buy_now": "Buy Now"
+    "buy_now": "Buy Now",
+    "loading": "Loading..."
   },
   "auth": {
     "login_into_your_account": "Login into your account",
