@@ -106,7 +106,7 @@
 
                             <button type="submit"
                                 class="inline-block px-5 py-3 text-sm font-medium text-white bg-blue-500 rounded-lg ">
-                                {{ loading ? $t('Loading...') : $t('btn.sign_up') }}
+                                {{ loading ? $t('btn.loading') : $t('btn.sign_up') }}
                                 <template v-if="loading">
                                     <icon name="svg-spinners:6-dots-scale-middle" class="animate-spin" />
                                 </template>
