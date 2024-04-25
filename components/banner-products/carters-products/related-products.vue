@@ -10,7 +10,7 @@
             <img class="object-cover w-full rounded-t-lg h-60 transit" :src="product.productImg" />
           </div>
           <span
-            class="absolute top-0 text-sm text-center text-white -rotate-45 -translate-x-6 translate-y-4 bg-black start-0 w-28"
+            class="absolute top-0 left-0 text-sm text-center text-white -rotate-45 -translate-x-6 translate-y-4 bg-black w-28"
             v-if="product.discount">{{ product.discount }}% {{ $t('home.off') }}</span>
           <div class="px-5 pb-5 mt-4">
             <a href="#">
