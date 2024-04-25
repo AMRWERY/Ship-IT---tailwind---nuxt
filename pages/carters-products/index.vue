@@ -104,7 +104,7 @@
                                                             class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
                                                         <label for="category" class="text-sm text-gray-600 ms-3">{{
                                                             ful.label
-                                                        }}</label>
+                                                            }}</label>
                                                     </div>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -139,7 +139,7 @@
                                                             @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
                                                         <label for="category" class="text-sm text-gray-600 ms-3">{{
                                                             $t(category.label)
-                                                        }}</label>
+                                                            }}</label>
                                                     </div>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -174,7 +174,7 @@
                                                             @change="color.checked = !color.checked; updateSelectedColor(color.label, color.checked)" />
                                                         <label for="color" class="text-sm text-gray-600 ms-3">{{
                                                             color.label
-                                                        }}</label>
+                                                            }}</label>
                                                     </div>
                                                 </div>
                                             </HeadlessDisclosurePanel>
@@ -313,7 +313,7 @@
                                                     @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
                                                 <label for="category" class="text-sm text-gray-600 ms-3">{{
                                                     $t(category.label)
-                                                }}</label>
+                                                    }}</label>
                                             </div>
                                         </div>
                                     </HeadlessDisclosurePanel>
@@ -400,7 +400,7 @@ const fulfillment = ref([
     { value: "carter's", label: "Carter's", checked: true },
 ])
 
-const categories = reactive([
+const categories = ref([
     { value: 'women', label: 'menu.women', checked: false },
     { value: 'men', label: 'menu.men', checked: false },
     { value: 'kids', label: 'menu.juniors_kids', checked: false },
@@ -408,7 +408,7 @@ const categories = reactive([
     { value: 'beauty', label: 'menu.beauty', checked: false },
 ])
 
-const colors = reactive([
+const colors = ref([
     { value: 'yellow', label: 'Yellow', checked: false },
     { value: 'white', label: 'White', checked: false },
     { value: 'turquoise', label: 'Turquoise', checked: false },

@@ -13,7 +13,7 @@
           data-twe-carousel-fade data-twe-carousel-item>
           <img src="https://justfields.com/storage/projects/7M5rV059/salsssss.webp" class="block w-full" />
         </nuxt-link>
-        <nuxt-link to=""
+        <nuxt-link to="/express-products"
           class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
           data-twe-carousel-fade data-twe-carousel-item>
           <img src="https://justfields.com/storage/projects/7M5rV059/express-deals.webp" class="block w-full" />
