@@ -56,7 +56,7 @@
                                                         <rating :rating="todayDeal.rating" />
                                                         <span class="text-gray-600 ms-3">{{ todayDeal.reviews }} {{
                                                             $t('deal.reviews')
-                                                            }}</span>
+                                                        }}</span>
                                                     </span>
                                                     <span
                                                         class="flex py-2 border-gray-200 ms-3 ps-3 border-s-2 space-x-2s">
@@ -73,7 +73,7 @@
                                                 </div>
                                                 <p class="leading-relaxed">"{{
                                                     $t('deal.i_cannot_make_my_days_longer_so_i_strive_to_make_them_better')
-                                                }} {{ $t('deal.nothing_in_life_is_to_be_feared') }} {{
+                                                    }} {{ $t('deal.nothing_in_life_is_to_be_feared') }} {{
                                                         $t('deal.it_is_only_to_be_understood') }} {{
                                                         $t('deal.joy_is_the_best_makeup') }} {{
                                                         $t('deal.love_is_never_lost') }}
