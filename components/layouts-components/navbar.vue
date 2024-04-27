@@ -52,6 +52,17 @@
         <!-- cart -->
         <cart-dialog v-if="isAuthenticated" />
 
+        <div
+          class="absolute inset-y-0 flex items-center pr-2 space-s-3 end-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="rounded-full me-4 text-neutral-600 dark:text-white"
+            @click="toggleTheme">
+            <span class="absolute -inset-1.5" />
+            <icon v-if="theme === 'dark'" name="mi:moon" class="w-5 h-5" />
+            <icon v-else name="mi:sun" class="w-5 h-5" />
+          </button>
+        </div>
+
         <profile-menu v-if="isAuthenticated" />
 
         <login-dialog v-if="!isAuthenticated" />
@@ -83,6 +94,23 @@ onMounted(() => {
 });
 
 const isAuthenticated = useIsAuthenticated()
+
+const theme = ref('light');
+
+const toggleTheme = () => {
+  theme.value = theme.value === 'dark' ? 'light' : 'dark';
+  sessionStorage.setItem('theme', theme.value);
+  updateThemeClasses(theme.value);
+};
+
+const updateThemeClasses = (newTheme) => {
+  const body = document.querySelector('body');
+  if (newTheme === 'dark') {
+    body.classList.add('dark');
+  } else {
+    body.classList.remove('dark');
+  }
+};
 
 onMounted(async () => {
   const { Tooltip, Collapse, Dropdown, initTWE } = await import("tw-elements");
