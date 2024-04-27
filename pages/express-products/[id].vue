@@ -6,10 +6,10 @@
           <ol role="list" class="flex items-center">
             <li class="text-left">
               <div class="-m-1">
-                <a href="#"
+                <nuxt-link to="#"
                   class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800">
                   Home
-                </a>
+                </nuxt-link>
               </div>
             </li>
 
@@ -17,10 +17,10 @@
               <div class="flex items-center">
                 <span class="mx-2 text-gray-400">/</span>
                 <div class="-m-1">
-                  <a href="#"
+                  <nuxt-link to="#"
                     class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800">
                     Products
-                  </a>
+                  </nuxt-link>
                 </div>
               </div>
             </li>
@@ -29,11 +29,11 @@
               <div class="flex items-center">
                 <span class="mx-2 text-gray-400">/</span>
                 <div class="-m-1">
-                  <a href="#"
+                  <nuxt-link to="#"
                     class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800"
                     aria-current="page">
                     Coffee
-                  </a>
+                  </nuxt-link>
                 </div>
               </div>
             </li>
