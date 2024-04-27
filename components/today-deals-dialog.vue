@@ -36,58 +36,26 @@
                                 <div class="mt-2">
                                     <div class="max-w-full">
                                         <div class="flex flex-wrap p-4 mx-auto" v-if="todayDeal">
-                                            <img class="object-cover object-center w-full h-64 rounded lg:w-1/2 lg:h-auto"
+                                            <img class="object-cover object-center w-full h-64 rounded-xl lg:w-[350px] lg:h-auto"
                                                 :src="todayDeal.productImg">
-                                            <div class="w-full mt-6 lg:w-1/2 lg:ps-10 lg:py-6 lg:mt-0">
+                                            <div class="w-full mt-6 lg:w-[450px] lg:ps-10 lg:py-6 lg:mt-0">
                                                 <div class="flex justify-between text-base font-medium text-gray-900">
                                                     <h1 class="mb-1 text-3xl font-medium text-gray-900 title-font">
-                                                        {{
-                                                            todayDeal.title }}</h1>
+                                                        {{ todayDeal.title }}</h1>
                                                     <div class="flex gap-2 mt-2">
                                                         <p class="font-medium text-gray-500 line-through text-md">
-                                                            {{ $t('products.egp') }} {{
-                                                                todayDeal.originalPrice }}
+                                                            {{ $t('products.egp') }} {{ todayDeal.originalPrice }}
                                                         </p>
                                                         <p class="font-medium text-gray-900 text-md">{{
-                                                            $t('products.egp') }} {{
-                                                                todayDeal.price
-                                                            }}
+                                                            $t('products.egp') }} {{ todayDeal.price }}
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="flex mb-4">
                                                     <span class="flex items-center">
-                                                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                            viewBox="0 0 22 20">
-                                                            <path
-                                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                                        </svg>
-                                                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                            viewBox="0 0 22 20">
-                                                            <path
-                                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                                        </svg>
-                                                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                            viewBox="0 0 22 20">
-                                                            <path
-                                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                                        </svg>
-                                                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                            viewBox="0 0 22 20">
-                                                            <path
-                                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                                        </svg>
-                                                        <svg class="w-4 h-4 text-gray-300 dark:text-gray-500"
-                                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="currentColor" viewBox="0 0 22 20">
-                                                            <path
-                                                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                                        </svg>
-                                                        <span class="text-gray-600 ms-3">24 {{ $t('deal.reviews')
+                                                        <rating :rating="todayDeal.rating" />
+                                                        <span class="text-gray-600 ms-3">{{ todayDeal.reviews }} {{
+                                                            $t('deal.reviews')
                                                             }}</span>
                                                     </span>
                                                     <span
@@ -105,10 +73,10 @@
                                                 </div>
                                                 <p class="leading-relaxed">"{{
                                                     $t('deal.i_cannot_make_my_days_longer_so_i_strive_to_make_them_better')
-                                                    }} {{ $t('deal.nothing_in_life_is_to_be_feared') }} {{
-                                                    $t('deal.it_is_only_to_be_understood') }} {{
-                                                    $t('deal.joy_is_the_best_makeup') }} {{
-                                                    $t('deal.love_is_never_lost') }}
+                                                }} {{ $t('deal.nothing_in_life_is_to_be_feared') }} {{
+                                                        $t('deal.it_is_only_to_be_understood') }} {{
+                                                        $t('deal.joy_is_the_best_makeup') }} {{
+                                                        $t('deal.love_is_never_lost') }}
                                                     {{
                                                         $t('deal.if_not_reciprocated_it_will_flow_back_and_soften_and_purify_the_heart')
                                                     }}"
