@@ -2,7 +2,7 @@
   <div>
     <div class="m-auto max-w-[1500px] px-4 pt-28">
       <div class="max-w-[600px] m-auto flex justify-center items-center py-10">
-        <div class="w-full px-6 py-8 pt-20 bg-white border border-orange-400 shadow-xl rounded-2xl">
+        <div class="w-full px-6 py-8 pt-20 bg-white border border-orange-400 shadow-xl rounded-2xl dark:bg-[#F5F7F8]">
           <div class="flex justify-center items-center mt-[-150px] relative">
             <img src="https://justfields.com/storage/projects/7M5rV059/profile.jpg"
               class="w-[150px] h-[150px] rounded-full shadow-xl p-1 border border-orange-400 bg-gray-50">
@@ -51,6 +51,6 @@
 
 <script setup>
 useHead({
-    title: 'Hire Me'
+  title: 'Hire Me'
 })
 </script>
