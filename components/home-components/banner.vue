@@ -31,7 +31,7 @@
         type="button" data-twe-target="#carouselDarkVariant" data-twe-slide="prev">
         <span
           class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <icon name="ic:baseline-arrow-back" />
+          <icon name="ic:baseline-arrow-back" class="text-neutral-600 dark:text-neutral-300" />
         </span>
         <span
           class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
@@ -42,7 +42,7 @@
         type="button" data-twe-target="#carouselDarkVariant" data-twe-slide="next">
         <span
           class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <icon name="ic:baseline-arrow-forward" />
+          <icon name="ic:baseline-arrow-forward" class="text-neutral-600 dark:text-neutral-300" />
         </span>
         <span
           class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>

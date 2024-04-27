@@ -5,8 +5,9 @@
                 class="absolute top-0 end-2 mt-2 -me-2.5 inline-flex items-center justify-center rounded-full bg-red-500 h-4 w-4 text-white text-xs">
                 {{ cartStore.cart.length }}
             </span>
-            <button type="button" class="rounded-full me-4 text-neutral-600 dark:text-white" @click="open = !open">
-                <icon name="material-symbols:shopping-basket-outline" size="30px" class="text-gray-500" />
+            <button type="button" class="rounded-full me-4" @click="open = !open">
+                <icon name="material-symbols:shopping-basket-outline" size="30px"
+                    class="text-neutral-600 dark:text-neutral-200" />
             </button>
         </div>
 
@@ -33,7 +34,7 @@
                                                 <HeadlessDialogTitle class="text-lg font-medium text-gray-900">
                                                     <nuxt-link to="/cart" @click="open = false">{{
                                                         $t('cart.shopping_cart')
-                                                        }}</nuxt-link>
+                                                    }}</nuxt-link>
                                                 </HeadlessDialogTitle>
                                                 <div class="flex items-center ml-3 h-7">
                                                     <button type="button"

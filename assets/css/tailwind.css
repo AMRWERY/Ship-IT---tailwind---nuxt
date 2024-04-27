@@ -8,7 +8,7 @@
   }
 
   .text {
-    @apply text-2xl font-bold tracking-tight text-center text-gray-700 sm:text-4xl;
+    @apply text-2xl font-bold tracking-tight text-center text-neutral-600 dark:text-neutral-300 sm:text-4xl;
   }
 
   .read-only-input {
