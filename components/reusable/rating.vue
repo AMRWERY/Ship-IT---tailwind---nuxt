@@ -6,7 +6,7 @@
         <p class="text-sm font-bold text-gray-900 ms-2 dark:text-white">{{ rating }}</p>
         <span class="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
         <a href="#" class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white">
-            {{ reviews }} {{ $t('products.reviews') }}
+            {{ reviews }}
         </a>
     </div>
 </template>
