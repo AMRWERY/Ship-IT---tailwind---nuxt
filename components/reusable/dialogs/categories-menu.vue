@@ -6,7 +6,7 @@
         <ul class="flex flex-row me-auto" data-twe-navbar-nav-ref>
           <li class="static" data-twe-nav-item-ref data-twe-dropdown-ref>
             <nuxt-link
-              class="flex items-center py-2 transition duration-200 whitespace-nowrap pe-2 text-black/60 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+              class="flex items-center py-2 transition duration-200 cursor-pointer whitespace-nowrap pe-2 text-black/60 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
               to="" type="button" id="dropdownMenuButtonX" data-twe-dropdown-toggle-ref aria-expanded="false"
               data-twe-nav-link-ref>
               <span class="me-2">
