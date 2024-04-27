@@ -23,8 +23,8 @@
           <nuxt-link :to="card.route"
             class="block max-w-96 lg:max-w-96 xs:min-w-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div class="p-6 text-center">
-              <p class="mb-2 truncate text-neutral-600 dark:text-neutral-300">{{ $t(card.title) }}</p>
-              <p class="text-base text-neutral-500 dark:text-neutral-200">
+              <p class="mb-2 truncate">{{ $t(card.title) }}</p>
+              <p class="text-base text-neutral-600 dark:text-neutral-200">
                 {{ $t(card.subtitle) }}
               </p>
             </div>

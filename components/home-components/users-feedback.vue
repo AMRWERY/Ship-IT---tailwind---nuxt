@@ -11,20 +11,20 @@
               <div class="h-full overflow-hidden border-2 border-gray-800 rounded-lg">
                 <img class="object-cover object-center w-full lg:h-48 md:h-36 transit" :src="card.img">
                 <div class="p-6">
-                  <h2 class="text-2xl font-semibold text-center text-gray-700 text-neutral-600 dark:text-neutral-300">
+                  <h2 class="text-2xl font-semibold text-center text-gray-700">
                     {{ $t(card.title) }}</h2>
                   <br>
-                  <p class="mb-3 leading-relaxed text-neutral-500 dark:text-neutral-200">{{ $t(card.subtitle) }}</p>
+                  <p class="mb-3 leading-relaxed text-gray-500">{{ $t(card.subtitle) }}</p>
                   <div class="flex flex-wrap items-center">
-                    <nuxt-link to="" class="inline-flex items-center text-indigo-700 dark:text-indigo-300 md:mb-2 lg:mb-0">
+                    <nuxt-link to="" class="inline-flex items-center text-indigo-700 md:mb-2 lg:mb-0">
                       {{ $t('home.learn_more') }}
                     </nuxt-link>
                     <span
-                      class="inline-flex items-center py-1 text-sm leading-none border-gray-800 text-neutral-500 dark:text-neutral-200 me-3 lg:ms-auto md:ms-0 ms-auto pe-3 border-e-2">
+                      class="inline-flex items-center py-1 text-sm leading-none text-gray-500 border-gray-800 me-3 lg:ms-auto md:ms-0 ms-auto pe-3 border-e-2">
                       <icon name="fontisto:eye" />
                       <p class="ms-1">{{ card.reviews }}K</p>
                     </span>
-                    <span class="inline-flex items-center text-sm leading-none text-neutral-500 dark:text-neutral-200">
+                    <span class="inline-flex items-center text-sm leading-none text-gray-500">
                       <icon name="fontisto:comments" />
                       <p class="ms-1">{{ card.comments }}</p>
                     </span>

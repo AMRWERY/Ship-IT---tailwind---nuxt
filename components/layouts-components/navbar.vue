@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-[#4F46E5] dark:bg-[#135D66] py-1.5 flex justify-center z-50">
+  <nav class="fixed top-0 left-0 right-0 bg-[#4F46E5] py-1.5 flex justify-center z-50">
     <p class="mt-0.5 text-sm text-white">{{ $t('layout.get_free_delivery_on_orders_over_egp_1000') }}</p>
     <span class="mx-2 text-white">|</span>
 
@@ -37,13 +37,13 @@
 
       <!-- Right elements -->
       <div class="relative flex items-center space-s-3">
-        <nuxt-link class="me-4 text-neutral-600 dark:text-neutral-200" to="" role="button" v-if="isRTL"
+        <nuxt-link class="me-4 text-neutral-600 dark:text-white" to="" role="button" v-if="isRTL"
           @click="updateLocale('en')">
           <span class="[&>svg]:w-5">
             En
           </span>
         </nuxt-link>
-        <nuxt-link class="me-4 text-neutral-600 dark:text-neutral-200" to="" role="button" v-else @click="updateLocale('ar')">
+        <nuxt-link class="me-4 text-neutral-600 dark:text-white" to="" role="button" v-else @click="updateLocale('ar')">
           <span class="[&>svg]:w-5">
             العربية
           </span>
@@ -51,17 +51,6 @@
 
         <!-- cart -->
         <cart-dialog v-if="isAuthenticated" />
-
-        <div
-          class="absolute inset-y-0 flex items-center pr-2 space-s-3 end-0 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <button type="button"
-            class="rounded-full me-4 text-neutral-600 dark:text-neutral-200"
-            @click="toggleTheme">
-            <span class="absolute -inset-1.5" />
-            <icon v-if="theme === 'dark'" name="mi:moon" class="w-5 h-5" />
-            <icon v-else name="mi:sun" class="w-5 h-5" />
-          </button>
-        </div>
 
         <profile-menu v-if="isAuthenticated" />
 
@@ -94,23 +83,6 @@ onMounted(() => {
 });
 
 const isAuthenticated = useIsAuthenticated()
-
-const theme = ref('light');
-
-const toggleTheme = () => {
-  theme.value = theme.value === 'dark' ? 'light' : 'dark';
-  sessionStorage.setItem('theme', theme.value);
-  updateThemeClasses(theme.value);
-};
-
-const updateThemeClasses = (newTheme) => {
-  const body = document.querySelector('body');
-  if (newTheme === 'dark') {
-    body.classList.add('dark');
-  } else {
-    body.classList.remove('dark');
-  }
-};
 
 onMounted(async () => {
   const { Tooltip, Collapse, Dropdown, initTWE } = await import("tw-elements");
