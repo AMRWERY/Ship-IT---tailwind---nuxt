@@ -3,7 +3,7 @@
     <p class="mt-0.5 text-sm text-white">{{ $t('layout.get_free_delivery_on_orders_over_egp_1000') }}</p>
     <span class="mx-2 text-white">|</span>
 
-    <today-deals-dialog />
+    <today-deals />
 
   </nav>
 
