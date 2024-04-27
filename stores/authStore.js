@@ -27,6 +27,8 @@ export const useAuthStore = defineStore("auth", {
     return {
       isAuthenticated: false,
       username: "",
+      firstName: "",
+      lastName: "",
       email: "",
       password: "",
       userToken: null,

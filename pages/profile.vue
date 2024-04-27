@@ -1,171 +1,45 @@
 <template>
     <div>
-        <div class="max-w-full py-16 mx-auto sm:px-6 lg:px-8">
-            <div class="flex flex-col p-6 bg-white sm:flex-row">
-                <!-- First column (size 8) -->
-                <!-- <div class="w-full pr-4 sm:w-2/3">
+        <div class="max-w-full py-16 mx-auto bg-white sm:px-6 lg:px-8">
+            <div class="flex flex-col p-6 sm:flex-row">
+                <div class="w-full pr-4">
                     <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-3">
                             <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
                                 $t('forms.first_name') }}</label>
-                            <div class="read-only-input">
-                                <p class="font-medium">Amr</p>
+                            <div>
+                                <input type="text" class="w-full read-only-input" v-model="firstName">
                             </div>
                         </div>
                         <div class="sm:col-span-3">
                             <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
                                 $t('forms.last_name') }}</label>
-                            <div class="read-only-input">
-                                <p class="font-medium">Mohamed</p>
+                            <div>
+                                <input type="text" class="w-full read-only-input" v-model="lastName">
                             </div>
                         </div>
                     </div>
                     <div class="mt-4 col-span-full">
                         <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
                             $t('forms.email_address') }}</label>
-                        <div class="read-only-input">
-                            <p class="font-medium">amrmounir2@gmail.com</p>
+                        <div>
+                            <input type="text" class="w-full read-only-input" v-model="email">
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8 sm:grid-cols-6">
-                        <div class="sm:col-span-3">
-                            <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
-                                $t('forms.password') }}</label>
-                            <div class="read-only-input">
-                                <p class="font-medium">*******</p>
-                            </div>
-                        </div>
-                        <div class="sm:col-span-3">
-                            <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
-                                $t('forms.confirm_password') }}</label>
-                            <div class="read-only-input">
-                                <p class="font-medium">*******</p>
-                            </div>
+                    <div class="mt-4 col-span-full">
+                        <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                            $t('forms.password') }}</label>
+                        <div>
+                            <input type="text" class="w-full read-only-input" v-model="password">
                         </div>
                     </div>
+
                     <div class="flex items-center justify-end mt-6 gap-x-6">
-                        <button type="button"
+                        <button type="button" @click="toggleEditMode"
                             class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                             {{ $t('btn.edit') }}
                         </button>
                     </div>
-                </div> -->
-
-                <div class="w-full pr-4 sm:w-2/3">
-                    <FormKit type="form" id="profile-form" :actions="false" :incomplete-message="false"
-                        class="space-y-8">
-                        <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8 sm:grid-cols-6">
-                            <div class="sm:col-span-3">
-                                <form-inputs>
-                                    <template #first-name="{ icon, label, placeholder }">
-                                        <label for="name"
-                                            class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
-                                                label }}</label>
-                                        <div class="relative">
-                                            <FormKit name="first name" type="text" v-model="firstName"
-                                                validation="required|contains_alpha|length:2,10"
-                                                validation-visibility="dirty" :placeholder="placeholder"
-                                                message-class="text-red-600 mt-1.5"
-                                                input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
-                                            <span class="absolute inset-y-0 flex items-center end-0 pe-3">
-                                                <icon :name="icon" class="w-5 h-5 text-gray-400" />
-                                            </span>
-                                        </div>
-                                    </template>
-                                </form-inputs>
-                            </div>
-
-                            <div class="sm:col-span-3">
-                                <form-inputs>
-                                    <template #last-name="{ icon, label, placeholder }">
-                                        <label for="name"
-                                            class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
-                                                label }}</label>
-                                        <div class="relative">
-                                            <FormKit name="last name" type="text" v-model="lastName"
-                                                validation="required|contains_alpha|length:2,10"
-                                                validation-visibility="dirty" :placeholder="placeholder"
-                                                message-class="text-red-600 mt-1.5"
-                                                input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
-                                            <span class="absolute inset-y-0 flex items-center end-0 pe-3">
-                                                <icon :name="icon" class="w-5 h-5 text-gray-400" />
-                                            </span>
-                                        </div>
-                                    </template>
-                                </form-inputs>
-                            </div>
-                        </div>
-                        <div class="mt-4 col-span-full">
-                            <form-inputs>
-                                <template #email="{ icon, label, placeholder }">
-                                    <label for="email" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
-                                        label }}</label>
-                                    <div class="relative">
-                                        <FormKit name="email" type="email" v-model="email"
-                                            validation="required|email|ends_with:.com" validation-visibility="dirty"
-                                            :placeholder="placeholder" message-class="text-red-600 mt-1.5"
-                                            input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
-                                        <span class="absolute inset-y-0 flex items-center end-0 pe-3">
-                                            <icon :name="icon" class="w-5 h-5 text-gray-400" />
-                                        </span>
-                                    </div>
-                                </template>
-                            </form-inputs>
-                        </div>
-                        <div class="grid grid-cols-1 mt-5 gap-x-6 gap-y-8 sm:grid-cols-6">
-                            <div class="sm:col-span-3">
-                                <form-inputs>
-                                    <template #password="{ icon, label, placeholder }">
-                                        <div class="flex items-center">
-                                            <label for="password"
-                                                class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
-                                                    label }}</label>
-                                        </div>
-                                        <div class="relative">
-                                            <FormKit name="password" type="password" v-model="password"
-                                                validation="required|password|length:6,7" validation-visibility="dirty"
-                                                :placeholder="placeholder" message-class="mt-1.5 text-red-600"
-                                                input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
-                                            <span class="absolute inset-y-0 flex items-center end-0 pe-3">
-                                                <icon :name="icon" class="w-5 h-5 text-gray-400" />
-                                            </span>
-                                        </div>
-                                    </template>
-                                </form-inputs>
-                            </div>
-
-                            <div class="sm:col-span-3">
-                                <form-inputs>
-                                    <template #confirmPassword="{ icon, label, placeholder }">
-                                        <div class="flex items-center">
-                                            <label for="confirm-password"
-                                                class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
-                                                    label }}</label>
-                                        </div>
-                                        <div class="relative">
-                                            <FormKit name="password_confirm" type="password" v-model="confirmPassword"
-                                                validation="required|confirm" validation-visibility="dirty"
-                                                :placeholder="placeholder" message-class="mt-1.5 text-red-600"
-                                                input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
-                                            <span class="absolute inset-y-0 flex items-center end-0 pe-3">
-                                                <icon :name="icon" class="w-5 h-5 text-gray-400" />
-                                            </span>
-                                        </div>
-                                    </template>
-                                </form-inputs>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-end mt-6 gap-x-6">
-                            <button type="submit"
-                                class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                                {{ $t('btn.update') }}
-                            </button>
-                            <button type="button"
-                                class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                                {{ $t('btn.edit') }}
-                            </button>
-                        </div>
-                    </FormKit>
                 </div>
 
                 <div class="w-full mt-4 sm:w-1/3 sm:mt-0">
@@ -201,6 +75,114 @@
                     </div>
                 </div>
             </div>
+
+            <div class="max-w-5xl pr-4 mx-5" v-if="editMode">
+                <FormKit type="form" id="profile-form" :actions="false" :incomplete-message="false" class="space-y-8">
+                    <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8 sm:grid-cols-6">
+                        <div class="sm:col-span-3">
+                            <form-inputs>
+                                <template #first-name="{ icon, label }">
+                                    <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                                        label }}</label>
+                                    <div class="relative">
+                                        <FormKit name="first name" type="text" v-model="firstName"
+                                            validation="required|contains_alpha|length:2,10"
+                                            validation-visibility="dirty" message-class="text-red-600 mt-1.5"
+                                            input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                                        <span class="absolute inset-y-0 flex items-center end-0 pe-3">
+                                            <icon :name="icon" class="w-5 h-5 text-gray-400" />
+                                        </span>
+                                    </div>
+                                </template>
+                            </form-inputs>
+                        </div>
+
+                        <div class="sm:col-span-3">
+                            <form-inputs>
+                                <template #last-name="{ icon, label }">
+                                    <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                                        label }}</label>
+                                    <div class="relative">
+                                        <FormKit name="last name" type="text" v-model="lastName"
+                                            validation="required|contains_alpha|length:2,10"
+                                            validation-visibility="dirty" message-class="text-red-600 mt-1.5"
+                                            input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                                        <span class="absolute inset-y-0 flex items-center end-0 pe-3">
+                                            <icon :name="icon" class="w-5 h-5 text-gray-400" />
+                                        </span>
+                                    </div>
+                                </template>
+                            </form-inputs>
+                        </div>
+                    </div>
+                    <div class="mt-4 col-span-full">
+                        <form-inputs>
+                            <template #email="{ icon, label }">
+                                <label for="email" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                                    label }}</label>
+                                <div class="relative">
+                                    <FormKit name="email" type="email" v-model="email"
+                                        validation="required|email|ends_with:.com" validation-visibility="dirty"
+                                        message-class="text-red-600 mt-1.5"
+                                        input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                                    <span class="absolute inset-y-0 flex items-center end-0 pe-3">
+                                        <icon :name="icon" class="w-5 h-5 text-gray-400" />
+                                    </span>
+                                </div>
+                            </template>
+                        </form-inputs>
+                    </div>
+                    <div class="grid grid-cols-1 mt-5 gap-x-6 gap-y-8 sm:grid-cols-6">
+                        <div class="sm:col-span-3">
+                            <form-inputs>
+                                <template #password="{ icon, label }">
+                                    <div class="flex items-center">
+                                        <label for="password"
+                                            class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                                                label }}</label>
+                                    </div>
+                                    <div class="relative">
+                                        <FormKit name="password" type="text" v-model="password"
+                                            validation="required|password|length:6,7" validation-visibility="dirty"
+                                            message-class="mt-1.5 text-red-600"
+                                            input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                                        <span class="absolute inset-y-0 flex items-center end-0 pe-3">
+                                            <icon :name="icon" class="w-5 h-5 text-gray-400" />
+                                        </span>
+                                    </div>
+                                </template>
+                            </form-inputs>
+                        </div>
+
+                        <div class="sm:col-span-3">
+                            <form-inputs>
+                                <template #confirmPassword="{ icon, label, placeholder }">
+                                    <div class="flex items-center">
+                                        <label for="confirm-password"
+                                            class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                                                label }}</label>
+                                    </div>
+                                    <div class="relative">
+                                        <FormKit name="password_confirm" type="password" v-model="confirmPassword"
+                                            validation="required|confirm" validation-visibility="dirty"
+                                            :placeholder="placeholder" message-class="mt-1.5 text-red-600"
+                                            input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                                        <span class="absolute inset-y-0 flex items-center end-0 pe-3">
+                                            <icon :name="icon" class="w-5 h-5 text-gray-400" />
+                                        </span>
+                                    </div>
+                                </template>
+                            </form-inputs>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end mt-6 gap-x-6">
+                        <button type="submit"
+                            class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            {{ $t('btn.update') }}
+                        </button>
+                    </div>
+                </FormKit>
+            </div>
         </div>
     </div>
 </template>
@@ -211,8 +193,20 @@ const lastName = ref('')
 const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')
-
 const { t } = useI18n()
+
+onMounted(() => {
+    firstName.value = sessionStorage.getItem('firstName');
+    lastName.value = sessionStorage.getItem('lastName');
+    email.value = sessionStorage.getItem('email');
+    password.value = sessionStorage.getItem('password');
+})
+
+const editMode = ref(false)
+
+const toggleEditMode = () => {
+    editMode.value = !editMode.value
+}
 
 useHead({
     title: t('head.profile')
