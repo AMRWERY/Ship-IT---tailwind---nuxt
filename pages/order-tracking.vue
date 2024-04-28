@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="py-6 mx-auto bg-white rounded-lg max-w-7xl sm:px-6 lg:px-8">
       <div class="flex space-s-20">
         <p class="text-2xl font-semibold">Order details <span class="text-blue-700 underline">#A53365ax12</span></p>
         <span

@@ -72,7 +72,6 @@
   </div>
 </template>
 
-
 <script setup>
 const expressOne = ref([
   { img: 'https://justfields.com/storage/projects/7M5rV059/01.webp', title: 'Lace Wig cap for making wigs with adjustable strap', price: '50.00', getBy: 'Nov 07 - Nov 09' },
