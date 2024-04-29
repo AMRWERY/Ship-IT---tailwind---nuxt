@@ -15,6 +15,18 @@
     @apply rounded-lg border border-gray-300 shadow-sm bg-slate-200 text-black py-1.5 ps-2;
   }
 
+  .input {
+    @apply w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50 dark:bg-gray-100;
+  }
+
+  .label {
+    @apply inline-block mb-1 text-sm text-gray-800 sm:text-base dark:text-gray-300;
+  }
+
+  .error-message {
+    @apply text-red-600 mt-1.5;
+  }
+
   body {
     @apply bg-gray-100;
   }

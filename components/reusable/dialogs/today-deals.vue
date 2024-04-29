@@ -21,15 +21,16 @@
                             leave="duration-200 ease-in" leave-from="opacity-100 scale-100"
                             leave-to="opacity-0 scale-95">
                             <HeadlessDialogPanel
-                                class="w-full max-w-3xl p-4 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl rounded-2xl dark:bg-gray-100">
+                                class="w-full max-w-3xl p-4 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl rounded-2xl dark:bg-[#1e2022]">
                                 <div class="flex items-start justify-between pt-2 pb-2">
                                     <div class="w-full text-center">
-                                        <HeadlessDialogTitle as="h3" class="text-xl font-semibold text-gray-900">
+                                        <HeadlessDialogTitle as="h3"
+                                            class="text-xl font-semibold text-gray-800 dark:text-gray-300">
                                             {{ $t('deal.today_deal') }}
                                         </HeadlessDialogTitle>
                                     </div>
                                     <button type="button" @click="closeModal"
-                                        class="inline-flex items-center justify-center w-8 h-8 ml-auto text-sm text-gray-600 bg-transparent">
+                                        class="inline-flex items-center justify-center w-8 h-8 ml-auto text-sm text-gray-600 bg-transparent dark:text-gray-300">
                                         <icon name="ci:close-md" />
                                     </button>
                                 </div>
@@ -40,30 +41,35 @@
                                                 :src="todayDeal.productImg">
                                             <div class="w-full mt-6 lg:w-[450px] lg:ps-10 lg:py-6 lg:mt-0">
                                                 <div class="flex justify-between text-base font-medium text-gray-900">
-                                                    <h1 class="mb-1 text-3xl font-medium text-gray-900 title-font">
+                                                    <h1
+                                                        class="mb-1 text-3xl font-medium text-gray-900 dark:text-gray-300 title-font">
                                                         {{ todayDeal.title }}</h1>
                                                     <div class="flex gap-2 mt-2">
-                                                        <p class="font-medium text-gray-500 line-through text-md">
+                                                        <p
+                                                            class="font-medium text-gray-500 line-through dark:text-gray-300 text-md mt-0.5">
                                                             {{ $t('products.egp') }} {{ todayDeal.originalPrice }}
                                                         </p>
-                                                        <p class="font-medium text-gray-900 text-md">{{
-                                                            $t('products.egp') }} {{ todayDeal.price }}
+                                                        <p
+                                                            class="text-xl font-semibold text-gray-900 dark:text-gray-300">
+                                                            {{
+                                                                $t('products.egp') }} {{ todayDeal.price }}
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="flex mb-4">
                                                     <span class="flex items-center">
                                                         <rating :rating="todayDeal.rating" />
-                                                        <span class="text-gray-600 ms-3">{{ todayDeal.reviews }} {{
-                                                            $t('deal.reviews')
-                                                        }}</span>
+                                                        <span class="text-gray-600 dark:text-gray-300 ms-3">{{
+                                                            todayDeal.reviews }} {{
+                                                                $t('deal.reviews')
+                                                            }}</span>
                                                     </span>
                                                     <span
                                                         class="flex py-2 space-x-2 border-gray-200 ms-3 ps-3 border-s-2">
                                                         <a class="text-blue-600 me-2 transit">
                                                             <SocialShare network="facebook" :label="false" />
                                                         </a>
-                                                        <a class="text-black me-2 transit">
+                                                        <a class="text-black dark:text-white me-2 transit">
                                                             <SocialShare network="twitter" :label="false" />
                                                         </a>
                                                         <a class="text-[#25D366] transit">
@@ -74,7 +80,7 @@
                                                         </a>
                                                     </span>
                                                 </div>
-                                                <p class="leading-relaxed">"{{
+                                                <p class="leading-relaxed dark:text-gray-300">"{{
                                                     $t('deal.i_cannot_make_my_days_longer_so_i_strive_to_make_them_better')
                                                     }} {{ $t('deal.nothing_in_life_is_to_be_feared') }} {{
                                                         $t('deal.it_is_only_to_be_understood') }} {{
@@ -90,17 +96,20 @@
                                                             <div class="flex items-center">
                                                                 <span class="text-4xl text-orange-400">{{ hours
                                                                     }}</span>
-                                                                <p class="text-sm ms-1">{{ $t('deal.hours') }}</p>
+                                                                <p class="text-sm ms-1 dark:text-gray-300">{{
+                                                                    $t('deal.hours') }}</p>
                                                             </div>
                                                             <div class="flex items-center">
                                                                 <span class="text-4xl text-orange-400">{{ minutes
                                                                     }}</span>
-                                                                <p class="text-sm ms-1">{{ $t('deal.minutes') }}</p>
+                                                                <p class="text-sm ms-1 dark:text-gray-300">{{
+                                                                    $t('deal.minutes') }}</p>
                                                             </div>
                                                             <div class="flex items-center">
                                                                 <span class="text-4xl text-orange-400">{{ seconds
                                                                     }}</span>
-                                                                <p class="text-sm ms-1">{{ $t('deal.seconds') }}</p>
+                                                                <p class="text-sm ms-1 dark:text-gray-300">{{
+                                                                    $t('deal.seconds') }}</p>
                                                             </div>
                                                         </div>
                                                     </div>

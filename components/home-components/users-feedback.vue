@@ -8,23 +8,24 @@
         <div class="px-5 pt-5 mx-auto pb-7">
           <div class="flex flex-wrap -m-4">
             <div class="w-full p-4 sm:w-96 md:w-1/3" v-for="card in cards" :key="card">
-              <div class="h-full overflow-hidden border-2 border-gray-800 rounded-lg">
+              <div class="h-full overflow-hidden border-2 border-gray-800 rounded-2xl dark:border-gray-400">
                 <img class="object-cover object-center w-full lg:h-48 md:h-36 transit" :src="card.img">
                 <div class="p-6">
-                  <h2 class="text-2xl font-semibold text-center text-gray-700">
+                  <h2 class="text-2xl font-semibold text-center text-gray-700 dark:text-gray-200">
                     {{ $t(card.title) }}</h2>
                   <br>
-                  <p class="mb-3 leading-relaxed text-gray-500">{{ $t(card.subtitle) }}</p>
+                  <p class="mb-3 leading-relaxed text-gray-500 dark:text-gray-300">{{ $t(card.subtitle) }}</p>
                   <div class="flex flex-wrap items-center">
-                    <nuxt-link to="" class="inline-flex items-center text-indigo-700 md:mb-2 lg:mb-0">
+                    <nuxt-link to="/blogs"
+                      class="inline-flex items-center text-indigo-700 md:mb-2 lg:mb-0 dark:text-indigo-400">
                       {{ $t('home.learn_more') }}
                     </nuxt-link>
                     <span
-                      class="inline-flex items-center py-1 text-sm leading-none text-gray-500 border-gray-800 me-3 lg:ms-auto md:ms-0 ms-auto pe-3 border-e-2">
+                      class="inline-flex items-center py-1 text-sm leading-none text-gray-500 border-gray-800 dark:text-gray-300 me-3 lg:ms-auto md:ms-0 ms-auto pe-3 border-e-2">
                       <icon name="fontisto:eye" />
                       <p class="ms-1">{{ card.reviews }}K</p>
                     </span>
-                    <span class="inline-flex items-center text-sm leading-none text-gray-500">
+                    <span class="inline-flex items-center text-sm leading-none text-gray-500 dark:text-gray-300">
                       <icon name="fontisto:comments" />
                       <p class="ms-1">{{ card.comments }}</p>
                     </span>

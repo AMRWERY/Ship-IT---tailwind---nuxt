@@ -102,12 +102,12 @@
           <div class="space-y-4">
             <form-inputs>
               <template #email="{ icon, label, placeholder }">
-                <label for="email" class="inline-block mt-4 mb-1 text-sm text-gray-800 sm:text-base">{{
+                <label for="email" class="label">{{
                   label }}</label>
                 <div class="relative">
                   <FormKit name="email" type="email" v-model="email" validation="required|email|ends_with:.com"
-                    validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
-                    input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                    validation-visibility="dirty" :placeholder="placeholder" message-class="error-message"
+                    input-class="input" />
                   <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                     <icon :name="icon" class="w-5 h-5 text-gray-400" />
                   </span>
@@ -121,8 +121,8 @@
                   label }}</label>
                 <div class="relative">
                   <FormKit name="first name" type="text" v-model="cardHolder" validation="required|contains_alpha"
-                    validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
-                    input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                    validation-visibility="dirty" :placeholder="placeholder" message-class="error-message"
+                    input-class="input" />
                   <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                     <icon :name="icon" class="w-5 h-5 text-gray-400" />
                   </span>
@@ -138,8 +138,8 @@
                       label }}</label>
                     <div class="relative">
                       <FormKit name="card-no" type="text" v-model="cardNumber" validation="required|number"
-                        validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
-                        input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                        validation-visibility="dirty" :placeholder="placeholder" message-class="error-message"
+                        input-class="input" />
                       <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                         <icon :name="icon" class="w-5 h-5 text-gray-400" />
                       </span>
@@ -153,7 +153,7 @@
                   <div class="relative">
                     <FormKit name="credit-expiry" type="text" v-model="expiryDate"
                       validation="required|date_format:MM/YY" validation-visibility="dirty" :placeholder="placeholder"
-                      message-class="text-red-600 mt-1.5"
+                      message-class="error-message"
                       input-class="w-full px-3 py-2 mt-1 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                   </div>
                 </template>
@@ -163,7 +163,7 @@
                   <label for="credit-cvc" class="inline-block mb-1 text-sm text-gray-800 sm:text-base"></label>
                   <div class="relative">
                     <FormKit name="credit-cvc" type="text" v-model="cvc" validation="required|number|length:3"
-                      validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
+                      validation-visibility="dirty" :placeholder="placeholder" message-class="error-message"
                       input-class="w-full px-3 py-2 mt-1 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
                   </div>
                 </template>
@@ -179,8 +179,7 @@
                     <div class="relative">
                       <FormKit name="street-address" type="text" v-model="streetAddress"
                         validation="required|contains_alpha_spaces|length:10,100" validation-visibility="dirty"
-                        :placeholder="placeholder" message-class="text-red-600 mt-1.5"
-                        input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                        :placeholder="placeholder" message-class="error-message" input-class="input" />
                       <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                         <img class="object-contain w-4 h-4"
                           src="https://justfields.com/storage/projects/7M5rV059/egy=flag.png" />

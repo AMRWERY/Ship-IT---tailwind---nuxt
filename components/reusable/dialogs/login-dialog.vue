@@ -3,7 +3,7 @@
     <!-- Button trigger modal -->
     <button data-twe-toggle="modal" data-twe-target="#exampleModal" data-twe-ripple-init data-twe-ripple-color="light"
       type="button"
-      class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{
+      class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 dark:bg-[#6196A6] rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{
         $t('btn.login') }}</button>
 
     <!-- Modal -->
@@ -13,9 +13,9 @@
       <div data-twe-modal-dialog-ref
         class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
         <div
-          class="relative flex flex-col w-full text-current bg-white border-none rounded-md outline-none pointer-events-auto bg-clip-padding shadow-4 dark:bg-surface-dark">
-          <div class="mx-auto mt-4">
-            <img src="/shopping-bags-svgrepo-com.svg" class="w-12 h-12">
+          class="relative flex flex-col w-full text-current bg-white dark:bg-[#1e2022] border-none rounded-md outline-none pointer-events-auto bg-clip-padding shadow-4 dark:bg-surface-dark">
+          <div class="mx-auto mt-4" ref="el">
+            <img src="/shopping-bags-svgrepo-com.svg" class="h-14 w-14">
           </div>
           <div
             class="flex items-center justify-center flex-shrink-0 p-4 rounded-t-md border-neutral-100 dark:border-white/10">
@@ -26,18 +26,18 @@
 
           <!-- Modal body -->
           <div class="relative flex-auto" data-twe-modal-body-ref>
-            <FormKit class="max-w-lg mx-auto rounded-lg" type="form" id="login-form" :actions="false"
+            <FormKit class="max-w-lg mx-auto rounded-2xl" type="form" id="login-form" :actions="false"
               :incomplete-message="false" @submit="signIn">
               <div class="flex flex-col gap-4 p-4">
                 <div>
                   <form-inputs>
                     <template #email="{ icon, label, placeholder }">
-                      <label for="email" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                      <label for="email" class="label">{{
                         label }}</label>
                       <div class="relative">
                         <FormKit name="email" type="email" v-model="email" validation="required|email|ends_with:.com"
-                          validation-visibility="dirty" :placeholder="placeholder" message-class="text-red-600 mt-1.5"
-                          input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                          validation-visibility="dirty" :placeholder="placeholder" message-class="error-message"
+                          input-class="input" />
                         <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                           <icon :name="icon" class="w-5 h-5 text-gray-400" />
                         </span>
@@ -50,16 +50,15 @@
                   <form-inputs>
                     <template #password="{ icon, label, placeholder }">
                       <div class="flex items-center">
-                        <label for="password" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                        <label for="password" class="label">{{
                           label }}</label>
-                        <nuxt-link to="/reset-password" class="text-sm text-blue-600 ms-auto">{{
+                        <nuxt-link to="/reset-password" class="text-sm text-blue-600 ms-auto dark:text-blue-400">{{
                           $t('auth.forget_password') }}</nuxt-link>
                       </div>
                       <div class="relative">
                         <FormKit name="password" type="password" v-model="password"
                           validation="required|password|length:6,7" validation-visibility="dirty"
-                          :placeholder="placeholder" message-class="mt-1.5 text-red-600"
-                          input-class="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded outline-none bg-gray-50" />
+                          :placeholder="placeholder" message-class="mt-1.5 text-red-600" input-class="input" />
                         <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                           <icon :name="icon" class="w-5 h-5 text-gray-400 mt-2.5" />
                         </span>
@@ -69,7 +68,7 @@
                 </div>
 
                 <button type="submit" data-twe-modal-dismiss
-                  class="block px-8 py-3 mt-1 text-sm font-semibold text-center text-white transition duration-100 bg-gray-800 rounded-lg outline-none ring-gray-300 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">{{
+                  class="block px-8 py-3 mt-1 text-sm font-semibold text-center text-white transition duration-100 bg-gray-800 rounded-lg outline-none ring-gray-300 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base dark:bg-[#41B06E] dark:text-gray-100">{{
                     loading ? $t('btn.loading') : $t('btn.login') }}
                   <template v-if="loading">
                     <icon name="svg-spinners:6-dots-scale-middle" class="animate-spin" />
@@ -80,7 +79,7 @@
 
             <div class="relative flex items-center justify-center">
               <span class="absolute inset-x-0 h-px bg-gray-300"></span>
-              <span class="relative px-4 text-sm text-gray-400 bg-white">{{ $t('auth.log_in_with_social') }}</span>
+              <span class="relative px-4 text-sm text-gray-400 bg-white rounded-lg dark:bg-gray-400 dark:text-gray-100">{{ $t('auth.log_in_with_social') }}</span>
             </div>
 
             <div class="flex flex-col gap-4 p-4">
@@ -111,10 +110,10 @@
               </button>
             </div>
 
-            <div class="flex items-center justify-center p-4 bg-gray-100">
-              <p class="text-sm text-center text-gray-500">{{ $t('auth.dont_have_an_account') }}
+            <div class="flex items-center justify-center p-4 bg-gray-100 dark:bg-[#424242]">
+              <p class="text-sm text-center text-gray-500 dark:text-gray-200">{{ $t('auth.dont_have_an_account') }}
                 <nuxt-link to="/sign-up"
-                  class="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">{{
+                  class="text-indigo-500 transition duration-100 dark:text-indigo-300 hover:text-indigo-600 active:text-indigo-700">{{
                     $t('auth.register') }}</nuxt-link>
               </p>
             </div>
@@ -143,18 +142,14 @@ const signIn = async () => {
   }
 };
 
-// const signIn = () => {
-//   store.userSignIn({
-//     email: email.value,
-//     password: password.value,
-//   });
-// };
-
 const signInWithGoogleAccount = () => {
   store.signInWithGoogle({
     email: email.value,
   });
 };
+
+//rotate logo composable
+const { el } = useAnimateRotation();
 
 onMounted(async () => {
   const { Modal, initTWE } = await import("tw-elements");
