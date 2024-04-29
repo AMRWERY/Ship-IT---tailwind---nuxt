@@ -79,7 +79,9 @@
 
             <div class="relative flex items-center justify-center">
               <span class="absolute inset-x-0 h-px bg-gray-300"></span>
-              <span class="relative px-4 text-sm text-gray-400 bg-white rounded-lg dark:bg-gray-400 dark:text-gray-100">{{ $t('auth.log_in_with_social') }}</span>
+              <span
+                class="relative px-4 text-sm text-gray-400 bg-white rounded-lg dark:bg-gray-400 dark:text-gray-100">{{
+                  $t('auth.log_in_with_social') }}</span>
             </div>
 
             <div class="flex flex-col gap-4 p-4">

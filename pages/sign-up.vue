@@ -147,7 +147,7 @@
 
             <div class="relative w-full h-64 sm:h-96 lg:h-full lg:w-1/2">
                 <img src="https://justfields.com/storage/projects/7M5rV059/deal05.jpg"
-                    class="absolute inset-0 object-cover w-full h-full" />
+                    class="absolute inset-0 object-cover w-full h-full rounded-2xl" />
             </div>
         </section>
     </div>
