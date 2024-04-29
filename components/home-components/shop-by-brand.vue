@@ -21,10 +21,10 @@
       <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         <div v-for="card in cards" :key="card" class="relative group">
           <nuxt-link :to="card.route"
-            class="block max-w-96 lg:max-w-96 xs:min-w-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            class="block max-w-96 lg:max-w-96 xs:min-w-full rounded-2xl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div class="p-6 text-center">
-              <p class="mb-2 truncate">{{ $t(card.title) }}</p>
-              <p class="text-base text-neutral-600 dark:text-neutral-200">
+              <p class="mb-2 font-semibold truncate text-neutral-800 dark:text-neutral-300">{{ $t(card.title) }}</p>
+              <p class="text-base text-neutral-700 dark:text-neutral-300">
                 {{ $t(card.subtitle) }}
               </p>
             </div>
@@ -38,7 +38,7 @@
 
     <div class="max-w-full py-6 mx-auto mt-8 sm:px-6 lg:px-8">
       <img src="https://justfields.com/storage/projects/7M5rV059/expressss.webp"
-        class="w-full h-60 xs:h-56 sm:h-72 md:h-96">
+        class="w-full rounded-2xl h-60 xs:h-56 sm:h-72 md:h-96">
     </div>
   </div>
 </template>

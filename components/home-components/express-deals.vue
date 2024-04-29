@@ -7,7 +7,7 @@
           :slidesPerView="4.5" :loop="true" :grabCursor="true" :grid="{ rows: 1 }" :pagination="{ clickable: true }"
           :modules="[SwiperAutoplay]" class="mySwiper">
           <swiper-slide v-for="card in expressOne" :key="card">
-            <div class="relative mt-5 w-[300px] max-w-[18rem] overflow-hidden rounded-lg bg-white shadow-md">
+            <div class="relative mt-5 w-[300px] max-w-[18rem] overflow-hidden rounded-2xl bg-white shadow-md dark:bg-neutral-700">
               <div>
                 <img class="object-cover w-full rounded-t-lg h-60 transit" :src="card.img" />
               </div>
@@ -16,18 +16,18 @@
                 v-if="card.discount">{{ card.discount }}% {{ $t('home.off') }}</span>
               <div class="px-5 pb-5 mt-4">
                 <nuxt-link to="">
-                  <h5 class="font-semibold tracking-tight truncate text-md text-slate-900">
+                  <h5 class="font-semibold tracking-tight truncate text-md text-slate-900 dark:text-slate-300">
                     {{ card.title }}
                   </h5>
                 </nuxt-link>
                 <div class="flex items-center justify-between">
                   <p class="mt-2">
-                    <span class="text-lg font-bold text-red-600 me-1">EGP{{ card.price }}</span>
-                    <span class="text-sm line-through text-slate-900" v-if="card.originalPrice">EGP{{
+                    <span class="text-lg font-bold text-red-600 dark:text-red-200 me-1">{{ $t('products.egp') }}{{ card.price }}</span>
+                    <span class="text-sm line-through text-slate-900 dark:text-slate-300" v-if="card.originalPrice">{{ $t('products.egp') }}{{
                       card.originalPrice }}</span>
                   </p>
                 </div>
-                <p class="mt-2 text-start">Get it by {{ card.getBy }}</p>
+                <p class="mt-2 text-start text-slate-700 dark:text-slate-300">Get it by {{ card.getBy }}</p>
               </div>
             </div>
           </swiper-slide>
@@ -37,7 +37,7 @@
           :slidesPerView="4.5" :loop="true" :grabCursor="true" :grid="{ rows: 1 }" :pagination="{ clickable: true }"
           :modules="[SwiperAutoplay]" class="mySwiper">
           <swiper-slide v-for="card in expressTwo" :key="card">
-            <div class="relative mt-5 w-[300px] max-w-[16rem] overflow-hidden rounded-lg bg-white shadow-md">
+            <div class="relative mt-5 w-[300px] max-w-[16rem] overflow-hidden rounded-2xl bg-white shadow-md dark:bg-neutral-700">
               <div>
                 <img class="object-cover w-full rounded-t-lg h-60 transit" :src="card.img" />
               </div>
@@ -46,18 +46,18 @@
                 v-if="card.discount">{{ card.discount }}% {{ $t('home.off') }}</span>
               <div class="px-5 pb-5 mt-4">
                 <nuxt-link to="">
-                  <h5 class="font-semibold tracking-tight truncate text-md text-slate-900">
+                  <h5 class="font-semibold tracking-tight truncate text-md text-slate-900 dark:text-slate-300">
                     {{ card.title }}
                   </h5>
                 </nuxt-link>
                 <div class="flex items-center justify-between">
                   <p class="mt-2">
-                    <span class="text-lg font-bold text-red-600 me-1">EGP{{ card.price }}</span>
-                    <span class="text-sm line-through text-slate-900" v-if="card.originalPrice">EGP{{
+                    <span class="text-lg font-bold text-red-600 dark:text-red-200 me-1">{{ $t('products.egp') }}{{ card.price }}</span>
+                    <span class="text-sm line-through text-slate-900 dark:text-slate-300" v-if="card.originalPrice">{{ $t('products.egp') }}{{
                       card.originalPrice }}</span>
                   </p>
                 </div>
-                <p class="mt-2 text-start">Get it by {{ card.getBy }}</p>
+                <p class="mt-2 text-start text-slate-700 dark:text-slate-300">Get it by {{ card.getBy }}</p>
               </div>
             </div>
           </swiper-slide>
@@ -67,7 +67,7 @@
 
     <div class="max-w-full py-2 mx-auto mt-4 sm:px-6 lg:px-8">
       <img src="https://justfields.com/storage/projects/7M5rV059/ck_banner.webp"
-        class="w-full h-60 xs:h-56 sm:h-72 md:h-96">
+        class="w-full rounded-2xl h-60 xs:h-56 sm:h-72 md:h-96">
     </div>
   </div>
 </template>

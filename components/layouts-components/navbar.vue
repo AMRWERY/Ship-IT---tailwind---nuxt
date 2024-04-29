@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-[#4F46E5] py-1.5 flex justify-center z-50">
+  <nav class="fixed top-0 left-0 right-0 bg-[#4F46E5] dark:bg-[#6196A6] py-1.5 flex justify-center z-50">
     <p class="mt-0.5 text-sm text-white">{{ $t('layout.get_free_delivery_on_orders_over_egp_1000') }}</p>
     <span class="mx-2 text-white">|</span>
 
@@ -25,12 +25,13 @@
       <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
         id="navbarSupportedContent1" data-twe-collapse-item>
         <!-- Logo -->
-        <nuxt-link
+        <nuxt-link ref="el"
           class="flex items-center mt-3 mb-4 me-5 ms-2 text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
           to="/">
-          <img src="/shopping-bags-svgrepo-com.svg" class="h-8" loading="lazy" />
+          <img src="/shopping-bags-svgrepo-com.svg" class="h-10" loading="lazy" />
         </nuxt-link>
 
+        <!-- Categories -->
         <categories-menu />
         <!-- Left links -->
       </div>
@@ -51,8 +52,7 @@
         </nuxt-link>
 
         <!-- Toggle Themes-->
-        <button type="button" @click="toggleTheme"
-          class="p-1 text-gray-400 rounded-full dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+        <button type="button" @click="toggleTheme" class="p-1 text-gray-400 rounded-full dark:text-white">
           <icon :name="theme === 'dark' ? 'heroicons-solid:sun' : 'heroicons-solid:moon'"></icon>
         </button>
 
@@ -111,6 +111,9 @@ const updateThemeClasses = (newTheme) => {
 };
 
 updateThemeClasses(sessionStorage.getItem('theme') || 'light');
+
+//rotate logo composable
+const { el } = useAnimateRotation();
 
 onMounted(async () => {
   const { Tooltip, Collapse, Dropdown, initTWE } = await import("tw-elements");

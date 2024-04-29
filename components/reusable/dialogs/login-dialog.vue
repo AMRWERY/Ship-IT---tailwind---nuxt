@@ -3,7 +3,7 @@
     <!-- Button trigger modal -->
     <button data-twe-toggle="modal" data-twe-target="#exampleModal" data-twe-ripple-init data-twe-ripple-color="light"
       type="button"
-      class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{
+      class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 dark:bg-[#6196A6] rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{
         $t('btn.login') }}</button>
 
     <!-- Modal -->
