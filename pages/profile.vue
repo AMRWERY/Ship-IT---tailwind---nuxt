@@ -123,8 +123,7 @@
                                 <div class="relative">
                                     <FormKit name="email" type="email" v-model="email"
                                         validation="required|email|ends_with:.com" validation-visibility="dirty"
-                                        message-class="error-message"
-                                        input-class="input" />
+                                        message-class="error-message" input-class="input" />
                                     <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                                         <icon :name="icon" class="w-5 h-5 text-gray-400" />
                                     </span>
@@ -144,8 +143,7 @@
                                     <div class="relative">
                                         <FormKit name="password" type="text" v-model="password"
                                             validation="required|password|length:6,7" validation-visibility="dirty"
-                                            message-class="mt-1.5 text-red-600"
-                                            input-class="input" />
+                                            message-class="mt-1.5 text-red-600" input-class="input" />
                                         <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                                             <icon :name="icon" class="w-5 h-5 text-gray-400" />
                                         </span>

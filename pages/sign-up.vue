@@ -18,15 +18,13 @@
                             <div class="sm:col-span-3">
                                 <form-inputs>
                                     <template #first-name="{ icon, label, placeholder }">
-                                        <label for="name"
-                                            class="label">{{
-                                                label }}</label>
+                                        <label for="name" class="label">{{
+                                            label }}</label>
                                         <div class="relative">
                                             <FormKit name="first name" type="text" v-model="firstName"
                                                 validation="required|contains_alpha|length:2,10"
                                                 validation-visibility="dirty" :placeholder="placeholder"
-                                                message-class="error-message"
-                                                input-class="input" />
+                                                message-class="error-message" input-class="input" />
                                             <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                                                 <icon :name="icon" class="w-5 h-5 text-gray-400" />
                                             </span>
@@ -38,15 +36,13 @@
                                 <div>
                                     <form-inputs>
                                         <template #last-name="{ icon, label, placeholder }">
-                                            <label for="name"
-                                                class="label">{{
-                                                    label }}</label>
+                                            <label for="name" class="label">{{
+                                                label }}</label>
                                             <div class="relative">
                                                 <FormKit name="last name" type="text" v-model="lastName"
                                                     validation="required|contains_alpha|length:2,10"
                                                     validation-visibility="dirty" :placeholder="placeholder"
-                                                    message-class="error-message"
-                                                    input-class="input" />
+                                                    message-class="error-message" input-class="input" />
                                                 <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                                                     <icon :name="icon" class="w-5 h-5 text-gray-400" />
                                                 </span>
@@ -79,9 +75,8 @@
                             <form-inputs>
                                 <template #password="{ icon, label, placeholder }">
                                     <div class="flex items-center">
-                                        <label for="password"
-                                            class="label">{{
-                                                label }}</label>
+                                        <label for="password" class="label">{{
+                                            label }}</label>
                                         <nuxt-link to="/reset-password" class="text-sm text-blue-600 ms-auto">{{
                                             $t('auth.forget_password') }}</nuxt-link>
                                     </div>

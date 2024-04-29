@@ -22,7 +22,7 @@
   .label {
     @apply inline-block mb-1 text-sm text-gray-800 sm:text-base dark:text-gray-300;
   }
-  
+
   .error-message {
     @apply text-red-600 mt-1.5;
   }

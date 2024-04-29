@@ -179,8 +179,7 @@
                     <div class="relative">
                       <FormKit name="street-address" type="text" v-model="streetAddress"
                         validation="required|contains_alpha_spaces|length:10,100" validation-visibility="dirty"
-                        :placeholder="placeholder" message-class="error-message"
-                        input-class="input" />
+                        :placeholder="placeholder" message-class="error-message" input-class="input" />
                       <span class="absolute inset-y-0 flex items-center end-0 pe-3">
                         <img class="object-contain w-4 h-4"
                           src="https://justfields.com/storage/projects/7M5rV059/egy=flag.png" />
