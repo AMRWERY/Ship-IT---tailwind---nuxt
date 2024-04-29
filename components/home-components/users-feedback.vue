@@ -16,7 +16,8 @@
                   <br>
                   <p class="mb-3 leading-relaxed text-gray-500 dark:text-gray-300">{{ $t(card.subtitle) }}</p>
                   <div class="flex flex-wrap items-center">
-                    <nuxt-link to="/blogs" class="inline-flex items-center text-indigo-700 md:mb-2 lg:mb-0 dark:text-indigo-400">
+                    <nuxt-link to="/blogs"
+                      class="inline-flex items-center text-indigo-700 md:mb-2 lg:mb-0 dark:text-indigo-400">
                       {{ $t('home.learn_more') }}
                     </nuxt-link>
                     <span
