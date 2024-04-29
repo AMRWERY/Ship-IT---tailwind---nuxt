@@ -37,6 +37,7 @@
 
       <!-- Right elements -->
       <div class="relative flex items-center space-s-3">
+        <!-- Toggle Languages-->
         <nuxt-link class="me-4 text-neutral-600 dark:text-white" to="" role="button" v-if="isRTL"
           @click="updateLocale('en')">
           <span class="[&>svg]:w-5">
@@ -49,11 +50,19 @@
           </span>
         </nuxt-link>
 
+        <!-- Toggle Themes-->
+        <button type="button" @click="toggleTheme"
+          class="p-1 text-gray-400 rounded-full dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+          <icon :name="theme === 'dark' ? 'heroicons-solid:sun' : 'heroicons-solid:moon'"></icon>
+        </button>
+
         <!-- cart -->
         <cart-dialog v-if="isAuthenticated" />
 
+        <!-- Dropdown menu -->
         <profile-menu v-if="isAuthenticated" />
 
+        <!-- Login -->
         <login-dialog v-if="!isAuthenticated" />
       </div>
       <!-- Right elements -->
@@ -83,6 +92,25 @@ onMounted(() => {
 });
 
 const isAuthenticated = useIsAuthenticated()
+
+const theme = ref('light');
+
+const toggleTheme = () => {
+  theme.value = theme.value === 'dark' ? 'light' : 'dark';
+  sessionStorage.setItem('theme', theme.value);
+  updateThemeClasses(theme.value);
+};
+
+const updateThemeClasses = (newTheme) => {
+  const body = document.querySelector('body');
+  if (newTheme === 'dark') {
+    body.classList.add('dark');
+  } else {
+    body.classList.remove('dark');
+  }
+};
+
+updateThemeClasses(sessionStorage.getItem('theme') || 'light');
 
 onMounted(async () => {
   const { Tooltip, Collapse, Dropdown, initTWE } = await import("tw-elements");

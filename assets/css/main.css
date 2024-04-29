@@ -22,3 +22,12 @@
 .desc::-webkit-scrollbar-track {
   background-color: #eee;
 }
+
+/*themes*/
+body {
+  background-color: #f6f6f6;
+}
+
+.back-btn {
+  background-color: #ffffff;
+}
