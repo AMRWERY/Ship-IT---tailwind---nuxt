@@ -68,7 +68,7 @@
                 </div>
 
                 <button type="submit" data-twe-modal-dismiss
-                  class="block px-8 py-3 mt-1 text-sm font-semibold text-center text-white transition duration-100 bg-gray-800 rounded-lg outline-none ring-gray-300 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">{{
+                  class="block px-8 py-3 mt-1 text-sm font-semibold text-center text-white transition duration-100 bg-gray-800 rounded-lg outline-none ring-gray-300 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base dark:bg-[#41B06E] dark:text-gray-100">{{
                     loading ? $t('btn.loading') : $t('btn.login') }}
                   <template v-if="loading">
                     <icon name="svg-spinners:6-dots-scale-middle" class="animate-spin" />
@@ -79,7 +79,7 @@
 
             <div class="relative flex items-center justify-center">
               <span class="absolute inset-x-0 h-px bg-gray-300"></span>
-              <span class="relative px-4 text-sm text-gray-400 bg-white">{{ $t('auth.log_in_with_social') }}</span>
+              <span class="relative px-4 text-sm text-gray-400 bg-white rounded-lg dark:bg-gray-400 dark:text-gray-100">{{ $t('auth.log_in_with_social') }}</span>
             </div>
 
             <div class="flex flex-col gap-4 p-4">
@@ -110,10 +110,10 @@
               </button>
             </div>
 
-            <div class="flex items-center justify-center p-4 bg-gray-100">
-              <p class="text-sm text-center text-gray-500">{{ $t('auth.dont_have_an_account') }}
+            <div class="flex items-center justify-center p-4 bg-gray-100 dark:bg-[#424242]">
+              <p class="text-sm text-center text-gray-500 dark:text-gray-200">{{ $t('auth.dont_have_an_account') }}
                 <nuxt-link to="/sign-up"
-                  class="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">{{
+                  class="text-indigo-500 transition duration-100 dark:text-indigo-300 hover:text-indigo-600 active:text-indigo-700">{{
                     $t('auth.register') }}</nuxt-link>
               </p>
             </div>
