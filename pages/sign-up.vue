@@ -3,9 +3,9 @@
         <section class="relative flex flex-wrap max-w-6xl py-4 mx-auto lg:h-screen lg:items-center">
             <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
                 <div class="max-w-lg mx-auto text-center">
-                    <h1 class="text-2xl font-bold sm:text-3xl">{{ $t('auth.sign_up_new_account') }}</h1>
-
-                    <p class="mt-4 text-gray-500">
+                    <h1 class="text-2xl font-semibold leading-normal text-surface dark:text-white">{{
+                        $t('auth.sign_up_new_account') }}</h1>
+                    <p class="mt-4 text-gray-500 dark:text-gray-200">
                         {{ $t('auth.let_is_get_you_all_set_up_so_you_can_start_creating_your_first') }}
                         {{ $t('auth.first_onboarding_experience') }}
                     </p>
@@ -112,7 +112,9 @@
 
                 <div class="relative flex items-center justify-center">
                     <span class="absolute inset-x-0 h-px bg-gray-300"></span>
-                    <span class="relative px-4 text-sm text-gray-400 bg-white">{{ $t('auth.log_in_with_social')
+                    <span
+                        class="relative px-4 text-sm text-gray-400 bg-white rounded-lg dark:bg-gray-400 dark:text-gray-100">{{
+                            $t('auth.log_in_with_social')
                         }}</span>
                 </div>
 
