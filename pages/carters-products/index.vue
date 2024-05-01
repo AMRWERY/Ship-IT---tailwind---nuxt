@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bg-white">
+        <div class="bg-white dark:bg-[#1B1D1E]">
             <div>
                 <!-- Mobile filter dialog -->
                 <HeadlessTransitionRoot as="template" :show="mobileFiltersOpen">
@@ -18,11 +18,11 @@
                                 leave="transition ease-in-out duration-300 transform" leave-from="translate-x-0"
                                 leave-to="translate-x-full">
                                 <HeadlessDialogPanel
-                                    class="relative flex flex-col w-full h-full max-w-xs py-4 pb-12 overflow-y-auto bg-white shadow-xl ms-auto">
+                                    class="relative flex flex-col w-full h-full max-w-xs py-4 pb-12 overflow-y-auto bg-white shadow-xl ms-auto dark:bg-[#1e2022]">
                                     <div class="flex items-center justify-between px-4 mt-7">
-                                        <h2 class="text-lg font-medium text-gray-900">Filters</h2>
+                                        <h2 class="text-lg font-medium text-gray-700 dark:text-gray-300">Filters</h2>
                                         <button type="button"
-                                            class="flex items-center justify-center w-10 h-10 p-2 text-gray-400 bg-white rounded-md -me-2"
+                                            class="flex items-center justify-center w-10 h-10 p-2 text-gray-400 rounded-md -me-2"
                                             @click="mobileFiltersOpen = false">
                                             <icon name="ci:close-sm" class="w-6 h-6" aria-hidden="true" />
                                         </button>
@@ -35,8 +35,9 @@
                                             v-slot="{ open }">
                                             <h3 class="flow-root -my-3">
                                                 <HeadlessDisclosureButton
-                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">{{ $t('products.price') }}
+                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500 dark:bg-[#1e2022] dark:text-gray-300">
+                                                    <span class="font-medium text-gray-900 dark:text-gray-300">{{
+                                                        $t('products.price') }}
                                                         ({{ $t('products.egp') }})</span>
                                                     <span class="flex items-center ms-6">
                                                         <icon name="ant-design:plus-outlined" class="w-5 h-5"
@@ -53,17 +54,18 @@
                                                         <div>
                                                             <div class="relative mt-1 rounded-md shadow-sm">
                                                                 <input id="minPrice" name="minPrice" v-model="minPrice"
-                                                                    class="flex-1 block w-full px-2 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 h-9"
+                                                                    class="flex-1 block w-full px-2 py-2 rounded-md input h-9"
                                                                     type="number" step="100"
                                                                     :placeholder="$t('placeholder.min')">
                                                             </div>
                                                         </div>
-                                                        <span class="mx-auto mt-1 text-gray-600">{{ $t('products.to')
-                                                            }}</span>
+                                                        <span class="mx-auto mt-1 text-gray-600 dark:text-gray-300">{{
+                                                            $t('products.to')
+                                                        }}</span>
                                                         <div>
                                                             <div class="relative mt-1 rounded-md shadow-sm">
                                                                 <input id="maxPrice" name="maxPrice" v-model="maxPrice"
-                                                                    class="flex-1 block w-full px-2 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 h-9"
+                                                                    class="flex-1 block w-full px-2 py-2 rounded-md input h-9"
                                                                     step="100" type="number"
                                                                     :placeholder="$t('placeholder.max')">
                                                             </div>
@@ -83,8 +85,10 @@
                                                 <filteration>
                                                     <template #fulfillment="{ plusIcon, minusIcon, label }">
                                                         <HeadlessDisclosureButton
-                                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                            <span class="font-medium text-gray-900">{{ label }}</span>
+                                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500 dark:bg-[#1e2022] dark:text-gray-300">
+                                                            <span
+                                                                class="font-medium text-gray-900 dark:text-gray-300">{{
+                                                                    label }}</span>
                                                             <span class="flex items-center ms-6">
                                                                 <icon :name="plusIcon" class="w-5 h-5"
                                                                     aria-hidden="true" v-if="!open" />
@@ -102,8 +106,9 @@
                                                         <input id="category" name="category" :value="ful.label"
                                                             type="checkbox" :checked="ful.checked"
                                                             class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
-                                                        <label for="category" class="text-sm text-gray-600 ms-3">{{
-                                                            ful.label
+                                                        <label for="category"
+                                                            class="text-sm text-gray-600 ms-3 dark:text-gray-300">{{
+                                                                ful.label
                                                             }}</label>
                                                     </div>
                                                 </div>
@@ -117,8 +122,10 @@
                                                 <filteration>
                                                     <template #categories="{ plusIcon, minusIcon, label }">
                                                         <HeadlessDisclosureButton
-                                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                            <span class="font-medium text-gray-900">{{ label }}</span>
+                                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500 dark:bg-[#1e2022] dark:text-gray-300">
+                                                            <span
+                                                                class="font-medium text-gray-900 dark:text-gray-300">{{
+                                                                    label }}</span>
                                                             <span class="flex items-center ms-6">
                                                                 <icon :name="plusIcon" class="w-5 h-5"
                                                                     aria-hidden="true" v-if="!open" />
@@ -137,8 +144,9 @@
                                                             type="checkbox" :checked="category.checked"
                                                             class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                                                             @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
-                                                        <label for="category" class="text-sm text-gray-600 ms-3">{{
-                                                            $t(category.label)
+                                                        <label for="category"
+                                                            class="text-sm text-gray-600 ms-3 dark:text-gray-300">{{
+                                                                $t(category.label)
                                                             }}</label>
                                                     </div>
                                                 </div>
@@ -146,14 +154,15 @@
                                         </HeadlessDisclosure>
 
                                         <!-- Colors -->
-                                        <HeadlessDisclosure as="div" class="px-4 py-6 border-b border-gray-200"
-                                            v-slot="{ open }">
+                                        <HeadlessDisclosure as="div" class="px-4 py-6" v-slot="{ open }">
                                             <h3 class="flow-root -my-3">
                                                 <filteration>
                                                     <template #colors="{ plusIcon, minusIcon, label }">
                                                         <HeadlessDisclosureButton
-                                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                            <span class="font-medium text-gray-900">{{ label }}</span>
+                                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500 dark:bg-[#1e2022] dark:text-gray-300">
+                                                            <span
+                                                                class="font-medium text-gray-900 dark:text-gray-300">{{
+                                                                    label }}</span>
                                                             <span class="flex items-center ms-6">
                                                                 <icon :name="plusIcon" class="w-5 h-5"
                                                                     aria-hidden="true" v-if="!open" />
@@ -172,8 +181,9 @@
                                                             type="checkbox" :checked="color.checked"
                                                             class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                                                             @change="color.checked = !color.checked; updateSelectedColor(color.label, color.checked)" />
-                                                        <label for="color" class="text-sm text-gray-600 ms-3">{{
-                                                            color.label
+                                                        <label for="color"
+                                                            class="text-sm text-gray-600 ms-3 dark:text-gray-300">{{
+                                                                color.label
                                                             }}</label>
                                                     </div>
                                                 </div>
@@ -188,16 +198,19 @@
 
                 <main class="max-w-full px-4 mx-auto sm:px-6 lg:px-8">
                     <div class="flex items-baseline justify-between pt-12 pb-6 border-b border-gray-200">
-                        <p>1 - 2 {{ $t('products.pages_over') }} 43 {{ $t('products.items_for') }} <span
-                                class="font-semibold tracking-tight text-blue-700 underline">carters</span>
+                        <p class="text-gray-700 dark:text-gray-300">1 - 2 {{ $t('products.pages_over') }} 43 {{
+                            $t('products.items_for')
+                        }} <span
+                                class="font-semibold tracking-tight text-blue-700 underline dark:text-blue-500">carters</span>
                         </p>
                         <div class="flex items-center">
-                            <button type="button" class="p-2 -m-2 text-gray-400 ms-5 hover:text-gray-500 sm:ms-7">
+                            <button type="button"
+                                class="p-2 -m-2 text-gray-500 ms-5 hover:text-gray-600 sm:ms-7 dark:text-gray-300 dark:hover:text-gray-400">
                                 <span class="sr-only">View grid</span>
                                 <icon name="material-symbols:square-rounded" class="w-5 h-5" aria-hidden="true" />
                             </button>
                             <button type="button"
-                                class="p-2 -m-2 text-gray-400 ms-4 hover:text-gray-500 sm:ms-6 lg:hidden"
+                                class="p-2 -m-2 text-gray-500 ms-4 hover:text-gray-600 sm:ms-6 lg:hidden dark:text-gray-300 dark:hover:text-gray-400"
                                 @click="mobileFiltersOpen = true">
                                 <span class="sr-only">Filters</span>
                                 <icon name="material-symbols:filter-alt" class="w-5 h-5" aria-hidden="true" />
@@ -214,9 +227,10 @@
                                 <HeadlessDisclosure as="div" class="py-6 border-b border-gray-200" v-slot="{ open }">
                                     <h3 class="flow-root -my-3">
                                         <HeadlessDisclosureButton
-                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                            <span class="font-medium text-gray-900">{{ $t('products.price') }} ({{
-                                                $t('products.egp') }})</span>
+                                            class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500 dark:bg-[#1B1D1E] dark:text-gray-300">
+                                            <span class="font-medium text-gray-900 dark:text-gray-300">{{
+                                                $t('products.price') }} ({{
+                                                    $t('products.egp') }})</span>
                                             <span class="flex items-center ms-6">
                                                 <icon name="ant-design:plus-outlined" class="w-5 h-5" aria-hidden="true"
                                                     v-if="!open" />
@@ -232,16 +246,17 @@
                                                 <div>
                                                     <div class="relative mt-1 rounded-md shadow-sm">
                                                         <input id="minPrice" name="minPrice" v-model="minPrice"
-                                                            class="flex-1 block w-full px-2 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 h-9"
+                                                            class="flex-1 block w-full px-2 py-2 rounded-md input h-9"
                                                             type="number" step="100"
                                                             :placeholder="$t('placeholder.min')">
                                                     </div>
                                                 </div>
-                                                <span class="mt-1 text-gray-600">{{ $t('products.to') }}</span>
+                                                <span class="mt-1 text-gray-600 dark:text-gray-300">{{ $t('products.to')
+                                                    }}</span>
                                                 <div>
                                                     <div class="relative mt-1 rounded-md shadow-sm">
                                                         <input id="maxPrice" name="maxPrice" v-model="maxPrice"
-                                                            class="flex-1 block w-full px-2 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 h-9"
+                                                            class="flex-1 block w-full px-2 py-2 rounded-md input h-9"
                                                             step="100" type="number"
                                                             :placeholder="$t('placeholder.max')">
                                                     </div>
@@ -260,8 +275,9 @@
                                         <filteration>
                                             <template #fulfillment="{ plusIcon, minusIcon, label }">
                                                 <HeadlessDisclosureButton
-                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">{{ label }}</span>
+                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500 dark:bg-[#1B1D1E] dark:text-gray-300">
+                                                    <span class="font-medium text-gray-900 dark:text-gray-300">{{ label
+                                                        }}</span>
                                                     <span class="flex items-center ms-6">
                                                         <icon :name="plusIcon" class="w-5 h-5" aria-hidden="true"
                                                             v-if="!open" />
@@ -278,7 +294,8 @@
                                                 <input id="category" name="category" :value="ful.label" type="checkbox"
                                                     :checked="ful.checked"
                                                     class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
-                                                <label for="category" class="text-sm text-gray-600 ms-3">{{ ful.label
+                                                <label for="category"
+                                                    class="text-sm text-gray-600 ms-3 dark:text-gray-300">{{ ful.label
                                                     }}</label>
                                             </div>
                                         </div>
@@ -291,8 +308,9 @@
                                         <filteration>
                                             <template #categories="{ plusIcon, minusIcon, label }">
                                                 <HeadlessDisclosureButton
-                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">{{ label }}</span>
+                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500 dark:bg-[#1B1D1E] dark:text-gray-300">
+                                                    <span class="font-medium text-gray-900 dark:text-gray-300">{{ label
+                                                        }}</span>
                                                     <span class="flex items-center ms-6">
                                                         <icon :name="plusIcon" class="w-5 h-5" aria-hidden="true"
                                                             v-if="!open" />
@@ -311,8 +329,9 @@
                                                     type="checkbox" :checked="category.checked"
                                                     class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                                                     @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
-                                                <label for="category" class="text-sm text-gray-600 ms-3">{{
-                                                    $t(category.label)
+                                                <label for="category"
+                                                    class="text-sm text-gray-600 ms-3 dark:text-gray-300">{{
+                                                        $t(category.label)
                                                     }}</label>
                                             </div>
                                         </div>
@@ -320,13 +339,14 @@
                                 </HeadlessDisclosure>
 
                                 <!-- Colors -->
-                                <HeadlessDisclosure as="div" class="py-6 border-b border-gray-200" v-slot="{ open }">
+                                <HeadlessDisclosure as="div" class="py-6" v-slot="{ open }">
                                     <h3 class="flow-root -my-3">
                                         <filteration>
                                             <template #colors="{ plusIcon, minusIcon, label }">
                                                 <HeadlessDisclosureButton
-                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500">
-                                                    <span class="font-medium text-gray-900">{{ label }}</span>
+                                                    class="flex items-center justify-between w-full py-3 text-sm text-gray-400 bg-white hover:text-gray-500 dark:bg-[#1B1D1E] dark:text-gray-300">
+                                                    <span class="font-medium text-gray-900 dark:text-gray-300">{{ label
+                                                        }}</span>
                                                     <span class="flex items-center ms-6">
                                                         <icon :name="plusIcon" class="w-5 h-5" aria-hidden="true"
                                                             v-if="!open" />
@@ -344,7 +364,8 @@
                                                     :checked="color.checked"
                                                     class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                                                     @change="color.checked = !color.checked; updateSelectedColor(color.label, color.checked)" />
-                                                <label for="color" class="text-sm text-gray-600 ms-3">{{ color.label
+                                                <label for="color"
+                                                    class="text-sm text-gray-600 ms-3 dark:text-gray-300">{{ color.label
                                                     }}</label>
                                             </div>
                                         </div>
