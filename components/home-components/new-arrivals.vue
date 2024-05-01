@@ -8,7 +8,7 @@
           :modules="[SwiperAutoplay]" class="mySwiper">
           <swiper-slide v-for="card in arrivalOne" :key="card">
             <div class="relative mt-5 w-[300px] max-w-[18rem] overflow-hidden rounded-2xl bg-white shadow-md dark:bg-neutral-700">
-                <div class="relative flex mx-3 mt-3 overflow-hidden h-60 rounded-xl" href="#">
+                <div class="relative flex mx-3 mt-3 overflow-hidden h-60 rounded-xl">
                   <img class="object-cover w-full transit" :src="card.img" />
                   <span
                     class="absolute top-0 left-0 px-2 m-2 text-sm font-medium text-center text-white bg-black rounded-full"
