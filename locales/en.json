@@ -191,7 +191,8 @@
     "shipping": "Shipping",
     "total": "Total",
     "including_vat": "including VAT",
-    "or": "or"
+    "or": "or",
+    "pieces": "pieces"
   },
   "checkout": {
     "checkout": "Checkout",

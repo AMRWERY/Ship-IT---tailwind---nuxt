@@ -191,7 +191,8 @@
     "shipping": "الشحن",
     "total": "الإجمالي",
     "including_vat": "تشمل الضريبة المضافة",
-    "or": "أو"
+    "or": "أو",
+    "pieces": "قطعه"
   },
   "checkout": {
     "checkout": "الدفع",
