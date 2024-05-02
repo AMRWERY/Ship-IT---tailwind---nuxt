@@ -4,34 +4,37 @@
       <section class="max-w-full mx-auto mt-10 sm:px-6 lg:px-8">
         <h2 class="mb-6 text">New Arrivals</h2>
         <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{ delay: 2500, disableOnInteraction: false }"
-          :slidesPerView="4.5" :loop="true" :grabCursor="true" :grid="{ rows: 1 }"
-          :modules="[SwiperAutoplay]" class="mySwiper">
+          :slidesPerView="4.5" :loop="true" :grabCursor="true" :grid="{ rows: 1 }" :modules="[SwiperAutoplay]"
+          class="mySwiper">
           <swiper-slide v-for="card in arrivalOne" :key="card">
-            <div class="relative mt-5 w-[300px] max-w-[18rem] overflow-hidden rounded-2xl bg-white shadow-md dark:bg-neutral-700">
-                <div class="relative flex mx-3 mt-3 overflow-hidden h-60 rounded-xl">
-                  <img class="object-cover w-full transit" :src="card.img" />
-                  <span
-                    class="absolute top-0 left-0 px-2 m-2 text-sm font-medium text-center text-white bg-black rounded-full"
-                    v-if="card.discount">{{ card.discount }}%
-                    {{ $t('home.off') }}</span>
-                </div>
-                <div class="px-5 pb-5 mt-4">
-                  <nuxt-link to="">
-                    <h5 class="font-semibold tracking-tight truncate text-md text-slate-900 dark:text-slate-300">
-                      {{ card.title }}
-                    </h5>
-                  </nuxt-link>
-
-                  <div class="flex items-center mt-2 mb-5">
-                    <p>
-                      <span class="text-lg font-bold text-red-600 dark:text-red-200">{{ $t('products.egp') }}{{ card.price }}</span>
-                      <span class="text-sm line-through text-slate-900 dark:text-slate-300 me-1" v-if="card.originalPrice">{{ $t('products.egp') }}{{
-                        card.originalPrice }}</span>
-                    </p>
-                  </div>
-                  <p class="mt-2 text-start text-slate-700 dark:text-slate-300">Get it by {{ card.getBy }}</p>
-                </div>
+            <div
+              class="relative mt-5 w-[300px] max-w-[18rem] overflow-hidden rounded-2xl bg-white shadow-md dark:bg-neutral-700">
+              <div class="relative flex mx-3 mt-3 overflow-hidden h-60 rounded-xl">
+                <img class="object-cover w-full transit" :src="card.img" />
+                <span
+                  class="absolute top-0 left-0 px-2 m-2 text-sm font-medium text-center text-white bg-black rounded-full"
+                  v-if="card.discount">{{ card.discount }}%
+                  {{ $t('home.off') }}</span>
               </div>
+              <div class="px-5 pb-5 mt-4">
+                <nuxt-link to="">
+                  <h5 class="font-semibold tracking-tight truncate text-md text-slate-900 dark:text-slate-300">
+                    {{ card.title }}
+                  </h5>
+                </nuxt-link>
+
+                <div class="flex items-center mt-2 mb-5">
+                  <p>
+                    <span class="text-lg font-bold text-red-600 dark:text-red-200">{{ $t('products.egp') }}{{ card.price
+                      }}</span>
+                    <span class="text-sm line-through text-slate-900 dark:text-slate-300 me-1"
+                      v-if="card.originalPrice">{{ $t('products.egp') }}{{
+                        card.originalPrice }}</span>
+                  </p>
+                </div>
+                <p class="mt-2 text-start text-slate-700 dark:text-slate-300">Get it by {{ card.getBy }}</p>
+              </div>
+            </div>
           </swiper-slide>
         </swiper>
       </section>
