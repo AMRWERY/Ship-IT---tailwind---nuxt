@@ -1,13 +1,13 @@
 <template>
   <div>
-    <section class="overflow-hidden bg-white py-11 font-poppins dark:bg-gray-800">
+    <section class="overflow-hidden bg-white py-11 font-poppins dark:bg-[#1e2022]">
       <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <nav class="flex">
           <ol role="list" class="flex items-center">
             <li class="text-start">
               <div class="-m-1">
-                <nuxt-link to="#"
-                  class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800">
+                <nuxt-link to="/"
+                  class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800 dark:text-gray-200">
                   Home
                 </nuxt-link>
               </div>
@@ -15,10 +15,10 @@
 
             <li class="text-start">
               <div class="flex items-center">
-                <span class="mx-2 text-gray-400">/</span>
+                <span class="mx-2 text-gray-400 dark:text-gray-200">/</span>
                 <div class="-m-1">
                   <nuxt-link to href="#"
-                    class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800">
+                    class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800 dark:text-gray-200">
                     Products
                   </nuxt-link>
                 </div>
@@ -27,10 +27,10 @@
 
             <li class="text-start">
               <div class="flex items-center">
-                <span class="mx-2 text-gray-400">/</span>
+                <span class="mx-2 text-gray-400 dark:text-gray-200">/</span>
                 <div class="-m-1">
                   <nuxt-link to href="#"
-                    class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800"
+                    class="p-1 text-sm font-medium text-gray-600 rounded-md focus:text-gray-900 focus:shadow hover:text-gray-800 dark:text-gray-200"
                     aria-current="page">
                     Coffee
                   </nuxt-link>
@@ -58,13 +58,14 @@
         </div>
         <div class="w-full mt-6 lg:w-1/2 lg:ps-10 lg:py-6 lg:mt-0">
           <div class="flex">
-            <h2 class="font-medium tracking-widest text-blue-500 text-md title-font">
+            <h2 class="font-medium tracking-widest text-blue-500 text-md title-font dark:text-blue-300">
               {{ productDetails?.brand }}
             </h2>
-            <span class="p-1 text-sm font-semibold text-green-600 bg-green-100 rounded-lg ms-auto"
+            <span
+              class="px-2 py-1.5 text-sm font-semibold text-green-600 bg-green-100 rounded-xl ms-auto dark:text-green-700 dark:bg-green-200"
               v-if="productDetails?.discount">{{ productDetails?.discount }}% {{ $t('home.off') }}</span>
           </div>
-          <h1 class="mb-1 text-3xl font-medium text-gray-900 title-font">
+          <h1 class="mb-1 text-3xl font-medium text-gray-800 title-font dark:text-gray-300">
             {{ productDetails?.title }}
           </h1>
           <div class="flex mb-4">
@@ -73,49 +74,54 @@
               <rating :rating="productDetails?.rating" :reviews="productDetails?.reviews" />
 
             </span>
-            <span class="flex py-2 border-gray-200 border-s-2 ms-3 ps-3">
-              <a class="text-gray-500">
-                <icon name="ci:facebook" class="w-5 h-5" />
+            <span class="flex py-2 border-gray-200 border-s-2 ms-3 ps-3 space-s-2">
+              <a class="text-blue-600 me-2 transit">
+                <SocialShare network="facebook" :label="false" />
               </a>
-              <a class="text-gray-500 ms-2">
-                <icon name="ci:twitter" class="w-5 h-5" />
+              <a class="text-black dark:text-white me-2 transit">
+                <SocialShare network="twitter" :label="false" />
               </a>
-              <a class="text-gray-500 ms-2">
-                <icon name="fontisto:whatsapp" class="w-5 h-5" />
+              <a class="text-[#25D366] transit">
+                <SocialShare network="whatsapp" :label="false" />
+              </a>
+              <a class="text-[#0088CC] transit">
+                <SocialShare network="telegram" :label="false" />
               </a>
             </span>
           </div>
           <div class="my-3">
-            <p>{{ $t('products.sku') }}: <strong>{{ productDetails?.sku }}</strong></p>
+            <p class="text-gray-700 dark:text-gray-300">{{ $t('products.sku') }}: <strong
+                class="text-gray-600 dark:text-gray-200">{{ productDetails?.sku }}</strong></p>
           </div>
           <div class="mb-4">
-            <p>{{ $t('products.availability') }}: <strong>{{ productDetails?.availability }}</strong></p>
+            <p class="text-gray-700 dark:text-gray-300">{{ $t('products.availability') }}: <strong
+                class="text-gray-600 dark:text-gray-200">{{ productDetails?.availability }}</strong></p>
           </div>
           <div class="overflow-x-hidden overflow-y-auto max-h-20 desc">
-            <p class="leading-relaxed">
+            <p class="leading-relaxed text-gray-700 dark:text-gray-300">
               {{ productDetails?.description }}
             </p>
           </div>
           <div class="flex items-center pb-5 mt-6 mb-5 border-gray-100">
             <div class="flex">
               <div class="items-center" v-if="productDetails?.color != null">
-                <p class="flex items-center me-3">{{ $t('products.color') }} <strong
-                    class="relative flex items-center justify-center px-4 py-3 text-sm font-medium border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1">{{
+                <p class="flex items-center text-gray-700 me-3 dark:text-gray-300">{{ $t('products.color') }} <strong
+                    class="relative flex items-center justify-center px-4 py-3 text-sm font-medium text-gray-600 border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1 dark:text-gray-200">{{
                       productDetails?.color }}</strong></p>
               </div>
               <div class="items-center" v-if="productDetails?.colors != null">
-                <p class="flex items-center me-3">{{ $t('products.color') }} <strong
+                <p class="flex items-center text-gray-700 me-3 dark:text-gray-300">{{ $t('products.color') }} <strong
                     v-for="color in store.selectedProduct?.colors" :key="color"
-                    class="relative flex items-center justify-center px-4 py-3 text-sm font-medium border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1">{{
+                    class="relative flex items-center justify-center px-4 py-3 text-sm font-medium text-gray-600 border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1 dark:text-gray-200">{{
                       color }}</strong></p>
               </div>
             </div>
             <div class="flex items-center ms-16" v-if="productDetails?.size != null">
-              <span class="me-3">{{ $t('products.size') }} </span>
+              <span class="text-gray-700 me-3 dark:text-gray-300">{{ $t('products.size') }} </span>
               <div class="ms-auto">
                 <div class="relative">
                   <select
-                    class="py-2 text-base border border-gray-400 rounded appearance-none pe-10 ps-3 focus:outline-none focus:border-red-500">
+                    class="py-2 text-base border border-gray-400 rounded appearance-none pe-10 ps-3 dark:bg-[#3D3B40] dark:text-white">
                     <option>--{{ $t('products.select') }}--</option>
                     <option v-for="size in store.selectedProduct?.size" :key="size">{{ size }}</option>
                   </select>
@@ -127,21 +133,21 @@
               </div>
             </div>
             <div class="items-center ms-16" v-if="productDetails?.oneSize != null">
-              <p class="flex items-center me-3">{{ $t('products.size') }} <strong
-                  class="relative flex items-center justify-center px-4 py-3 text-sm font-medium border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1">{{
+              <p class="flex items-center text-gray-700 me-3 dark:text-gray-300">{{ $t('products.size') }} <strong
+                  class="relative flex items-center justify-center px-4 py-3 text-sm font-medium text-gray-600 border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1 dark:text-gray-200">{{
                     productDetails?.oneSize }}</strong></p>
             </div>
             <div class="items-center ms-16" v-if="productDetails?.package != null">
-              <p class="flex items-center me-3">{{ $t('products.package') }} <strong
-                  class="relative flex items-center justify-center px-4 py-3 text-sm font-medium border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1">{{
+              <p class="flex items-center text-gray-700 me-3 dark:text-gray-300">{{ $t('products.package') }} <strong
+                  class="relative flex items-center justify-center px-4 py-3 text-sm font-medium text-gray-600 border rounded-md cursor-pointer ms-3 hover:bg-gray-50 focus:outline-none sm:flex-1 dark:text-gray-200">{{
                     productDetails?.package }}</strong></p>
             </div>
             <div class="flex items-center ms-16" v-if="productDetails?.styles != null">
-              <span class="mr-3">{{ $t('products.style') }} </span>
+              <span class="mr-3 text-gray-700 dark:text-gray-300">{{ $t('products.style') }} </span>
               <div class="ms-auto">
                 <div class="relative">
                   <select
-                    class="py-2 text-base border border-gray-400 rounded appearance-none pe-10 ps-3 focus:outline-none focus:border-red-500">
+                    class="py-2 text-base border border-gray-400 rounded appearance-none pe-10 ps-3 dark:bg-[#3D3B40] dark:text-white">
                     <option>--{{ $t('products.select') }}--</option>
                     <option v-for="style in store.selectedProduct?.styles" :key="style">{{ style }}</option>
                   </select>
@@ -154,10 +160,12 @@
             </div>
           </div>
           <div class="my-3" v-if="productDetails?.type != null">
-            <p>{{ $t('products.type') }}: <strong>{{ productDetails?.type }}</strong></p>
+            <p class="text-gray-700 me-3 dark:text-gray-300">{{ $t('products.type') }}: <strong
+                class="text-gray-600 dark:text-gray-200">{{ productDetails?.type }}</strong></p>
           </div>
           <div class="my-3">
-            <p>{{ $t('products.category') }} <strong>{{ productDetails?.category }}</strong></p>
+            <p class="text-gray-700 me-3 dark:text-gray-300">{{ $t('products.category') }} <strong
+                class="text-gray-600 dark:text-gray-200">{{ productDetails?.category }}</strong></p>
           </div>
 
           <div class="flex items-center">
@@ -165,15 +173,14 @@
               $t('products.quantity') }}</label>
             <div class="relative flex flex-row w-full h-10 mt-6 bg-transparent rounded-lg">
               <button type="button" @click="decrementQuantity"
-                class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75 hover:bg-red-400">
+                class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75 hover:bg-red-400 dark:text-gray-300">
                 <span class="m-auto text-2xl font-thin hover:text-white">-</span>
               </button>
 
               <input type="number" id="Quantity" :value="quantity" @input="updateQuantity"
-                class="h-10 w-12 rounded border-gray-200 text-center [...]" />
-
+                class="h-10 w-12 rounded border-gray-200 text-center dark:bg-[#3D3B40] dark:text-white" />
               <button type="button" @click="incrementQuantity"
-                class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75 hover:bg-blue-400">
+                class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75 hover:bg-blue-400 dark:text-gray-300">
                 <span class="m-auto text-2xl font-thin hover:text-white">+</span>
               </button>
             </div>
@@ -181,9 +188,9 @@
 
           <hr class="mt-4">
           <div class="flex mt-6">
-            <span class="text-2xl font-medium text-gray-900 title-font">{{ $t('products.egp') }} {{
+            <span class="text-2xl font-medium text-gray-900 title-font dark:text-gray-300">{{ $t('products.egp') }} {{
               productDetails?.price }}</span>
-            <span class="mt-1 font-medium text-gray-500 line-through ms-2 text-md"
+            <span class="mt-1 font-medium text-gray-500 line-through ms-2 text-md dark:text-gray-300"
               v-if="productDetails?.originalPrice">{{ $t('products.egp') }} {{ productDetails?.originalPrice
               }}</span>
             <button @click="addToCart" :class="{

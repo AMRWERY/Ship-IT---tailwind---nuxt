@@ -131,7 +131,9 @@
     "feel_free_to_get_in_touch_with_me_i_am_always_open_to_discussing_new_projects_creative_ideas_or_opportunities_to_be_part_of_your_visions": "لا تتردد في الاتصال بي. أنا دائمًا منفتح لمناقشة المشاريع الجديدة أو الأفكار الإبداعية أو الفرص لأكون جزءًا من رؤيتك",
     "address_point": "نقطة العنوان",
     "email_address": "عنوان البريد الإلكتروني",
-    "mobile_no": "رقم المحمول"
+    "mobile_no": "رقم المحمول",
+    "feedback": "ردود الفعل",
+    "our_lives_are_a_sum_total_of_the_choices_we_have_made_truth_is_powerful_and_it_prevails": "حياتنا هي مجموع الخيارات التي اتخذناها، الحقيقة قوية وتسود"
   },
   "about": {
     "our_competitive_advantage": "ميزتنا التنافسية",
@@ -182,7 +184,7 @@
   },
   "cart": {
     "shopping_cart": "عربة التسوق",
-    "your_cart_is_empty": "عربة التسوق فارغة!",
+    "your_cart_is_empty": "! عربة التسوق فارغة",
     "subtotal": "المجموع الفرعي",
     "shipping_and_taxes_calculated_at_checkout": "الشحن والضرائب يتم حسابها عند الخروج.",
     "continue_shopping": "متابعة التسوق",
@@ -191,7 +193,8 @@
     "shipping": "الشحن",
     "total": "الإجمالي",
     "including_vat": "تشمل الضريبة المضافة",
-    "or": "أو"
+    "or": "أو",
+    "pieces": "قطعه"
   },
   "checkout": {
     "checkout": "الدفع",

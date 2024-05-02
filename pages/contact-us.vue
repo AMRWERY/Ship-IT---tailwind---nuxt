@@ -4,14 +4,16 @@
       <div class="absolute inset-0 bg-gray-300">
         <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no"
           src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-          style="filter:contrast(1.2) opacity(0.4);"></iframe>
+          style="filter:contrast(1.2) opacity(0.4)">
+        </iframe>
       </div>
       <div class="flex px-5 py-24 mx-auto">
         <div
-          class="relative z-10 flex flex-col w-full p-8 mt-10 bg-white rounded-lg shadow-md lg:w-1/3 md:w-1/2 md:ml-auto md:mt-0">
-          <h2 class="mb-1 text-lg font-medium text-gray-900 title-font">Feedback</h2>
-          <p class="mb-5 leading-relaxed text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion
-            axe
+          class="relative z-10 flex flex-col w-full p-8 mt-10 bg-white dark:bg-[#131313] shadow-md rounded-2xl lg:w-1/3 md:w-1/2 md:ml-auto md:mt-0">
+          <h2 class="mb-1 text-lg font-medium text-gray-800 title-font dark:text-gray-300">{{ $t('contact.feedback') }}
+          </h2>
+          <p class="mb-5 leading-relaxed text-gray-600 dark:text-gray-200">{{
+            $t('contact.our_lives_are_a_sum_total_of_the_choices_we_have_made_truth_is_powerful_and_it_prevails') }}
           </p>
 
           <FormKit type="form" id="contact-form" :actions="false" :incomplete-message="false">
@@ -60,8 +62,6 @@
               class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{
                 $t('btn.lets_chat') }}</button>
           </FormKit>
-          <p class="mt-3 text-xs text-gray-500">Chicharrones blog helvetica normcore iceland tousled brook viral
-            artisan.</p>
         </div>
       </div>
     </section>

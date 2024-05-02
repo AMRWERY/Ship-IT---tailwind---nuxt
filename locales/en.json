@@ -131,7 +131,9 @@
     "feel_free_to_get_in_touch_with_me_i_am_always_open_to_discussing_new_projects_creative_ideas_or_opportunities_to_be_part_of_your_visions": "Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions",
     "address_point": "Address Point",
     "email_address": "Email Address",
-    "mobile_no": "Mobile No"
+    "mobile_no": "Mobile No",
+    "feedback": "Feedback",
+    "our_lives_are_a_sum_total_of_the_choices_we_have_made_truth_is_powerful_and_it_prevails": "Our lives are a sum total of the choices we have made, Truth is powerful and it prevails"
   },
   "about": {
     "our_competitive_advantage": "Our competitive advantage",
@@ -182,7 +184,7 @@
   },
   "cart": {
     "shopping_cart": "Shopping cart",
-    "your_cart_is_empty": "Your cart is empty!",
+    "your_cart_is_empty": "Your cart is empty !",
     "subtotal": "Subtotal",
     "shipping_and_taxes_calculated_at_checkout": "Shipping and taxes calculated at checkout.",
     "continue_shopping": "Continue Shopping",
@@ -191,7 +193,8 @@
     "shipping": "Shipping",
     "total": "Total",
     "including_vat": "including VAT",
-    "or": "or"
+    "or": "or",
+    "pieces": "pieces"
   },
   "checkout": {
     "checkout": "Checkout",

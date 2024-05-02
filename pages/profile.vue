@@ -1,18 +1,18 @@
 <template>
     <div>
-        <div class="max-w-full py-16 mx-auto bg-white sm:px-6 lg:px-8">
+        <div class="max-w-full py-16 mx-auto bg-white sm:px-6 lg:px-8 dark:bg-[#1e2022]">
             <div class="flex flex-col p-6 sm:flex-row">
                 <div class="w-full pr-4">
                     <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-3">
-                            <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                            <label for="name" class="label">{{
                                 $t('forms.first_name') }}</label>
                             <div>
                                 <input type="text" class="w-full read-only-input" v-model="firstName">
                             </div>
                         </div>
                         <div class="sm:col-span-3">
-                            <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                            <label for="name" class="label">{{
                                 $t('forms.last_name') }}</label>
                             <div>
                                 <input type="text" class="w-full read-only-input" v-model="lastName">
@@ -20,14 +20,14 @@
                         </div>
                     </div>
                     <div class="mt-4 col-span-full">
-                        <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                        <label for="name" class="label">{{
                             $t('forms.email_address') }}</label>
                         <div>
                             <input type="text" class="w-full read-only-input" v-model="email">
                         </div>
                     </div>
                     <div class="mt-4 col-span-full">
-                        <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                        <label for="name" class="label">{{
                             $t('forms.password') }}</label>
                         <div>
                             <input type="text" class="w-full read-only-input" v-model="password">
@@ -36,7 +36,7 @@
 
                     <div class="flex items-center justify-end mt-6 gap-x-6">
                         <button type="button" @click="toggleEditMode"
-                            class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-blue-600 dark:hover:bg-blue-500">
                             {{ $t('btn.edit') }}
                         </button>
                     </div>
@@ -44,7 +44,7 @@
 
                 <div class="w-full mt-4 sm:w-1/3 sm:mt-0">
                     <div
-                        class="max-w-2xl mx-4 mt-6 text-gray-900 bg-white rounded-lg shadow-xl sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto">
+                        class="max-w-2xl mx-4 mt-6 text-gray-900 bg-white dark:bg-[#1e2022] rounded-lg shadow-xl sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto">
                         <div class="h-32 overflow-hidden rounded-t-lg">
                             <img class="object-cover object-top w-full"
                                 src="https://justfields.com/storage/projects/7M5rV059/Mountain.jpg" />
@@ -55,21 +55,23 @@
                                 src="https://justfields.com/storage/projects/7M5rV059/profile.jpg" />
                         </div>
                         <div class="mt-2 text-center">
-                            <h2 class="font-semibold">Amr Mohamed</h2>
-                            <p class="text-gray-500">CEO Profile</p>
+                            <h2 class="font-semibold text-gray-800 dark:text-gray-300">Amr Mohamed</h2>
+                            <p class="text-gray-600 dark:text-gray-200">CEO Profile</p>
                         </div>
                         <ul class="flex items-center justify-around py-4 mt-2 text-gray-700">
                             <li class="flex flex-col items-center justify-around">
-                                <icon name="fontisto:star" class="w-5 text-blue-900 fill-current" />
-                                <div>2k</div>
+                                <icon name="fontisto:star" class="w-5 text-blue-900 fill-current dark:text-blue-600" />
+                                <div class="text-gray-700 dark:text-gray-300">2k</div>
                             </li>
                             <li class="flex flex-col items-center justify-between">
-                                <icon name="fontisto:persons" class="w-5 text-blue-900 fill-current" />
-                                <div>10k</div>
+                                <icon name="fontisto:persons"
+                                    class="w-5 text-blue-900 fill-current dark:text-blue-600" />
+                                <div class="text-gray-700 dark:text-gray-300">10k</div>
                             </li>
                             <li class="flex flex-col items-center justify-around">
-                                <icon name="basil:shopping-bag-solid" class="w-5 text-blue-900 fill-current" />
-                                <div>15</div>
+                                <icon name="basil:shopping-bag-solid"
+                                    class="w-5 text-blue-900 fill-current dark:text-blue-600" />
+                                <div class="text-gray-700 dark:text-gray-300">15</div>
                             </li>
                         </ul>
                     </div>
@@ -100,7 +102,7 @@
                         <div class="sm:col-span-3">
                             <form-inputs>
                                 <template #last-name="{ icon, label }">
-                                    <label for="name" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                                    <label for="name" class="label">{{
                                         label }}</label>
                                     <div class="relative">
                                         <FormKit name="last name" type="text" v-model="lastName"
@@ -118,7 +120,7 @@
                     <div class="mt-4 col-span-full">
                         <form-inputs>
                             <template #email="{ icon, label }">
-                                <label for="email" class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
+                                <label for="email" class="label">{{
                                     label }}</label>
                                 <div class="relative">
                                     <FormKit name="email" type="email" v-model="email"
@@ -136,9 +138,8 @@
                             <form-inputs>
                                 <template #password="{ icon, label }">
                                     <div class="flex items-center">
-                                        <label for="password"
-                                            class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
-                                                label }}</label>
+                                        <label for="password" class="label">{{
+                                            label }}</label>
                                     </div>
                                     <div class="relative">
                                         <FormKit name="password" type="text" v-model="password"
@@ -156,9 +157,8 @@
                             <form-inputs>
                                 <template #confirmPassword="{ icon, label, placeholder }">
                                     <div class="flex items-center">
-                                        <label for="confirm-password"
-                                            class="inline-block mb-1 text-sm text-gray-800 sm:text-base">{{
-                                                label }}</label>
+                                        <label for="confirm-password" class="label">{{
+                                            label }}</label>
                                     </div>
                                     <div class="relative">
                                         <FormKit name="password_confirm" type="password" v-model="confirmPassword"
@@ -175,7 +175,7 @@
                     </div>
                     <div class="flex items-center justify-end mt-6 gap-x-6">
                         <button type="submit"
-                            class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-blue-600 dark:hover:bg-blue-500">
                             {{ $t('btn.update') }}
                         </button>
                     </div>
