@@ -182,7 +182,7 @@
   },
   "cart": {
     "shopping_cart": "عربة التسوق",
-    "your_cart_is_empty": "عربة التسوق فارغة!",
+    "your_cart_is_empty": "! عربة التسوق فارغة",
     "subtotal": "المجموع الفرعي",
     "shipping_and_taxes_calculated_at_checkout": "الشحن والضرائب يتم حسابها عند الخروج.",
     "continue_shopping": "متابعة التسوق",

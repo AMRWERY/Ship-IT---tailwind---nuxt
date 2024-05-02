@@ -182,7 +182,7 @@
   },
   "cart": {
     "shopping_cart": "Shopping cart",
-    "your_cart_is_empty": "Your cart is empty!",
+    "your_cart_is_empty": "Your cart is empty !",
     "subtotal": "Subtotal",
     "shipping_and_taxes_calculated_at_checkout": "Shipping and taxes calculated at checkout.",
     "continue_shopping": "Continue Shopping",
