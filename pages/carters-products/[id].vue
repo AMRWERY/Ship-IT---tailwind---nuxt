@@ -90,10 +90,12 @@
             </span>
           </div>
           <div class="my-3">
-            <p class="text-gray-700 dark:text-gray-300">{{ $t('products.sku') }}: <strong class="text-gray-600 dark:text-gray-200">{{ productDetails?.sku }}</strong></p>
+            <p class="text-gray-700 dark:text-gray-300">{{ $t('products.sku') }}: <strong
+                class="text-gray-600 dark:text-gray-200">{{ productDetails?.sku }}</strong></p>
           </div>
           <div class="mb-4">
-            <p class="text-gray-700 dark:text-gray-300">{{ $t('products.availability') }}: <strong class="text-gray-600 dark:text-gray-200">{{ productDetails?.availability }}</strong></p>
+            <p class="text-gray-700 dark:text-gray-300">{{ $t('products.availability') }}: <strong
+                class="text-gray-600 dark:text-gray-200">{{ productDetails?.availability }}</strong></p>
           </div>
           <div class="overflow-x-hidden overflow-y-auto max-h-20 desc">
             <p class="leading-relaxed text-gray-700 dark:text-gray-300">
@@ -158,10 +160,12 @@
             </div>
           </div>
           <div class="my-3" v-if="productDetails?.type != null">
-            <p class="text-gray-700 me-3 dark:text-gray-300">{{ $t('products.type') }}: <strong class="text-gray-600 dark:text-gray-200">{{ productDetails?.type }}</strong></p>
+            <p class="text-gray-700 me-3 dark:text-gray-300">{{ $t('products.type') }}: <strong
+                class="text-gray-600 dark:text-gray-200">{{ productDetails?.type }}</strong></p>
           </div>
           <div class="my-3">
-            <p class="text-gray-700 me-3 dark:text-gray-300">{{ $t('products.category') }} <strong class="text-gray-600 dark:text-gray-200">{{ productDetails?.category }}</strong></p>
+            <p class="text-gray-700 me-3 dark:text-gray-300">{{ $t('products.category') }} <strong
+                class="text-gray-600 dark:text-gray-200">{{ productDetails?.category }}</strong></p>
           </div>
 
           <div class="flex items-center">
