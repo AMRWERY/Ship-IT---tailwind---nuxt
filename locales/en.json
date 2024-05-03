@@ -50,7 +50,8 @@
     "checkout": "Checkout",
     "adding": "Adding...",
     "buy_now": "Buy Now",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "read_more": "Read More"
   },
   "auth": {
     "login_into_your_account": "Login into your account",
@@ -254,5 +255,29 @@
     "total": "Total",
     "vat": "VAT",
     "discount": "Discount"
+  },
+  "blogs": {
+    "read_about_fashion": "Read About Fashion",
+    "amr_mohamed": "Amr Mohamed",
+    "top_10_fashion_of_the_week": "Top 10 Fashion of the Week",
+    "the_truth_you_believe_and_cling_to_makes_you_unavailable_to_hear_anything_new_a_jug_fills_drop_by_drop": "The truth you believe and cling to makes you unavailable to hear anything new. A jug fills drop by drop.",
+    "best_brands_for_fashion": "Best brands for fashion",
+    "the_weak_can_never_forgive_Forgiveness_is_the_attribute_of_the_strong_no_one_has_ever_become_poor_by_giving": "The weak can never forgive. Forgiveness is the attribute of the strong. No one has ever become poor by giving.",
+    "fashion_tips_tricks": "Fashion Tips & Tricks",
+    "when_you_see_a_man_of_worth_think_of_how_you_may_emulate_him_when_you_see_one_who_is_unworthy_examine_yourself": "When you see a man of worth, think of how you may emulate him. When you see one who is unworthy, examine yourself.",
+    "happiness_is_the_reward_we_get_for_living_to_the_highest_right_we_know_a_gem_cannot_be_polished_without_friction_nor_a_man_perfected_without_trials_dont_ruin_the_present_with_the_ruined_past_respect_should_be_earned_by_actions_and_not_acquired_by_years_neither_genius_fame_nor_love_show_the_greatness_of_the_soul_only_kindness_can_do_that_being_in_humaneness_is_good_if_we_select_other_goodness_and_thus_are_far_apart_from_humaneness_how_can_we_be_the_wise": "Happiness is the reward we get for living to the highest right we know. A gem cannot be polished without friction, nor a man perfected without trials. Don't ruin the present with the ruined past. Respect should be earned by actions, and not acquired by years. Neither genius, fame, nor love show the greatness of the soul. Only kindness can do that. Being in humaneness is good. If we select other goodness and thus are far apart from humaneness, how can we be the wise?",
+    "in_skating_over_thin_ice_our_safety_is_in_our_speed": "In skating over thin ice our safety is in our speed.",
+    "he_who_talks_more_is_sooner_exhausted": "He who talks more is sooner exhausted.",
+    "why_compare_yourself_with_others_no_one_in_the_entire_world_can_do_a_better_job_of_being_you_than_you_consider_how_hard_it_is_to_change_yourself_and_you_will_understand_what_little_chance_you_have_in_trying_to_change_others_it_is_not_enough_to_have_a_good_mind_the_main_thing_is_to_use_it_well_when_you_learn_teach_when_you_get_give_to_study_and_not_think_is_a_waste_to_think_and_not_study_is_dangerous": "Why compare yourself with others? No one in the entire world can do a better job of being you than you. Consider how hard it is to change yourself and you'll understand what little chance you have in trying to change others. It is not enough to have a good mind; the main thing is to use it well. When you learn, teach. When you get, give. To study and not think is a waste. To think and not study is dangerous.",
+    "testimonials": "Testimonials",
+    "he_who_conquers_others_is_strong_he_who_conquers_himself_is_mighty_if_you_spend_too_much_time_thinking_about_a_thing_you_will_never_get_it_done_there_are_things_so_deep_and_complex_that_only_intuition_can_reach_it_in_our_stage_of_development_as_human_beings": "He who conquers others is strong; He who conquers himself is mighty. If you spend too much time thinking about a thing, you'll never get it done. There are things so deep and complex that only intuition can reach it in our stage of development as human beings.",
+    "anna_morian": "Anna Morian",
+    "i_cannot_make_my_days_longer_so_i_strive_to_make_them_better_trust_yourself_you_know_more_than_you_think_you_do": "I cannot make my days longer so I strive to make them better. Trust yourself. You know more than you think you do.",
+    "lisa_cudrow": "Lisa Cudrow",
+    "everyone_is_a_genius_at_least_once_a_year_a_real_genius_has_his_original_ideas_closer_together": "Everyone is a genius at least once a year. A real genius has his original ideas closer together.",
+    "teresa_may": "Teresa May",
+    "people_are_not_lazy_they_simply_have_impotent_goals_that_is_goals_that_do_not_inspire_them_you_only_lose_what_you_cling_to": "People are not lazy. They simply have impotent goals - that is, goals that do not inspire them. You only lose what you cling to.",
+    "john_smith": "John Smith",
+    "patience_is_the_companion_of_wisdom_every_strike_brings_me_closer_to_the_next_home_run_chaos_and_order_are_not_enemies": "Patience is the companion of wisdom. Every strike brings me closer to the next home run. Chaos and Order are not enemies."
   }
 }

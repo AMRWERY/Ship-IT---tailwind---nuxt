@@ -1,8 +1,12 @@
 <template>
   <div>
     <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <h1 class="text-3xl italic font-normal text-center">Read About Fashion</h1>
-      <h4 class="text-center"><b class="text-red-500">Amr Mohamed</b> <span class="mx-2">|</span> {{ currentDate }}</h4>
+      <h1 class="text-3xl italic font-normal text-center text-gray-800 dark:text-gray-300">{{
+        $t('blogs.read_about_fashion') }}</h1>
+      <h4 class="flex justify-center text-center"><b class="text-red-500 dark:text-blue-300">{{ $t('blogs.amr_mohamed')
+          }}</b> <span class="mx-2 text-gray-800 dark:text-gray-300">|</span class>
+        <p class="text-gray-700 dark:text-gray-200">{{ currentDate }}</p>
+      </h4>
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="max-w-2xl mx-auto sm:py-12 lg:max-w-none lg:py-16">
           <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
@@ -19,16 +23,13 @@
                   </a>
                 </div>
                 <div class="p-6">
-                  <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                    {{ card.title }}
+                  <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-100">
+                    {{ $t(card.title) }}
                   </h5>
-                  <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                  <p class="mb-4 text-base text-neutral-600 dark:text-neutral-300">
+                    {{ $t(card.desc) }}
                   </p>
-
                   <posts-dialog :card="card" />
-
                 </div>
               </div>
             </div>
@@ -43,12 +44,10 @@
 </template>
 
 <script setup>
-// const { t } = useI18n();
-
 const cards = ref([
-  { title: 'Top 10 Fashion of the Week', img: 'https://justfields.com/storage/projects/7M5rV059/slider3.jpg' },
-  { title: 'Best brands for fashion', img: 'https://justfields.com/storage/projects/7M5rV059/slider01.jpg' },
-  { title: 'Fashion Tips & Tricks', img: 'https://justfields.com/storage/projects/7M5rV059/slider04.jpg' },
+  { title: 'blogs.top_10_fashion_of_the_week', desc: 'blogs.the_truth_you_believe_and_cling_to_makes_you_unavailable_to_hear_anything_new_a_jug_fills_drop_by_drop', img: 'https://justfields.com/storage/projects/7M5rV059/slider3.jpg' },
+  { title: 'blogs.best_brands_for_fashion', desc: 'blogs.the_weak_can_never_forgive_Forgiveness_is_the_attribute_of_the_strong_no_one_has_ever_become_poor_by_giving', img: 'https://justfields.com/storage/projects/7M5rV059/slider01.jpg' },
+  { title: 'blogs.fashion_tips_tricks', desc: 'blogs.when_you_see_a_man_of_worth_think_of_how_you_may_emulate_him_when_you_see_one_who_is_unworthy_examine_yourself', img: 'https://justfields.com/storage/projects/7M5rV059/slider04.jpg' },
 ])
 
 const currentDate = ref('');
@@ -65,6 +64,6 @@ onMounted(() => {
 });
 
 useHead({
-    title: 'Blogs'
+  title: 'Blogs'
 })
 </script>

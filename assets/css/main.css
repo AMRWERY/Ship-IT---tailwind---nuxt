@@ -10,16 +10,19 @@
 }
 
 /*scroll*/
-.desc::-webkit-scrollbar {
+.desc::-webkit-scrollbar,
+.blogs::-webkit-scrollbar {
   width: 6px;
 }
 
-.desc::-webkit-scrollbar-thumb {
+.desc::-webkit-scrollbar-thumb,
+.blogs::-webkit-scrollbar-thumb {
   background-color: #c1c1c1;
   border-radius: 6px;
 }
 
-.desc::-webkit-scrollbar-track {
+.desc::-webkit-scrollbar-track,
+.blogs::-webkit-scrollbar-track {
   background-color: #eee;
 }
 
