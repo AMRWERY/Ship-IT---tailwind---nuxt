@@ -2,7 +2,7 @@
     <div>
         <div class="max-w-full py-16 mx-auto bg-white sm:px-6 lg:px-8 dark:bg-[#1e2022]">
             <div class="flex flex-col p-6 sm:flex-row">
-                <div class="w-full pr-4">
+                <div class="w-full pe-4">
                     <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-3">
                             <label for="name" class="label">{{
