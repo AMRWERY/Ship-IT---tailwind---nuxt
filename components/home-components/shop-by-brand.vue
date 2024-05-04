@@ -1,11 +1,26 @@
 <template>
   <div>
     <div class="max-w-5xl py-6 mx-auto sm:px-6 lg:px-8">
-      <section class="max-w-full mx-auto mt-10 sm:px-6 lg:px-8">
-        <h2 class="mb-6 text">{{ $t('home.shop_by_brand') }}</h2>
-        <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{ delay: 2500, disableOnInteraction: false }"
-          :slidesPerView="4.5" :loop="true" :grabCursor="true" :grid="{ rows: 1 }" :pagination="{ clickable: true }"
-          :modules="[SwiperAutoplay, SwiperPagination]" class="mySwiper">
+      <section class="max-w-full mx-auto sm:px-6 lg:px-8">
+        <h2 class="mb-4 text">{{ $t('home.shop_by_brand') }}</h2>
+        <swiper :centeredSlides="true" :autoplay="{ delay: 2500, disableOnInteraction: false }" :loop="true"
+          :grabCursor="true" :grid="{ rows: 1 }" :modules="[SwiperAutoplay, SwiperPagination]" :breakpoints="{
+            '400': {
+              slidesPerView: 2.5,
+              spaceBetween: 10,
+            },
+            '640': {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            '768': {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            '1024': {
+              slidesPerView: 5,
+            },
+          }" class="mySwiper">
           <swiper-slide v-for="(card, index) in store.shopByBrand" :key="index">
             <div class="relative flex justify-center flex-shrink-0 h-48 mx-2 overflow-hidden w-44 rounded-xl">
               <div class="relative overflow-hidden bg-no-repeat bg-cover transit">
