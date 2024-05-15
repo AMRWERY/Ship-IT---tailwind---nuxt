@@ -161,7 +161,6 @@ const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
 const password = ref('')
-const { t } = useI18n();
 const loading = ref(false);
 
 const signUp = async () => {
@@ -184,7 +183,9 @@ const signUpWithGoogleAccount = () => {
     });
 };
 
-useHead({
-    title: 'Create new Account'
-})
+const { t } = useI18n()
+
+useHead(() => ({
+  title: t('head.create_new_account')
+}))
 </script>

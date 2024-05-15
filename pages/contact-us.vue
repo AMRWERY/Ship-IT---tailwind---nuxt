@@ -72,7 +72,9 @@
 const email = ref('')
 const message = ref('')
 
-useHead({
-  title: 'Contact Us'
-})
+const { t } = useI18n()
+
+useHead(() => ({
+  title: t('head.contact_us')
+}))
 </script>

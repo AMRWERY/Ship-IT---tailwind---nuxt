@@ -191,7 +191,6 @@ const lastName = ref('')
 const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')
-const { t } = useI18n()
 
 onMounted(() => {
     firstName.value = sessionStorage.getItem('firstName');
@@ -206,7 +205,9 @@ const toggleEditMode = () => {
     editMode.value = !editMode.value
 }
 
-useHead({
-    title: t('head.profile')
-})
+const { t } = useI18n()
+
+useHead(() => ({
+  title: t('head.profile')
+}))
 </script>

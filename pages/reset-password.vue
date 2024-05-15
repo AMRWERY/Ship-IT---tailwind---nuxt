@@ -55,7 +55,9 @@ const resetPassword = () => {
   });
 };
 
-useHead({
-  title: 'Reset Password'
-})
+const { t } = useI18n()
+
+useHead(() => ({
+  title: t('head.reset_password')
+}))
 </script>

@@ -63,7 +63,9 @@ onMounted(() => {
   setInterval(updateDate, 60000);
 });
 
-useHead({
-  title: 'Blogs'
-})
+const { t } = useI18n()
+
+useHead(() => ({
+  title: t('head.blogs')
+}))
 </script>

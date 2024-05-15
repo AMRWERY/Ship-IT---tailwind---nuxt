@@ -55,7 +55,9 @@
 </template>
 
 <script setup>
-useHead({
-  title: 'Hire Me'
-})
+const { t } = useI18n()
+
+useHead(() => ({
+  title: t('head.hire_me')
+}))
 </script>

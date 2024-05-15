@@ -131,10 +131,12 @@
 </template>
 
 <script setup>
+const { t } = useI18n()
+
 //rotate logo composable
 const { el } = useAnimateRotation();
 
-useHead({
-  title: 'About Us'
-})
+useHead(() => ({
+  title: t('head.about_us')
+}))
 </script>
