@@ -24,90 +24,36 @@
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
                   <div>
                     <p class="block w-full px-6 py-2 font-semibold bg-white text-neutral-700">{{ $t('menu.women') }}</p>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.clothing') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.shoes') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.watches_jewelry') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.handbags_bags') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.accessories') }}</nuxt-link>
+                    <nuxt-link aria-current="true" v-for="item in women" :key="item" to=""
+                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">
+                      {{ $t(item.title) }}</nuxt-link>
                   </div>
                   <div>
                     <p class="block w-full px-6 py-2 font-semibold bg-white text-neutral-700">{{ $t('menu.men') }}</p>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.clothing') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.shoes') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.watches_accessories') }}</nuxt-link>
+                    <nuxt-link aria-current="true" v-for="item in men" :key="item" to=""
+                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">
+                      {{ $t(item.title) }}</nuxt-link>
                   </div>
                   <div>
                     <p class="block w-full px-6 py-2 font-semibold bg-white text-neutral-700">{{ $t('menu.juniors_kids')
                       }}</p>
-                    <nuxt-link to="" aria-current="true"
+                    <nuxt-link aria-current="true" v-for="item in juniors_kids" :key="item" to=""
                       class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.girls') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.baby_girls') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.boys') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.baby_boys') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.toys') }}</nuxt-link>
+                      $t(item.title) }}</nuxt-link>
                   </div>
                   <div>
                     <p class="block w-full px-6 py-2 font-semibold bg-white text-neutral-700">{{ $t('menu.electronics')
                       }}</p>
-                    <nuxt-link to="" aria-current="true"
+                    <nuxt-link aria-current="true" v-for="item in electronics" :key="item" to=""
                       class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.computers_laptops') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.cameras_camcorders') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.tv_home_theater') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.video_games') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.mobiles_tablets') }}</nuxt-link>
+                        $t(item.title) }}</nuxt-link>
                   </div>
                   <div>
                     <p class="block w-full px-6 py-2 font-semibold bg-white text-neutral-700">{{ $t('menu.beauty') }}
                     </p>
-                    <nuxt-link to="" aria-current="true"
+                    <nuxt-link aria-current="true" v-for="item in beauty" :key="item" to=""
                       class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.bath_body') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.makeup') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.hair_care') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.fragrance') }}</nuxt-link>
-                    <nuxt-link to="" aria-current="true"
-                      class="block w-full px-6 py-2 bg-white text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t('menu.skin_care') }}</nuxt-link>
+                        $t(item.title) }}</nuxt-link>
                   </div>
                 </div>
               </div>
@@ -120,6 +66,46 @@
 </template>
 
 <script setup>
+const { t } = useI18n();
+
+const women = ref([
+  { title: 'menu.clothing', route: '' },
+  { title: 'menu.shoes', route: '' },
+  { title: 'menu.watches_jewelry', route: '' },
+  { title: 'menu.handbags_bags', route: '' },
+  { title: 'menu.accessories', route: '' },
+])
+
+const men = ref([
+  { title: 'menu.clothing', route: '' },
+  { title: 'menu.shoes', route: '' },
+  { title: 'menu.watches_accessories', route: '' },
+])
+
+const juniors_kids = ref([
+  { title: 'menu.girls', route: '' },
+  { title: 'menu.baby_girls', route: '' },
+  { title: 'menu.boys', route: '' },
+  { title: 'menu.baby_boys', route: '' },
+  { title: 'menu.toys', route: '' },
+])
+
+const electronics = ref([
+  { title: 'menu.computers_laptops', route: '' },
+  { title: 'menu.cameras_camcorders', route: '' },
+  { title: 'menu.tv_home_theater', route: '' },
+  { title: 'menu.video_games', route: '' },
+  { title: 'menu.mobiles_tablets', route: '' },
+])
+
+const beauty = ref([
+  { title: 'menu.bath_body', route: '' },
+  { title: 'menu.makeup', route: '' },
+  { title: 'menu.hair_care', route: '' },
+  { title: 'menu.fragrance', route: '' },
+  { title: 'menu.skin_care', route: '' },
+])
+
 onMounted(async () => {
   const { Collapse, Dropdown, Ripple, initTWE } = await import("tw-elements");
   initTWE({ Collapse, Dropdown, Ripple });
