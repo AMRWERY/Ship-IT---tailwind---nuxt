@@ -39,7 +39,9 @@
                       }}</p>
                     <nuxt-link aria-current="true" v-for="item in juniors_kids" :key="item" to=""
                       class="block w-full px-6 py-2 bg-white border-b border-neutral-150 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25">{{
-                        $t(item.title) }}</nuxt-link>
+
+
+                      $t(item.title) }}</nuxt-link>
                   </div>
                   <div>
                     <p class="block w-full px-6 py-2 font-semibold bg-white text-neutral-700">{{ $t('menu.electronics')
