@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="sticky top-0 z-40">
-      <div class="flex items-center justify-between w-full px-6 bg-gray-100 border-b h-14">
+      <div class="flex items-center justify-between w-full px-6 bg-gray-100 border-b h-14 dark:bg-[#1e2022]">
         <!-- left navbar -->
         <div class="flex">
           <!-- mobile hamburger -->
@@ -21,7 +21,7 @@
         <div class="flex">
           <!-- back to home -->
           <nuxt-link to="/" class="relative flex items-center">
-            <icon name="humbleicons:home" class="mr-3 fill-current hover:text-blue-500" />
+            <icon name="humbleicons:home" class="mr-3 text-gray-500 fill-current hover:text-blue-800 dark:text-blue-100" />
           </nuxt-link>
 
           <!-- profile -->
@@ -38,7 +38,7 @@
     </div>
 
     <!-- sidebar -->
-    <div class="fixed z-30 w-1/2 h-screen bg-gray-100 border-r md:w-1/3 lg:w-64 md:top-14 md:left-0 lg:block"
+    <div class="fixed z-30 w-1/2 h-screen bg-gray-100 border-r md:w-1/3 lg:w-64 md:top-14 md:left-0 lg:block dark:bg-[#1e2022]"
       :class="sideBarOpen ? '' : 'hidden'" id="main-nav">
       <div class="px-4 my-4">
         <p class="pl-4 mb-1 text-sm font-semibold">Main</p>

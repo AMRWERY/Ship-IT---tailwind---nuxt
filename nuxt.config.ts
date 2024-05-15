@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@vueuse/nuxt",
     "@stefanobartoletti/nuxt-social-share",
-    "nuxt-swiper",
+    "vue3-carousel-nuxt",
   ],
   tailwindcss: {
     cssPath: ["~/assets/css/tailwind.css", { injectPosition: "first" }],
@@ -38,10 +38,8 @@ export default defineNuxtConfig({
     autoImport: true,
     configFile: "./formkit.config.ts",
   },
-  swiper: {
-    prefix: "Swiper",
-    styleLang: "css",
-    // modules: ['Autoplay', 'Pagination', 'Navigation'],
+  carousel: {
+    prefix: "MyPrefix",
   },
   css: ["~/assets/css/main.css"],
   components: [

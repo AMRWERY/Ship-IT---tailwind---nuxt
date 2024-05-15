@@ -1,19 +1,20 @@
 <template>
   <div>
     <div class="max-w-5xl py-6 mx-auto sm:px-6 lg:px-8">
-      <section class="max-w-full mx-auto mt-10 sm:px-6 lg:px-8">
+      <section class="max-w-full mx-auto mt-5 sm:px-6 lg:px-8">
         <h2 class="mb-6 text">{{ $t('home.shop_by_brand') }}</h2>
-        <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{ delay: 2500, disableOnInteraction: false }"
-          :slidesPerView="4.5" :loop="true" :grabCursor="true" :grid="{ rows: 1 }" :pagination="{ clickable: true }"
-          :modules="[SwiperAutoplay, SwiperPagination]" class="mySwiper">
-          <swiper-slide v-for="(card, index) in store.shopByBrand" :key="index">
-            <div class="relative flex justify-center flex-shrink-0 h-48 mx-2 overflow-hidden w-44 rounded-xl">
-              <div class="relative overflow-hidden bg-no-repeat bg-cover transit">
-                <img class="h-48 rounded-t-lg" :src="getImageUrl(card.img)" />
+        <Carousel v-bind="settings" :breakpoints="breakpoints" :wrap-around="true" :autoplay="3000" :transition="500">
+          <Slide v-for="(card, index) in store.shopByBrand" :key="index">
+            <div class="carousel__item">
+              <div class="relative flex justify-center flex-shrink-0 h-48 mx-2 overflow-hidden w-44 rounded-xl">
+                <div class="relative overflow-hidden bg-no-repeat bg-cover transit">
+                  <img class="h-48 rounded-t-lg" :src="getImageUrl(card.img)" />
+                </div>
               </div>
             </div>
-          </swiper-slide>
-        </swiper>
+          </Slide>
+          <template #addons></template>
+        </Carousel>
       </section>
     </div>
 
@@ -74,10 +75,62 @@ const cards = ref([
   { title: 'home.a_never_ending_sunglasses_season', subtitle: 'home.on_any_and_all_occasions_the_right_pair_of_shades_will_elevate_your_days_out', img: 'https://justfields.com/storage/projects/7M5rV059/6-sunglasses.jpg', route: '' },
   { title: 'home.accessories_and_bags', subtitle: 'home.large_collections_of_sharpening_up_your_fashion_look_with_these_statement', img: 'https://justfields.com/storage/projects/7M5rV059/bagssss.jpg', route: '' },
 ])
+
+const settings = ref({
+  itemsToShow: 2,
+  snapAlign: 'center',
+});
+
+const breakpoints = ref({
+  700: {
+    itemsToShow: 3,
+    snapAlign: 'center',
+  },
+  1024: {
+    itemsToShow: 4.5,
+    snapAlign: 'center',
+  },
+});
 </script>
 
 <style scoped>
-.mySwiper {
-  height: 230px;
+.carousel__slide {
+  padding: 5px;
+}
+
+.carousel__viewport {
+  perspective: 2000px;
+}
+
+.carousel__track {
+  transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
+  transition: 0.5s;
+}
+
+.carousel__slide {
+  opacity: 0.9;
+  transform: rotateY(-20deg) scale(0.9);
+}
+
+.carousel__slide--active~.carousel__slide {
+  transform: rotateY(20deg) scale(0.9);
+}
+
+.carousel__slide--prev {
+  opacity: 1;
+  transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__slide--next {
+  opacity: 1;
+  transform: rotateY(10deg) scale(0.95);
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  transform: rotateY(0) scale(1.1);
 }
 </style>
