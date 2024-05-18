@@ -146,7 +146,7 @@
                                                             @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
                                                         <label for="category"
                                                             class="text-sm text-gray-600 ms-3 dark:text-gray-300">{{
-                                                                $t(category.label)
+                                                                category.label
                                                             }}</label>
                                                     </div>
                                                 </div>
@@ -331,7 +331,7 @@
                                                     @change="category.checked = !category.checked; updateSelectedCategories(category.label, category.checked)" />
                                                 <label for="category"
                                                     class="text-sm text-gray-600 ms-3 dark:text-gray-300">{{
-                                                        $t(category.label)
+                                                        category.label
                                                     }}</label>
                                             </div>
                                         </div>
@@ -422,11 +422,11 @@ const fulfillment = ref([
 ])
 
 const categories = ref([
-    { value: 'women', label: 'menu.women', checked: false },
-    { value: 'men', label: 'menu.men', checked: false },
-    { value: 'kids', label: 'menu.juniors_kids', checked: false },
-    { value: 'electronics', label: 'menu.electronics', checked: false },
-    { value: 'beauty', label: 'menu.beauty', checked: false },
+    { value: 'women', label: 'Women', checked: false },
+    { value: 'men', label: 'Men', checked: false },
+    { value: 'kids', label: 'Juniors & Kids', checked: false },
+    { value: 'electronics', label: 'Electronics', checked: false },
+    { value: 'beauty', label: 'Beauty', checked: false },
 ])
 
 const colors = ref([
