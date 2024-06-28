@@ -76,7 +76,8 @@
     "forget_password": "نسيت كلمة المرور",
     "reset_password": "إعادة تعيين كلمة المرور",
     "remember_your_password": "هل تتذكر كلمة المرور الخاصة بك؟",
-    "back_to_login": "العودة إلى تسجيل الدخول"
+    "back_to_login": "العودة إلى تسجيل الدخول",
+    "sign_up_with_social": "التسجيل باستخدام حساب الوسائل الاجتماعية"
   },
   "placeholder": {
     "enter_your_password": "أدخل كلمة المرور الخاصة بك",

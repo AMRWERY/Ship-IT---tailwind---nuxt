@@ -76,7 +76,8 @@
     "forget_password": "Forget Password",
     "reset_password": "Reset Password",
     "remember_your_password": "Remember your password?",
-    "back_to_login": "Back to Login"
+    "back_to_login": "Back to Login",
+    "sign_up_with_social": "sign up with social"
   },
   "placeholder": {
     "enter_your_password": "enter your password",

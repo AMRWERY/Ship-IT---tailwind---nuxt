@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="pt-2 mt-48 bg-[#013A48] dark:bg-[#86469C]">
+    <div class="pt-2 mt-24 bg-[#013A48] dark:bg-[#86469C]">
       <footer class="px-4 mx-auto max-w-screen-2xl md:px-8">
         <div class="flex flex-col items-center justify-between gap-4 py-6 border-b md:flex-row">
           <!-- nav - start -->
