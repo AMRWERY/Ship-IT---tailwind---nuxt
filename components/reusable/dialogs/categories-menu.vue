@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="px-6">
-      <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+      <div class="!visible flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
         id="navbarSupportedContent1" data-twe-collapse-item>
         <ul class="flex flex-row me-auto" data-twe-navbar-nav-ref>
           <li class="static" data-twe-nav-item-ref data-twe-dropdown-ref>

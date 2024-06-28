@@ -2,9 +2,9 @@
   <div>
     <banner />
     <shop-by-brand />
-     <express-deals />
+    <express-deals />
     <new-arrivals />
-   <users-feedback />
+    <users-feedback />
   </div>
 </template>
 

@@ -1,75 +1,52 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-[#4F46E5] dark:bg-[#6196A6] py-1.5 flex justify-center z-50">
-    <p class="mt-0.5 text-sm text-white">{{ $t('layout.get_free_delivery_on_orders_over_egp_1000') }}</p>
-    <span class="mx-2 text-white">|</span>
+  <div>
+    <nav class="fixed top-0 left-0 right-0 bg-[#4F46E5] dark:bg-[#6196A6] py-1.5 flex justify-center z-50">
+      <p class="mt-0.5 text-sm text-white">{{ $t('layout.get_free_delivery_on_orders_over_egp_1000') }}</p>
+      <span class="mx-2 text-white">|</span>
+      <today-deals />
+    </nav>
 
-    <today-deals />
+    <header class="z-30 flex items-center w-full h-12 mt-12 sm:h-12">
+      <div class="container flex items-center justify-between max-w-full px-4 py-6 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center">
+          <nuxt-link to="/" class="text-3xl font-black xs:text-lg lg:text-3xl text-gradient" ref="el">
+            Ship-IT
+          </nuxt-link>
+          <categories-menu class="ml-4 xs:ml-2" />
+        </div>
 
-  </nav>
+        <div class="flex items-center">
+          <nav class="items-center space-x-1 text-lg text-gray-800 font-sen xs:flex sm:space-x-1.5">
+            <!-- Toggle Language -->
+            <nuxt-link class="me-4 text-neutral-600 dark:text-white" to="" role="button" v-if="isRTL"
+              @click="updateLocale('en'); changeLocale('en')">
+              <span class="[&>svg]:w-5">
+                En
+              </span>
+            </nuxt-link>
+            <nuxt-link class="me-4 text-neutral-600 dark:text-white" to="" role="button" v-else
+              @click="updateLocale('ar'); changeLocale('ar')">
+              <span class="[&>svg]:w-5">
+                العربية
+              </span>
+            </nuxt-link>
 
-  <nav
-    class="relative flex flex-no-wrap items-center justify-between w-full py-2 mt-7 bg-zinc-50 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4">
-    <div class="flex flex-wrap items-center justify-between w-full px-3">
-      <!-- Hamburger button for mobile view -->
-      <button
-        class="block px-2 bg-transparent border-0 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
-        type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent1"
-        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-        <!-- Hamburger icon -->
-        <span class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
-          <icon name="grommet-icons:menu" />
-        </span>
-      </button>
+            <button type="button" @click="toggleTheme" class="p-1 text-gray-400 rounded-full dark:text-white">
+              <icon :name="theme === 'dark' ? 'heroicons-solid:sun' : 'heroicons-solid:moon'"></icon>
+            </button>
 
-      <!-- Collapsible navigation container -->
-      <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
-        id="navbarSupportedContent1" data-twe-collapse-item>
-        <!-- Logo -->
-        <nuxt-link ref="el"
-          class="flex items-center mt-3 mb-4 me-5 ms-2 text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
-          to="/">
-          <img src="/shopping-bags-svgrepo-com.svg" class="h-10" loading="lazy" />
-        </nuxt-link>
+            <cart-dialog v-if="isAuthenticated" />
 
-        <!-- Categories -->
-        <categories-menu />
-        <!-- Left links -->
+            <profile-menu v-if="isAuthenticated" />
+
+            <nuxt-link to="/auth/login" type="button"
+              class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              v-if="!isAuthenticated">Login</nuxt-link>
+          </nav>
+        </div>
       </div>
-
-      <!-- Right elements -->
-      <div class="relative flex items-center space-s-3">
-        <!-- Toggle Languages-->
-        <nuxt-link class="me-4 text-neutral-600 dark:text-white" to="" role="button" v-if="isRTL"
-          @click="updateLocale('en')">
-          <span class="[&>svg]:w-5">
-            En
-          </span>
-        </nuxt-link>
-        <nuxt-link class="me-4 text-neutral-600 dark:text-white" to="" role="button" v-else @click="updateLocale('ar')">
-          <span class="[&>svg]:w-5">
-            العربية
-          </span>
-        </nuxt-link>
-
-        <!-- Toggle Themes-->
-        <button type="button" @click="toggleTheme" class="p-1 text-gray-400 rounded-full dark:text-white">
-          <icon :name="theme === 'dark' ? 'heroicons-solid:sun' : 'heroicons-solid:moon'"></icon>
-        </button>
-
-        <!-- cart -->
-        <cart-dialog v-if="isAuthenticated" />
-
-        <!-- Dropdown menu -->
-        <profile-menu v-if="isAuthenticated" />
-
-        <!-- Login -->
-        <nuxt-link to="/auth/login" type="button"
-          class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          v-if="!isAuthenticated">Login</nuxt-link>
-      </div>
-      <!-- Right elements -->
-    </div>
-  </nav>
+    </header>
+  </div>
 </template>
 
 <script setup>
@@ -116,9 +93,12 @@ updateThemeClasses(sessionStorage.getItem('theme') || 'light');
 
 //rotate logo composable
 const { el } = useAnimateRotation();
-
-onMounted(async () => {
-  const { Tooltip, Collapse, Dropdown, initTWE } = await import("tw-elements");
-  initTWE({ Tooltip, Collapse, Dropdown });
-});
 </script>
+
+<style scoped>
+.text-gradient {
+  background: linear-gradient(to right, #4F46E5, #6196A6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
