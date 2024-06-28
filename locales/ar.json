@@ -247,7 +247,8 @@
     "type": "النوع:",
     "category": "الفئة:",
     "quantity": "الكمية:",
-    "related_products": "المنتجات ذات الصلة"
+    "related_products": "المنتجات ذات الصلة",
+    "no_items_available": "لا توجد عناصر متاحة"
   },
   "order_tracking": {
     "order_details": "تفاصيل الطلب",

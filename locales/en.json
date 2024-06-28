@@ -245,7 +245,8 @@
     "type": "Type:",
     "category": "Category:",
     "quantity": "Quantity:",
-    "related_products": "Related Products"
+    "related_products": "Related Products",
+    "no_items_available": "no items available"
   },
   "order_tracking": {
     "order_details": "Order details",

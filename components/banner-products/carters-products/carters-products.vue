@@ -22,6 +22,13 @@
         </div>
 
         <div class="grid grid-cols-1 mt-6 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+          <div v-if="store.filteredProducts.length === 0"
+            class="flex flex-col items-center justify-center w-full h-[calc(100vh-12rem)] sm:mx-72">
+            <icon name="svg-spinners:blocks-shuffle-3" class="w-16 h-16 text-gray-600" />
+            <p class="mt-4 text-xl font-semibold text-gray-500 dark:text-gray-300">{{ $t('products.no_items_available')
+              }}</p>
+          </div>
+
           <div v-for="product in store.filteredProducts" :key="product.id"
             class="relative w-full max-w-xs m-5 overflow-hidden bg-white shadow-md rounded-2xl card-transit dark:bg-neutral-700">
             <nuxt-link :to="'/carters-products/' + product.id">
