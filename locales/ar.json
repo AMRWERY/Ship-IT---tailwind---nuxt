@@ -163,6 +163,7 @@
     "tracking_number": "رقم التتبع"
   },
   "head": {
+    "login_into_your_account": "تسجيل الدخول إلى حسابك",
     "create_new_account": "إنشاء حساب جديد",
     "reset_password": "إعادة تعيين كلمة المرور",
     "hire_me": "توظيفني",
@@ -283,5 +284,13 @@
     "patience_is_the_companion_of_wisdom_every_strike_brings_me_closer_to_the_next_home_run_chaos_and_order_are_not_enemies": "الصبر رفيق الحكمة. كل ضربة تقربني من الهوم رن القادمة. الفوضى والنظام ليستا أعداء.",
     "emely_watson": "إيميلي واتسون",
     "february_19_2024": "١٩ فبراير ٢٠٢٤"
+  },
+  "reusable": {
+    "successfully": "بنجاح",
+    "your_password_has_been_reset_successfully_please_check_your_email": "تم إعادة تعيين كلمة المرور بنجاح، يرجى التحقق من بريدك الإلكتروني",
+    "an_error_occurred_while_resetting_your_password_please_try_again": "حدث خطأ أثناء إعادة تعيين كلمة المرور الخاصة بك. يرجى المحاولة مرة أخرى.",
+    "processing": "جارٍ المعالجة...",
+    "out_of": "out of",
+    "stars": "stars"
   }
 }

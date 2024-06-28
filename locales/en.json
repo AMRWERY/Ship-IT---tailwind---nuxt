@@ -161,6 +161,7 @@
     "tracking_number": "Tracking number"
   },
   "head": {
+    "login_into_your_account": "Login into your account",
     "create_new_account": "Create new Account",
     "reset_password": "Reset Password",
     "hire_me": "Hire Me",
@@ -281,5 +282,13 @@
     "patience_is_the_companion_of_wisdom_every_strike_brings_me_closer_to_the_next_home_run_chaos_and_order_are_not_enemies": "Patience is the companion of wisdom. Every strike brings me closer to the next home run. Chaos and Order are not enemies.",
     "emely_watson": "Emely Watson",
     "february_19_2024": "February 19, 2024"
+  },
+  "reusable": {
+    "successfully": "Successfully",
+    "your_password_has_been_reset_successfully_please_check_your_email": "Your password has been reset successfully, please check your email",
+    "an_error_occurred_while_resetting_your_password_please_try_again": "An error occurred while resetting your password. Please try again.",
+    "processing": "Processing...",
+    "out_of": "out of",
+    "stars": "stars"
   }
 }

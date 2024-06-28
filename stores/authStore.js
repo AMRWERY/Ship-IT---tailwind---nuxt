@@ -90,11 +90,13 @@ export const useAuthStore = defineStore("auth", {
           const user = userCredential.user;
           if (user) {
             this.isAuthenticated = true;
+            sessionStorage.setItem("isAuthenticated", true);
             sessionStorage.setItem("password", password);
             sessionStorage.setItem("email", email);
-            sessionStorage.setItem("isAuthenticated", true);
-            // sessionStorage.setItem("username", payload.username);
-            // router.replace("/");
+            router.replace("/");
+            setTimeout(() => {
+              location.reload();
+            }, 500);
             try {
               const usersCollection = collection(db, "users");
               const q = query(
@@ -104,6 +106,8 @@ export const useAuthStore = defineStore("auth", {
               const querySnapshot = await getDocs(q);
               if (!querySnapshot.empty) {
                 const userData = querySnapshot.docs[0].data();
+                this.firstName = userData.firstName;
+                sessionStorage.setItem("firstName", userData.firstName);
                 sessionStorage.setItem("username", userData.username);
                 sessionStorage.setItem("userId", user.uid);
               } else {
@@ -120,7 +124,7 @@ export const useAuthStore = defineStore("auth", {
                 console.log(error);
               });
           } else {
-            // router.replace("/auth");
+            router.replace("/sign-up");
           }
         })
         .catch((error) => {

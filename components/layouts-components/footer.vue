@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="pt-2 mt-10 bg-[#013A48] dark:bg-[#86469C]">
+    <div class="pt-2 mt-48 bg-[#013A48] dark:bg-[#86469C]">
       <footer class="px-4 mx-auto max-w-screen-2xl md:px-8">
         <div class="flex flex-col items-center justify-between gap-4 py-6 border-b md:flex-row">
           <!-- nav - start -->
@@ -19,26 +19,31 @@
 
           <!-- social - start -->
           <div class="flex gap-4">
-            <a href="#" target="_blank" class="text-neutral-200 dark:text-neutral-50 hover:text-gray-500 active:text-gray-600 transit">
+            <a href="#" target="_blank"
+              class="text-neutral-200 dark:text-neutral-50 hover:text-gray-500 active:text-gray-600 transit">
               <icon name="fontisto:facebook" class="w-5 h-5" />
             </a>
 
-            <a href="#" target="_blank" class="text-neutral-200 dark:text-neutral-50 hover:text-gray-500 active:text-gray-600 transit">
+            <a href="#" target="_blank"
+              class="text-neutral-200 dark:text-neutral-50 hover:text-gray-500 active:text-gray-600 transit">
               <icon name="fontisto:instagram" class="w-5 h-5" />
             </a>
 
-            <a href="#" target="_blank" class="text-neutral-200 dark:text-neutral-50 hover:text-gray-500 active:text-gray-600 transit">
+            <a href="#" target="_blank"
+              class="text-neutral-200 dark:text-neutral-50 hover:text-gray-500 active:text-gray-600 transit">
               <icon name="fontisto:twitter" class="w-5 h-5" />
             </a>
 
-            <a href="#" target="_blank" class="text-neutral-200 dark:text-neutral-50 hover:text-gray-500 active:text-gray-600 transit">
+            <a href="#" target="_blank"
+              class="text-neutral-200 dark:text-neutral-50 hover:text-gray-500 active:text-gray-600 transit">
               <icon name="fontisto:whatsapp" class="w-5 h-5" />
             </a>
           </div>
           <!-- social - end -->
         </div>
 
-        <div class="p-6 text-center bg-[#013A48] dark:bg-[#86469C] border-t-2 border-neutral-600 dark:border-neutral-400">
+        <div
+          class="p-6 text-center bg-[#013A48] dark:bg-[#86469C] border-t-2 border-neutral-600 dark:border-neutral-400">
           <span class="me-1 text-neutral-200 dark:text-neutral-50">{{ $t('footer.2023_copyright') }}</span>
           <nuxt-link class="font-semibold text-neutral-300 dark:text-neutral-100" to=""> Ship-IT </nuxt-link>
         </div>

@@ -63,7 +63,9 @@
         <profile-menu v-if="isAuthenticated" />
 
         <!-- Login -->
-        <login-dialog v-if="!isAuthenticated" />
+        <nuxt-link to="/auth/login" type="button"
+          class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          v-if="!isAuthenticated">Login</nuxt-link>
       </div>
       <!-- Right elements -->
     </div>

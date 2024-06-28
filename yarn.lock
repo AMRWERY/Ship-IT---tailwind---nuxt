@@ -790,34 +790,44 @@
   resolved "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.1.tgz"
   integrity sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==
 
-"@formkit/addons@^1.6.2":
-  version "1.6.3"
-  resolved "https://registry.npmjs.org/@formkit/addons/-/addons-1.6.3.tgz"
-  integrity sha512-bqa7GzGzF5ue7jyS7a8MLbb+Qe2QnB4jKd+G3z0hDU6EucR8AnPTQaVVUaS93bZioUBQtb/qZ92yod0yDj/vxQ==
+"@formkit/addons@^1.6.5":
+  version "1.6.5"
+  resolved "https://registry.npmjs.org/@formkit/addons/-/addons-1.6.5.tgz"
+  integrity sha512-lI42uFX0a1UV/0J4ZzfuBAdoPykpDLOpH/fPNn6vI8hAKtkbOiStNZDex0r3aam0z3O1vPCtgUtsBCdWBVzxkw==
   dependencies:
     "@formkit/auto-animate" latest
-    "@formkit/core" "1.6.3"
-    "@formkit/inputs" "1.6.3"
-    "@formkit/utils" "1.6.3"
+    "@formkit/core" "1.6.5"
+    "@formkit/inputs" "1.6.5"
+    "@formkit/utils" "1.6.5"
 
 "@formkit/auto-animate@latest":
   version "0.8.2"
   resolved "https://registry.npmjs.org/@formkit/auto-animate/-/auto-animate-0.8.2.tgz"
   integrity sha512-SwPWfeRa5veb1hOIBMdzI+73te5puUBHmqqaF1Bu7FjvxlYSz/kJcZKSa9Cg60zL0uRNeJL2SbRxV6Jp6Q1nFQ==
 
-"@formkit/core@1.6.2":
+"@formkit/barcode@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/@formkit/barcode/-/barcode-1.0.2.tgz"
+  integrity sha512-nFCAPvujE1JWuRG7iEnTfIYUItxxSoGi/cWR2vSeVEhjPKCdMql1hJC8GIyd6YhtRs6wNFvKsvH5Jo4dPj92+A==
+  dependencies:
+    "@formkit/core" "^1.0.0"
+    "@formkit/inputs" "^1.0.0"
+    "@formkit/utils" "^1.0.0"
+    "@zxing/library" latest
+
+"@formkit/core@^1.0.0", "@formkit/core@1.6.2":
   version "1.6.2"
   resolved "https://registry.npmjs.org/@formkit/core/-/core-1.6.2.tgz"
   integrity sha512-48LGugLoQ9QR/GDvsVwviMQ/lk9rWA0iDy8Zg9BXPn0nfuWr5EW2IOTEZW3ZX8mAyvVZ4s+Xt5S40la8Sj5GTA==
   dependencies:
     "@formkit/utils" "1.6.2"
 
-"@formkit/core@1.6.3":
-  version "1.6.3"
-  resolved "https://registry.npmjs.org/@formkit/core/-/core-1.6.3.tgz"
-  integrity sha512-rirECaQABzO2ExM2EYUuXRRQfLShF//L98jWZPZUZGIlPuV6ow6sp06CO4bCC3r1lKVuP6IQ1kpvhUu9j/91hQ==
+"@formkit/core@1.6.5":
+  version "1.6.5"
+  resolved "https://registry.npmjs.org/@formkit/core/-/core-1.6.5.tgz"
+  integrity sha512-LLq8+vLd9ddPYA0NkyvnKycN4ESU8Wqcl9TrllPyU/axduJunSIJMZz4LHzlwK8G26b0pQNegXF/hXaj4wbmng==
   dependencies:
-    "@formkit/utils" "1.6.3"
+    "@formkit/utils" "1.6.5"
 
 "@formkit/dev@1.6.2":
   version "1.6.2"
@@ -836,7 +846,7 @@
     "@formkit/utils" "1.6.2"
     "@formkit/validation" "1.6.2"
 
-"@formkit/inputs@1.6.2":
+"@formkit/inputs@^1.0.0", "@formkit/inputs@1.6.2":
   version "1.6.2"
   resolved "https://registry.npmjs.org/@formkit/inputs/-/inputs-1.6.2.tgz"
   integrity sha512-Fe0xz6npjjoq+A/KupyzRTWUs0/Y5j8Ewh6XB8QMDMdutDeDamumsdZN6Mi9ilnQctZkPn6jKUPUGXRyMCfVDw==
@@ -844,13 +854,13 @@
     "@formkit/core" "1.6.2"
     "@formkit/utils" "1.6.2"
 
-"@formkit/inputs@1.6.3":
-  version "1.6.3"
-  resolved "https://registry.npmjs.org/@formkit/inputs/-/inputs-1.6.3.tgz"
-  integrity sha512-BeQDOq7llxVLHWKiAWt9NVFJBwYWAv/HCgQHH8rpDUHtapkOMz8j95ZmLE0p/oNgJvmLNdhABmNdmp+SQEYRdQ==
+"@formkit/inputs@1.6.5":
+  version "1.6.5"
+  resolved "https://registry.npmjs.org/@formkit/inputs/-/inputs-1.6.5.tgz"
+  integrity sha512-mHLMF0JMFZL/JC6NYrG4xaIdi7lUNE+tdC+QMipBdhobUhND0EJSpO6QNPGF6OLd9Zm9MDgqAzNXEtc05/nvow==
   dependencies:
-    "@formkit/core" "1.6.3"
-    "@formkit/utils" "1.6.3"
+    "@formkit/core" "1.6.5"
+    "@formkit/utils" "1.6.5"
 
 "@formkit/nuxt@^1.6.2":
   version "1.6.2"
@@ -890,15 +900,15 @@
   dependencies:
     "@formkit/core" "1.6.2"
 
-"@formkit/utils@1.6.2":
+"@formkit/utils@^1.0.0", "@formkit/utils@1.6.2":
   version "1.6.2"
   resolved "https://registry.npmjs.org/@formkit/utils/-/utils-1.6.2.tgz"
   integrity sha512-H7ai+AbemaF9okM2fUeHQUBEiGmiyXX/4M/P1ANI9C3nAqsPewmZucLH0QxihkjuMYOwO+MnHbG3rLS7FAkxig==
 
-"@formkit/utils@1.6.3":
-  version "1.6.3"
-  resolved "https://registry.npmjs.org/@formkit/utils/-/utils-1.6.3.tgz"
-  integrity sha512-ke3G91J8uHQ6JbDsPv8gxm7kmXI7LU7zd6Xe/TdG225XUXVhgnCrAZTxugLBriziF+9cHDo8QfapDiesD2cuDg==
+"@formkit/utils@1.6.5":
+  version "1.6.5"
+  resolved "https://registry.npmjs.org/@formkit/utils/-/utils-1.6.5.tgz"
+  integrity sha512-fohOg344tqFujHlEwvyHzzH5YiOBgecuOPkg7r7QObUrsH8gP1N8Rp9CHZlafxZ1zAEHZY2nTNx0VVQBkVmJbA==
 
 "@formkit/validation@1.6.2":
   version "1.6.2"
@@ -2378,6 +2388,20 @@
   integrity sha512-Uud2IWncmAfJvRaFYzv5OHDli+FbOzxiVEQdLCKQKLyhz94PIyFC3CHcH7EDMwIn8NPtD06+PNbC/PiO0LGLtw==
   dependencies:
     vue-demi ">=0.14.7"
+
+"@zxing/library@latest":
+  version "0.21.1"
+  resolved "https://registry.npmjs.org/@zxing/library/-/library-0.21.1.tgz"
+  integrity sha512-wCGA2gEUPJQEcsgH7posIne5vVocvOKrkGAYn8KvB8lqSJjzvATpLh2rc/hR6HqVVmW/rOcuRircJBHtRqHR3g==
+  dependencies:
+    ts-custom-error "^3.2.1"
+  optionalDependencies:
+    "@zxing/text-encoding" "~0.9.0"
+
+"@zxing/text-encoding@~0.9.0":
+  version "0.9.0"
+  resolved "https://registry.npmjs.org/@zxing/text-encoding/-/text-encoding-0.9.0.tgz"
+  integrity sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==
 
 abbrev@^2.0.0:
   version "2.0.0"
@@ -6887,6 +6911,11 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz"
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
+
+ts-custom-error@^3.2.1:
+  version "3.3.1"
+  resolved "https://registry.npmjs.org/ts-custom-error/-/ts-custom-error-3.3.1.tgz"
+  integrity sha512-5OX1tzOjxWEgsr/YEUWSuPrQ00deKLh6D7OTWcvNHm12/7QPyRh8SYpyWvA4IZv8H/+GQWQEh/kwo95Q9OVW1A==
 
 ts-interface-checker@^0.1.9:
   version "0.1.13"

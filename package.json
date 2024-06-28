@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@formkit/addons": "^1.6.2",
+    "@formkit/addons": "^1.6.5",
+    "@formkit/barcode": "^1.0.2",
     "@formkit/nuxt": "^1.6.2",
     "@nuxtjs/i18n": "^8.3.0",
     "@pinia/nuxt": "^0.5.1",
