@@ -49,23 +49,42 @@
         </li>
       </ul>
     </div>
+
+    <!-- overlay -->
+    <Overlay :visible="showOverlay" />
   </div>
 </template>
 
 <script setup>
 const store = useAuthStore()
+const showOverlay = ref(false);
 
-const logout = () => {
+const logout = async () => {
   try {
-    store.logout();
+    showOverlay.value = true;
+    await store.logout();
     setTimeout(() => {
+      showOverlay.value = false;
       location.reload();
-    }, 500);
-    navigateTo('/')
+    }, 3000);
+    navigateTo('/auth/login');
   } catch (error) {
     console.log(error);
+    showOverlay.value = false;
   }
 }
+
+// const logout = () => {
+//   try {
+//     store.logout();
+//     setTimeout(() => {
+//       location.reload();
+//     }, 500);
+//     navigateTo('/')
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
 const isAuthenticated = useIsAuthenticated()
 
