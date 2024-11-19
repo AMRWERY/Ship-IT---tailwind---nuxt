@@ -61,7 +61,7 @@
                                                         </div>
                                                         <span class="mx-auto mt-1 text-gray-600 dark:text-gray-300">{{
                                                             $t('products.to')
-                                                        }}</span>
+                                                            }}</span>
                                                         <div>
                                                             <div class="relative mt-1 rounded-md shadow-sm">
                                                                 <input id="maxPrice" name="maxPrice" v-model="maxPrice"
@@ -200,7 +200,7 @@
                     <div class="flex items-baseline justify-between pt-12 pb-6 border-b border-gray-200">
                         <p class="text-gray-700 dark:text-gray-300">1 - 2 {{ $t('products.pages_over') }} 43 {{
                             $t('products.items_for')
-                        }} <span
+                            }} <span
                                 class="font-semibold tracking-tight text-blue-700 underline dark:text-blue-500">carters</span>
                         </p>
                         <div class="flex items-center">
