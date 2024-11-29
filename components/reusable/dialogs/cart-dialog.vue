@@ -21,7 +21,7 @@
 
                 <div class="fixed inset-0 overflow-hidden">
                     <div class="absolute inset-0 overflow-hidden">
-                        <div class="fixed inset-y-0 flex max-w-full pl-10 pointer-events-none end-0">
+                        <div class="fixed inset-y-0 flex max-w-full pointer-events-none ps-10 end-0">
                             <HeadlessTransitionChild as="template"
                                 enter="transform transition ease-in-out duration-500 sm:duration-700"
                                 enter-from="translate-x-full" enter-to="translate-x-0"
@@ -38,7 +38,7 @@
                                                         $t('cart.shopping_cart')
                                                         }}</nuxt-link>
                                                 </HeadlessDialogTitle>
-                                                <div class="flex items-center ml-3 h-7">
+                                                <div class="flex items-center ms-3 h-7">
                                                     <button type="button"
                                                         class="relative p-2 -m-2 text-gray-400 dark:text-gray-200 hover:text-gray-500"
                                                         @click="open = false">
@@ -55,7 +55,7 @@
                                             </div>
                                             <div class="mt-8" v-else>
                                                 <div class="flow-root">
-                                                    <ul role="list" class="-my-6 divide-y divide-gray-200">
+                                                    <ul role="list" class="-my-4 divide-y divide-gray-200">
                                                         <li v-for="product in cartStore.cart" :key="product"
                                                             class="flex py-6">
                                                             <div
@@ -64,7 +64,7 @@
                                                                     class="object-cover object-center w-full h-full" />
                                                             </div>
 
-                                                            <div class="flex flex-col flex-1 ml-4">
+                                                            <div class="flex flex-col flex-1 ms-4">
                                                                 <div>
                                                                     <div
                                                                         class="flex justify-between text-base font-medium text-gray-700 dark:text-gray-200">

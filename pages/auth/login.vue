@@ -1,6 +1,7 @@
 <template>
   <div>
-    <section class="relative flex flex-wrap max-w-6xl py-4 mx-auto lg:h-screen lg:items-center" data-aos="fade-up" data-aos-duration="1000">
+    <section class="relative flex flex-wrap max-w-6xl py-4 mx-auto lg:h-screen lg:items-center" data-aos="fade-up"
+      data-aos-duration="1000">
       <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
         <div class="max-w-lg mx-auto text-center">
           <h1 class="text-2xl font-semibold leading-normal text-surface dark:text-white">{{
@@ -8,7 +9,9 @@
         </div>
 
         <FormKit type="form" id="login-form" v-model="data" :actions="false" :incomplete-message="false"
-          @submit="signIn" class="max-w-lg mx-auto">
+          @submit="signIn" class="max-w-lg mx-auto" :classes="{
+            wrapper: 'w-[1700px]',
+          }">
           <div class="flex flex-col gap-4 p-4">
             <div>
               <FormKitSchema :schema="translatedLoginSchema" />
@@ -104,9 +107,3 @@ useHead(() => ({
   title: t('head.login_into_your_account')
 }))
 </script>
-
-<style scoped>
-.formkit-inner {
-  width: 700px !important;
-}
-</style>
