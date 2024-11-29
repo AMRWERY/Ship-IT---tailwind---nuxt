@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="3000">
       <h1 class="text-3xl italic font-normal text-center text-gray-800 dark:text-gray-300">{{
         $t('blogs.read_about_fashion') }}</h1>
       <h4 class="flex justify-center text-center"><b class="text-red-500 dark:text-blue-300">{{ $t('blogs.amr_mohamed')
