@@ -1,6 +1,8 @@
 <template>
   <NuxtLayout>
+    <progress-bar />
     <NuxtPage />
+    <scroll-to-top />
   </NuxtLayout>
 </template>
 

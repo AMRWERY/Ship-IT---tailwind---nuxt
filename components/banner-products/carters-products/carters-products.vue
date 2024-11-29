@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-white dark:bg-[#1B1D1E]">
+    <div class="bg-white dark:bg-[#1B1D1E]" data-aos="fade-up" data-aos-duration="3000">
       <div class="max-w-2xl px-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-2">
         <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-300">{{ $t('products.results') }}</h2>
         <p class="text-gray-700 dark:text-gray-300">{{

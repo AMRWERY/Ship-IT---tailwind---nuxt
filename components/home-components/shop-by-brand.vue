@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="max-w-5xl py-6 mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-5xl py-6 mx-auto sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="3000">
       <section class="max-w-full mx-auto mt-5 sm:px-6 lg:px-8">
         <h2 class="mb-6 text">{{ $t('home.shop_by_brand') }}</h2>
         <Carousel v-bind="settings" :breakpoints="breakpoints" :wrap-around="true" :autoplay="3000" :transition="500">

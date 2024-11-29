@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="overflow-hidden bg-white py-11 font-poppins dark:bg-[#1e2022]">
+    <section class="overflow-hidden bg-white py-11 font-poppins dark:bg-[#1e2022]" data-aos="fade-up" data-aos-duration="3000">
       <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <nav class="flex">
           <ol role="list" class="flex items-center">

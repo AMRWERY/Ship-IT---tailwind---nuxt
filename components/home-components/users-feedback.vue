@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="overflow-hidden text-gray-600 body-font">
+    <section class="overflow-hidden text-gray-600 body-font" data-aos="fade-up" data-aos-duration="3000">
       <h3 class="text-3xl font-semibold text-center">{{ $t('home.latest_from_blogs') }}</h3>
       <div class="max-w-full px-5 py-12 mx-auto">
         <div class="flex flex-wrap mx-auto lg:w-4/5">

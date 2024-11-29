@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative w-full h-screen">
+    <div class="relative w-full h-screen" data-aos="fade-up" data-aos-duration="1000">
       <img src="https://justfields.com/storage/projects/7M5rV059/deal05.jpg"
         class="absolute inset-0 object-cover w-full h-full">
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>

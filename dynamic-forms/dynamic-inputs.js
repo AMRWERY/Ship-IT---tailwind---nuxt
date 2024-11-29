@@ -1,3 +1,5 @@
+const arabicRegex = /[\u0600-\u06FF\u0750-\u077F]/;
+
 const loginSchema = [
   {
     $formkit: "email",
@@ -7,6 +9,16 @@ const loginSchema = [
     outerClass:
       "px-3 py-2 text-gray-800 transition duration-100 rounded ring-indigo-300 focus:ring",
     innerClass: "outline-none bg-gray-50 border w-full",
+    onKeydown: (event) => {
+      if (arabicRegex.test(event.key)) {
+        event.preventDefault();
+      }
+    },
+    onInput: (event) => {
+      if (event?.target) {
+        event.target.value = event.target.value.replace(arabicRegex, "");
+      }
+    },
   },
   {
     $formkit: "password",
